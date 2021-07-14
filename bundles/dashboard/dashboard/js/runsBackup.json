@@ -1,7 +1,8 @@
 {
     "iWannaBeTheBoshy": {
         "gameInfo": {
-            "gameName": "I Wanna Be the Boshy",
+            "gameName": "I Wanna Be The Boshy",
+            "gameCategory": "I Wanna Be The Boshy",
             "resolution": "600",
             "createdBy": "Solgryn",
             "genres": null,
@@ -12,7 +13,7 @@
             "player1_twitchHandle": "Anuj071",
             "player1_displayName": "Anuj",
             "player1_camera": true,
-            "player1_pb": "1:13:24",
+            "player1_pb": "1:06:26",
             "player1_pronouns": "he/him",
             "player2_twitchHandle": null,
             "player2_displayName": null,
@@ -34,18 +35,20 @@
         "runInfo": {
             "category": "100%",
             "estimate": "1:10:00",
-            "runType": "Race",
+            "runType": "Run",
             "worldRecord": "0:48:23 by BBF",
             "wrHolder": null,
             "commentator_pronouns": "he/him"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "solaceDreams": {
         "gameInfo": {
             "gameName": "Solace Dreams",
+            "gameCategory": "DOOM II: Hell On Earth",
             "resolution": "16:9",
             "createdBy": "1ABC_Erminio",
             "genres": null,
@@ -78,18 +81,20 @@
         "runInfo": {
             "category": "New Game+",
             "estimate": "0:43:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:32:52 by LinkaMeister",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "realmInvasion": {
         "gameInfo": {
             "gameName": "Realm Invasion",
+            "gameCategory": "Super Mario 64",
             "resolution": "10:7",
             "createdBy": "SomeBro",
             "genres": null,
@@ -122,18 +127,20 @@
         "runInfo": {
             "category": "31 Star",
             "estimate": "0:50:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:39:42 by AndrewSM64",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".2",
+            "chromaKeyColor": "green"
         }
     },
     "makeAGood24HourMegaManLevel": {
         "gameInfo": {
             "gameName": "Make a Good 24 Hour Mega Man Level",
+            "gameCategory": "Mega Man",
             "resolution": "8:7",
             "createdBy": "Multiple People",
             "genres": null,
@@ -172,12 +179,14 @@
             "commentator_pronouns": "she/her"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "superSheffyWorld2": {
         "gameInfo": {
             "gameName": "Super Sheffy World 2",
+            "gameCategory": "Super Mario World",
             "resolution": "600",
             "createdBy": "Westslasher 2",
             "genres": null,
@@ -210,18 +219,20 @@
         "runInfo": {
             "category": "100%",
             "estimate": "0:35:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:17:33 by Wahnthac",
             "wrHolder": null,
             "commentator_pronouns": "he/him"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "superMetroidRedesign": {
         "gameInfo": {
             "gameName": "Super Metroid: Redesign",
+            "gameCategory": "Super Metroid",
             "resolution": "600",
             "createdBy": "Drewseph & Others",
             "genres": null,
@@ -254,18 +265,20 @@
         "runInfo": {
             "category": "Any%",
             "estimate": "2:30:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "2:05:41 by azder",
             "wrHolder": null,
             "commentator_pronouns": "she/her"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "twitchDoesAvoidance": {
         "gameInfo": {
             "gameName": "Twitch Does Avoidance",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "Patrickgh3",
             "genres": null,
@@ -298,18 +311,20 @@
         "runInfo": {
             "category": "Max%",
             "estimate": "0:30:00",
-            "runType": "Co-op Run",
+            "runType": "Event",
             "worldRecord": null,
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaBeTheDiverseVer095": {
         "gameInfo": {
             "gameName": "I Wanna Be The Diverse ver0.95",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "ていく",
             "genres": null,
@@ -317,8 +332,8 @@
         },
         "playerInfo": {
             "numberOfPlayers": "1",
-            "player1_twitchHandle": "すせるあ",
-            "player1_displayName": "suserua",
+            "player1_twitchHandle": "suserua0612",
+            "player1_displayName": "すせるあ",
             "player1_camera": false,
             "player1_pb": "0:54:21",
             "player1_pronouns": "he/him",
@@ -342,18 +357,20 @@
         "runInfo": {
             "category": "Any% (w/ turbo)",
             "estimate": "1:00:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:54",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iDunWannaBeAnything2": {
         "gameInfo": {
             "gameName": "I Dun Wanna Be Anything 2",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "Zanto",
             "genres": null,
@@ -386,18 +403,20 @@
         "runInfo": {
             "category": "Any%",
             "estimate": "2:00:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "1:46:37 by Thenadertwo",
             "wrHolder": null,
             "commentator_pronouns": "he/him"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "superTalkingTimeBros25": {
         "gameInfo": {
             "gameName": "Super Talking Time Bros. 2.5 The Last Levels",
+            "gameCategory": "Super Mario Bros. X",
             "resolution": "600",
             "createdBy": "The Talking Time Community",
             "genres": null,
@@ -430,18 +449,20 @@
         "runInfo": {
             "category": "Any%",
             "estimate": "0:40:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:34:00 by cheez8",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "celesteSpringCollab2020": {
         "gameInfo": {
             "gameName": "Celeste Spring Collab 2020",
+            "gameCategory": "Celeste",
             "resolution": "16:9",
             "createdBy": "Multiple People",
             "genres": null,
@@ -474,18 +495,20 @@
         "runInfo": {
             "category": "Grandmaster Lobby",
             "estimate": "1:30:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "1:06:22 by BV502",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaCruiseThe6Islands": {
         "gameInfo": {
-            "gameName": "I Wanna Cruise the 6 Islands",
+            "gameName": "I Wanna Cruise The 6 Islands",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "600",
             "createdBy": "エスポチ",
             "genres": null,
@@ -518,18 +541,20 @@
         "runInfo": {
             "category": "Ending B",
             "estimate": "2:00:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "1:53:32 by Cosmoing",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaBeTheVolatilePresence": {
         "gameInfo": {
-            "gameName": "I Wanna Be the Volatile Presence",
+            "gameName": "I Wanna Be The Volatile Presence",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "egg",
             "genres": null,
@@ -557,23 +582,25 @@
             "player4_camera": false,
             "player4_pb": null,
             "player4_pronouns": null,
-            "commentators": "vv."
+            "commentators": "vv. (egg)"
         },
         "runInfo": {
             "category": "Any%",
             "estimate": "0:25:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:11:58 by Emmanating_",
             "wrHolder": null,
             "commentator_pronouns": "she/her"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaBeTheCloudburst": {
         "gameInfo": {
-            "gameName": "I wanna be the cloudburst",
+            "gameName": "I Wanna Be The Cloudburst",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "Lilly",
             "genres": null,
@@ -606,18 +633,20 @@
         "runInfo": {
             "category": "Any%",
             "estimate": "0:15:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "~7-8 min by Matsu",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "anotherMarioAdventure": {
         "gameInfo": {
             "gameName": "Another Mario Adventure",
+            "gameCategory": "Super Mario 64",
             "resolution": "10:7",
             "createdBy": "aglab2 & guests",
             "genres": null,
@@ -650,18 +679,20 @@
         "runInfo": {
             "category": "120 Star + Bonus Showcase",
             "estimate": "2:10:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "1:37:29 by Isometer",
             "wrHolder": null,
             "commentator_pronouns": "he/him"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "metroidFreezeflame2TwistedDimensions": {
         "gameInfo": {
             "gameName": "Metroid FreezeFlame 2: Twisted Dimensions",
+            "gameCategory": "Metroid: Zero Mission",
             "resolution": "600",
             "createdBy": "Conner",
             "genres": null,
@@ -694,18 +725,20 @@
         "runInfo": {
             "category": "100%",
             "estimate": "0:36:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:29:36 by LinkaMeister",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "touhouMakukaSaiFantasticDanmakuFestival": {
         "gameInfo": {
             "gameName": "Touhou Makuka Sai ~ Fantastic Danmaku Festival",
+            "gameCategory": "Touhou Project",
             "resolution": "600",
             "createdBy": "東方幕華祭制作组",
             "genres": null,
@@ -738,18 +771,20 @@
         "runInfo": {
             "category": "Lunatic No Bomb (Patchouli)",
             "estimate": "0:27:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0 Miss tied by CYH, Seiko, A2",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaBeTheHamster": {
         "gameInfo": {
             "gameName": "I Wanna Be The Hamster!",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "椎名 京",
             "genres": null,
@@ -782,18 +817,20 @@
         "runInfo": {
             "category": "100% No Left+Right",
             "estimate": "0:40:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": null,
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "theSuperMarioBrosSuperShow64": {
         "gameInfo": {
             "gameName": "The Super Mario Bros. Super Show 64",
+            "gameCategory": "Super Mario 64",
             "resolution": "600",
             "createdBy": "Pasta Power",
             "genres": null,
@@ -826,18 +863,20 @@
         "runInfo": {
             "category": "25 Star",
             "estimate": "0:25:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:20:06 by AndrewSM64",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "missionEscapeFromBadGames": {
         "gameInfo": {
             "gameName": "Mission Escape From Bad games",
+            "gameCategory": "Mission: Escape from Island",
             "resolution": "16:9",
             "createdBy": "SioN",
             "genres": null,
@@ -870,18 +909,20 @@
         "runInfo": {
             "category": "All Achievements and Cat Easy",
             "estimate": "0:20:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:9:10 by DNVIC",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaBurnmind": {
         "gameInfo": {
             "gameName": "I Wanna Burnmind",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "RandomErik",
             "genres": null,
@@ -889,7 +930,7 @@
         },
         "playerInfo": {
             "numberOfPlayers": "2",
-            "player1_twitchHandle": "mastermaxify",
+            "player1_twitchHandle": "Mastermaxify",
             "player1_displayName": "max",
             "player1_camera": false,
             "player1_pb": "0:40:11",
@@ -920,12 +961,14 @@
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaKillTheLastBoss": {
         "gameInfo": {
-            "gameName": "I Wanna Kill the Last Boss",
+            "gameName": "I Wanna Kill The Last Boss",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "600",
             "createdBy": "Dark Ruler",
             "genres": null,
@@ -958,18 +1001,20 @@
         "runInfo": {
             "category": "100% (w/ storytime)",
             "estimate": "0:45:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:33:41 by Cosmoing",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "johnnysNightmare": {
         "gameInfo": {
             "gameName": "Johnny's Nightmare",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "600",
             "createdBy": "Clysm",
             "genres": null,
@@ -1002,18 +1047,20 @@
         "runInfo": {
             "category": "Any%",
             "estimate": "0:25:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:17:58 by Racic",
             "wrHolder": null,
             "commentator_pronouns": "he/him"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaKillTheKamilia": {
         "gameInfo": {
             "gameName": "I Wanna Kill The Kamilia",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "600",
             "createdBy": "ㅇyㅇ",
             "genres": null,
@@ -1046,18 +1093,20 @@
         "runInfo": {
             "category": "Any%",
             "estimate": "0:45:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:28:03 by CakeSauc3",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iDontWannaBeTheGay": {
         "gameInfo": {
             "gameName": "I Don't Wanna Be The Gay",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "domiki",
             "genres": null,
@@ -1090,18 +1139,20 @@
         "runInfo": {
             "category": "100%",
             "estimate": "1:30:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "1:06:35 by Gaborro14",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "piecesFangameFunanzapalooza": {
         "gameInfo": {
             "gameName": "Piece's Fangame Funanzapalooza",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "16:9",
             "createdBy": "pieceofcheese87",
             "genres": null,
@@ -1140,12 +1191,14 @@
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaCuteJump": {
         "gameInfo": {
             "gameName": "I Wanna Cute Jump",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "LAWatson",
             "genres": null,
@@ -1178,18 +1231,20 @@
         "runInfo": {
             "category": "Any%",
             "estimate": "0:40:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:29:35 by Tehninza",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "starRevenge2Act1ToTheMoon": {
         "gameInfo": {
             "gameName": "Star Revenge 2 Act 1: To The Moon",
+            "gameCategory": "Super Mario 64",
             "resolution": "600",
             "createdBy": "BroDute",
             "genres": null,
@@ -1222,18 +1277,20 @@
         "runInfo": {
             "category": "41 Star",
             "estimate": "0:45:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:35:29 by Muimania",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "sonic3AngelIslandRevisited": {
         "gameInfo": {
             "gameName": "Sonic 3: Angel Island Revisited",
+            "gameCategory": "Sonic The Hedgehog 3",
             "resolution": "16:9",
             "createdBy": "Eukaryot",
             "genres": null,
@@ -1266,18 +1323,20 @@
         "runInfo": {
             "category": "Amy NG+ Glitchless",
             "estimate": "0:52:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:34:22 by Zaxon96",
             "wrHolder": null,
             "commentator_pronouns": "he/him"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaCoinstack1000": {
         "gameInfo": {
             "gameName": "I Wanna CoinStack 1000",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "Denferok",
             "genres": null,
@@ -1316,12 +1375,14 @@
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "superMarioBrosDimensions": {
         "gameInfo": {
             "gameName": "Super Mario Bros. Dimensions",
+            "gameCategory": "Super Mario Bros.",
             "resolution": "600",
             "createdBy": "LangtonLion64",
             "genres": null,
@@ -1354,18 +1415,20 @@
         "runInfo": {
             "category": "Any%",
             "estimate": "1:30:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "1:19:08 by conmansr",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "maidMadeMaze": {
         "gameInfo": {
             "gameName": "Maid Made Maze",
+            "gameCategory": "Touhou Project",
             "resolution": "16:9",
             "createdBy": "Top Arts Plan",
             "genres": null,
@@ -1396,20 +1459,22 @@
             "commentators": null
         },
         "runInfo": {
-            "category": "any%",
+            "category": "Any%",
             "estimate": "0:40:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:27:24 by UnPigeonVoyageur",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaBeTheJustice,EasyVer": {
         "gameInfo": {
             "gameName": "I Wanna Be The Justice, Easy Ver.",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "600",
             "createdBy": "Carnival",
             "genres": null,
@@ -1448,12 +1513,14 @@
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaBeTheVandal": {
         "gameInfo": {
-            "gameName": "I Wanna be The Vandal",
+            "gameName": "I Wanna Be The Vandal",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "Wolfiexe",
             "genres": null,
@@ -1486,18 +1553,20 @@
         "runInfo": {
             "category": "\"Them\" vs. \"Him\"",
             "estimate": "1:00:00",
-            "runType": "Co-op Run",
+            "runType": "Co-op Race",
             "worldRecord": "0:43:11 by Wolfiexe",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "engagingGameDesign": {
         "gameInfo": {
             "gameName": "Engaging Game Design",
+            "gameCategory": "Science & Technology",
             "resolution": "16:9",
             "createdBy": "Tralexium",
             "genres": null,
@@ -1536,12 +1605,14 @@
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaDuloxetine": {
         "gameInfo": {
             "gameName": "I Wanna Duloxetine",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "dono",
             "genres": null,
@@ -1574,20 +1645,22 @@
         "runInfo": {
             "category": "Any% Brutal + Secret",
             "estimate": "0:40:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:33:31 by Nearigami",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "slicingApples": {
         "gameInfo": {
             "gameName": "Slicing Apples",
+            "gameCategory": "Beat Saber",
             "resolution": "16:9",
-            "createdBy": "Uhn Tiss Buzz Tiss",
+            "createdBy": "Beat Games",
             "genres": null,
             "otherGenres": null
         },
@@ -1624,12 +1697,14 @@
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "superMario64Sapphire": {
         "gameInfo": {
             "gameName": "Super Mario 64 Sapphire",
+            "gameCategory": "Super Mario 64",
             "resolution": "10:7",
             "createdBy": "Nebula",
             "genres": null,
@@ -1662,18 +1737,20 @@
         "runInfo": {
             "category": "30 Star",
             "estimate": "0:25:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:19:44 by Phanton404",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "makeAGoodMegaManLevelEpisodeZero": {
         "gameInfo": {
             "gameName": "Make a Good Mega Man Level: Episode Zero",
+            "gameCategory": "Mega Man",
             "resolution": "8:7",
             "createdBy": "Multiple People",
             "genres": null,
@@ -1706,18 +1783,20 @@
         "runInfo": {
             "category": "Any%, Collect Calls",
             "estimate": "2:10:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "2:01:22 by PineappleDerp",
             "wrHolder": null,
             "commentator_pronouns": "she/her, he/him"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "smolAme": {
         "gameInfo": {
             "gameName": "Smol Ame",
+            "gameCategory": "Smol Ame",
             "resolution": "16:9",
             "createdBy": "KevinCow",
             "genres": null,
@@ -1756,12 +1835,14 @@
             "commentator_pronouns": "he/him"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "guraquest": {
         "gameInfo": {
             "gameName": "GuraQuest",
+            "gameCategory": "GuraQuest",
             "resolution": "16:9",
             "createdBy": "Lee-Pic",
             "genres": null,
@@ -1794,18 +1875,20 @@
         "runInfo": {
             "category": "100% Glitchless",
             "estimate": "0:08:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:5:21 by Cyrryc",
             "wrHolder": null,
             "commentator_pronouns": "he/him"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "starRevenge0GalaxyOfOrigins": {
         "gameInfo": {
             "gameName": "Star Revenge 0: Galaxy of Origins",
+            "gameCategory": "Super Mario 64",
             "resolution": "10:7",
             "createdBy": "BroDute",
             "genres": null,
@@ -1838,18 +1921,20 @@
         "runInfo": {
             "category": "122 Star",
             "estimate": "1:25:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "1:16:47 by Tomatobird8",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "crimsonNeedle3": {
         "gameInfo": {
             "gameName": "Crimson Needle 3",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "Kalemandu, PlasmaNapkin, Zero-G",
             "genres": null,
@@ -1882,18 +1967,20 @@
         "runInfo": {
             "category": "NewGame+",
             "estimate": "1:30:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "1:18:51.35 by popop614",
             "wrHolder": null,
             "commentator_pronouns": "he/him"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "superMonkeyBallGaiden": {
         "gameInfo": {
             "gameName": "Super Monkey Ball Gaiden",
+            "gameCategory": "Super Monkey Ball 2",
             "resolution": "600",
             "createdBy": "Cutsman",
             "genres": null,
@@ -1926,18 +2013,20 @@
         "runInfo": {
             "category": "Story Mode All Levels",
             "estimate": "0:45:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:35:32 by IkeSMB",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "tempestOfTheHeavensAndEarth": {
         "gameInfo": {
             "gameName": "Tempest of the Heavens and Earth",
+            "gameCategory": "Touhou Project",
             "resolution": "16:9",
             "createdBy": "LION HEART",
             "genres": null,
@@ -1970,18 +2059,20 @@
         "runInfo": {
             "category": "Boss Lunatic + Boss Attack",
             "estimate": "0:30:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:08:58 by Naro",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "yoiyamiDancers": {
         "gameInfo": {
             "gameName": "Yoiyami Dancers",
+            "gameCategory": "Touhou Project",
             "resolution": "16:9",
             "createdBy": "tripper_room",
             "genres": null,
@@ -2014,18 +2105,20 @@
         "runInfo": {
             "category": "Normal Mode",
             "estimate": "0:20:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:16:33 by Naro",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "megaManBattleNetworkChronoX": {
         "gameInfo": {
             "gameName": "Mega Man Battle Network Chrono X",
+            "gameCategory": "Mega Man Battle Network Chrono X",
             "resolution": "3:2",
             "createdBy": "The MegaDudes",
             "genres": null,
@@ -2058,19 +2151,21 @@
         "runInfo": {
             "category": "Operation S-Rank",
             "estimate": "2:00:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": null,
             "wrHolder": null,
             "commentator_pronouns": "any"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "tasShowcase": {
         "gameInfo": {
             "gameName": "TAS Showcase",
-            "resolution": "600",
+            "gameCategory": "I Wanna Be The Guy",
+            "resolution": "16:9",
             "createdBy": "Multiple People",
             "genres": null,
             "otherGenres": null
@@ -2102,18 +2197,20 @@
         "runInfo": {
             "category": "Any%",
             "estimate": "2:20:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": null,
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaRunTheMarathon": {
         "gameInfo": {
             "gameName": "I Wanna Run The Marathon",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "Multiple People",
             "genres": null,
@@ -2146,18 +2243,20 @@
         "runInfo": {
             "category": "Any%",
             "estimate": "0:45:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:31:02 by Azmol",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaDeleteTheHugeBug": {
         "gameInfo": {
             "gameName": "I Wanna Delete The Huge Bug",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "16:9",
             "createdBy": "Souvenir",
             "genres": null,
@@ -2190,18 +2289,20 @@
         "runInfo": {
             "category": "Any%",
             "estimate": "0:35:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:26:56 by hyoka",
             "wrHolder": null,
             "commentator_pronouns": "he/him"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaBeTheBlizzard": {
         "gameInfo": {
             "gameName": "I Wanna Be The Blizzard",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "Carnival",
             "genres": null,
@@ -2234,18 +2335,20 @@
         "runInfo": {
             "category": "Any%",
             "estimate": "0:27:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": null,
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "superMonkeyBall651": {
         "gameInfo": {
             "gameName": "Super Monkey Ball 651",
+            "gameCategory": "Super Monkey Ball 2",
             "resolution": "600",
             "createdBy": "scrap651",
             "genres": null,
@@ -2278,18 +2381,20 @@
         "runInfo": {
             "category": "Story Mode All Levels",
             "estimate": "0:40:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:30:40 by IkeSMB",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "mariosVacationCourse": {
         "gameInfo": {
             "gameName": "Mario's Vacation Course",
+            "gameCategory": "Super Mario 64",
             "resolution": "600",
             "createdBy": "Reonu",
             "genres": null,
@@ -2322,18 +2427,20 @@
         "runInfo": {
             "category": "30 Star",
             "estimate": "0:10:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "0:04:37 by Phanton404",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "superMario74": {
         "gameInfo": {
             "gameName": "Super Mario 74",
+            "gameCategory": "Super Mario 64",
             "resolution": "600",
             "createdBy": "Lugmillord, sm64pie",
             "genres": null,
@@ -2366,18 +2473,20 @@
         "runInfo": {
             "category": "151 Star (Non-Stop)",
             "estimate": "1:55:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "1:42:44 by SuperViperT302",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "mysteryFinaleGame": {
         "gameInfo": {
             "gameName": "Mystery Finale Game",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "600",
             "createdBy": "wHoKnOwS?",
             "genres": null,
@@ -2410,18 +2519,20 @@
         "runInfo": {
             "category": "BibleThump%",
             "estimate": "0:05:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": null,
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "touhouDanmakufu": {
         "gameInfo": {
             "gameName": "Touhou Danmakufu",
+            "gameCategory": "Touhou Project",
             "resolution": "600",
             "createdBy": "mkm",
             "genres": null,
@@ -2454,18 +2565,20 @@
         "runInfo": {
             "category": "Showcase",
             "estimate": "0:30:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": null,
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "fangameBaggage": {
         "gameInfo": {
             "gameName": "Fangame Baggage",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "16:9",
             "createdBy": "Cosmoing",
             "genres": null,
@@ -2504,12 +2617,14 @@
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaWalkOutInTheMorningDew": {
         "gameInfo": {
             "gameName": "I Wanna Walk Out In The Morning Dew",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "GeoGeo222",
             "genres": null,
@@ -2542,18 +2657,20 @@
         "runInfo": {
             "category": "Any%",
             "estimate": "2:35:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": "2:28:44 by bummerman222",
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "fangameFeud": {
         "gameInfo": {
             "gameName": "Fangame Feud",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "16:9",
             "createdBy": "pieceofcheese87",
             "genres": null,
@@ -2586,18 +2703,20 @@
         "runInfo": {
             "category": "Gameshow%",
             "estimate": "1:00:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": null,
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "iWannaBeTheBattlegrounds": {
         "gameInfo": {
             "gameName": "I Wanna Be The Battlegrounds",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "Multiple People",
             "genres": null,
@@ -2630,20 +2749,22 @@
         "runInfo": {
             "category": "Showcase",
             "estimate": "1:35:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": null,
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "drawThingy": {
         "gameInfo": {
             "gameName": "Draw Thingy!",
+            "gameCategory": "Super Mario 64",
             "resolution": "608",
-            "createdBy": "pieceofcheese87",
+            "createdBy": "CowQuack",
             "genres": null,
             "otherGenres": null
         },
@@ -2674,13 +2795,14 @@
         "runInfo": {
             "category": "Draw%",
             "estimate": "2:00:00",
-            "runType": "Solo Run",
+            "runType": "Run",
             "worldRecord": null,
             "wrHolder": null,
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
 
@@ -2695,26 +2817,30 @@
     "fishOutOfWater": {
         "gameInfo": {
             "gameName": "Fish Out Of Water",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
-            "createdBy": null,
+            "createdBy": "Multiple People",
             "genres": null,
             "otherGenres": "Blind",
             "game1": {
-                "gameName": "Celeste: Into the Jungle",
+                "gameName": "Celeste: Into The Jungle",
+                "gameCategory": "Celeste",
                 "resolution": "16:9",
                 "createdBy": "Thegur90 and Others",
                 "genres": null,
                 "otherGenres": null
             },
             "game2": {
-                "gameName": "TBD",
+                "gameName": "I Wanna Be The FFM",
+                "gameCategory": "I Wanna Be The Guy",
                 "resolution": "608",
-                "createdBy": "TBD",
+                "createdBy": "The FM Pescatarians",
                 "genres": null,
                 "otherGenres": null
             },
             "game3": {
                 "gameName": "Mario's Vacation Course",
+                "gameCategory": "Super Mario 64",
                 "resolution": "10:7",
                 "createdBy": "Reonu",
                 "genres": null,
@@ -2753,14 +2879,16 @@
             "wrHolder": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "blindIwmRace": {
         "gameInfo": {
             "gameName": "Blind I Wanna Maker Race",
+            "gameCategory": "I Wanna Maker",
             "resolution": "608",
-            "createdBy": null,
+            "createdBy": "The FM Team",
             "genres": null,
             "otherGenres": "Blind"
         },
@@ -2796,14 +2924,16 @@
             "wrHolder": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "avoidanceTournament": {
         "gameInfo": {
             "gameName": "Avoidance Tournament",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "600",
-            "createdBy": null,
+            "createdBy": "The FM Team",
             "genres": "Avoidance",
             "otherGenres": null
         },
@@ -2839,12 +2969,14 @@
             "wrHolder": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "blindAdventureRace": {
         "gameInfo": {
             "gameName": "Blind Adventure Race",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "The FM Team",
             "genres": "Adventure",
@@ -2882,12 +3014,14 @@
             "wrHolder": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "blindNeedleRace": {
         "gameInfo": {
             "gameName": "Blind Needle Race",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "The FM Team",
             "genres": "Needle",
@@ -2925,12 +3059,14 @@
             "wrHolder": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "blindSudokuRace": {
         "gameInfo": {
             "gameName": "Blind Sudoku Race",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "The FM Masochists",
             "genres": null,
@@ -2968,14 +3104,16 @@
             "wrHolder": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "microtwist": {
         "gameInfo": {
             "gameName": "Microtwist",
+            "gameCategory": "I Wanna Maker",
             "resolution": "608",
-            "createdBy": null,
+            "createdBy": "The Elephant Crew",
             "genres": null,
             "otherGenres": "Sudoku"
         },
@@ -3011,25 +3149,29 @@
             "wrHolder": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
     "relayRace": {
         "gameInfo": {
             "gameName": "Relay Race",
+            "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
             "createdBy": "Multiple People",
             "genres": "Adventure; Avoidance; Gimmick; Trap; Needle",
             "otherGenres": null,
             "game1": {
-                "gameName": "I wanna be the Groovy",
+                "gameName": "I Wanna Be The Groovy",
+                "gameCategory": "I Wanna Be The Guy",
                 "resolution": "608",
                 "createdBy": "どるっぴ",
                 "genres": null,
                 "otherGenres": null
             },
             "game2": {
-                "gameName": "I wanna go End of the World",
+                "gameName": "I Wanna Go End Of The World",
+                "gameCategory": "I Wanna Be The Guy",
                 "resolution": "608",
                 "createdBy": "ノベボー, ロボ厨",
                 "genres": null,
@@ -3037,20 +3179,23 @@
             },
             "game3": {
                 "gameName": "Not Another Needle Game",
+                "gameCategory": "I Wanna Be The Guy",
                 "resolution": "608",
                 "createdBy": "Thenewgeezer",
                 "genres": null,
                 "otherGenres": null
             },
             "game4": {
-                "gameName": "I Wanna Be the Aura",
+                "gameName": "I Wanna Be The Aura",
+                "gameCategory": "I Wanna Be The Guy",
                 "resolution": "600",
                 "createdBy": "蒼羅",
                 "genres": null,
                 "otherGenres": null
             },
             "game5": {
-                "gameName": "I wanna afflict the mashikaku",
+                "gameName": "I Wanna Afflict The Mashikaku",
+                "gameCategory": "I Wanna Be The Guy",
                 "resolution": "608",
                 "createdBy": "椛饅頭",
                 "genres": null,
@@ -3120,7 +3265,8 @@
             "wrHolder": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3"
+            "backgroundOpacity": ".3",
+            "chromaKeyColor": "green"
         }
     },
 }

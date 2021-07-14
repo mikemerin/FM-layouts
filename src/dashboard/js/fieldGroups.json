@@ -8,6 +8,11 @@ var fieldGroups = {
         "placeholder": "I Wanna ___"
       },
       {
+        "fieldName": "Game Category",
+        "type": "text",
+        "placeholder": "I Wanna Be the Guy"
+      },
+      {
         "fieldName": "Created By",
         "type": "text",
         "placeholder": "Thenewgeezer, PieceOfCheese87"
@@ -45,14 +50,15 @@ var fieldGroups = {
         "fieldName": "Run Type",
         "type": "radio",
         "options": [
+          "Co-op Race",
           "Co-op Run",
           "Event",
           "Showcase",
-          "Solo Run",
+          "Run",
           "Race",
           "TAS Showcase"
         ],
-        "defaultValue": "Solo Run",
+        "defaultValue": "Run",
         "other": true
       }
     ]

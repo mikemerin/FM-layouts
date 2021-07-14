@@ -185,7 +185,8 @@ class DashboardForm {
       click: (e) => {
         e.preventDefault();
         this.saveFields();
-        this.saveFields(); // NOTE: two are needed to ensure it saves
+        this.saveFields();
+        this.saveFields(); // NOTE: three are needed to ensure it saves
       }
     });
 
@@ -435,12 +436,13 @@ class DashboardField {
 
   createMasterRunList = () => {
     const headerGroups = $("<tr>")
-      .append( $("<th>", { colspan: 3, text: "Actions" }) )
+      .append( $("<th>", { colspan: 4, text: "Actions" }) )
       .append( $("<th>", { rowspan: 2, text: "#" }) );
     const headerFields = $("<tr>")
       .append( $("<th>", { text: "Edit" }) )
       .append( $("<th>", { text: "Load" }) )
-      .append( $("<th>", { text: ".png" }) );
+      .append( $("<th>", { text: "Save\n.png" }) )
+      .append( $("<th>", { text: "Update\nTwitch" }) );
 
 
     ["Game Info", "Run Info", "Player Info", "Individual Player Info", "Admin Panel"].forEach(fieldGroup => {
@@ -514,8 +516,16 @@ class DashboardField {
           id: game + " - png",
           gameName: game,
           class: "pointer masterRunListpng",
-          text: "png",
+          text: "PNG",
           click: () => { this.saveImage(game) }
+        }))
+        .append($("<td>", {
+          rowspan: rowSpan,
+          id: game + " - updateTwitch",
+          game: game,
+          class: "pointer masterRunListpng",
+          text: "U",
+          click: () => { twitchApi.updateTwitchFull(game) }
         }))
         .append($("<td>", {
           rowspan: rowSpan,

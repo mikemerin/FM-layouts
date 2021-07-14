@@ -1,3 +1,135 @@
+class TwitchAPI {
+    constructor() {
+        this.channelId = '90780102';
+        this.clientId = '*getFromFile*';
+        this.clientSecret = '*getFromFile*';
+        this.redirectURI = 'http://localhost:9090/';
+        this.responseType = 'token';
+        this.scope = 'channel_editor';
+
+        this.oauthToken = '*getFromFile*';
+        this.bearerToken = '*getFromFile*';
+
+        this.gameId;
+        this.gameName;
+        this.title;
+
+        // this.setInMotion();
+    }
+
+    async fetcher(url, options = {}) {
+        console.log('url', url, '\noptions', options)
+        const res = await fetch(url, options);
+        const data = await res.json();
+        console.log('fetcher data', data);
+        return data;
+    }
+
+    async getOauthToken() {
+      const url = 'https://id.twitch.tv/oauth2/authorize?' + [
+          `client_id=${this.clientId}`,
+          `redirect_uri=${this.redirectURI}`,
+          `response_type=${this.responseType}`,
+          `scope=${this.scope}`
+      ].join('&');
+
+      const instructions = [
+        'Sign into FM\'s Twitch account',
+        'Copy the following link',
+        'Open a new Chrome tab and open the Network tab',
+        'Paste the link into the browser and accept',
+        'Scroll to the top of the Network tab. The first call will be an "authorize" call. The Response Header will have your access_token',
+        'URL: ' + url
+      ]
+      console.log(instructions.join("\n"));
+    }
+
+    // async getBearerToken() { // disabled as we're using OAuth
+    //   const url = 'https://id.twitch.tv/oauth2/token?' + [
+    //     `client_id=${this.clientId}`,
+    //     `client_secret=${this.clientSecret}`,
+    //     `grant_type=client_credentials`,
+    //     `scope=${this.scope}`
+    //   ].join('&');
+    //
+    //   const options = {
+    //   	method: 'POST'
+    //   };
+    //
+    //   const data = await this.fetcher(url, options);
+    //   this.bearerToken = data?.access_token;
+    //   console.log('token set to ' + this.bearerToken);
+    // }
+
+    async getChannelInfo() {
+      const url = 'https://api.twitch.tv/helix/search/channels?query=fangamemarathon/';
+
+      const options = {
+        headers: {
+          'Client-ID': this.clientId,
+          'Authorization': 'Bearer ' + this.bearerToken
+        }
+      };
+
+      const data = await this.fetcher(url, options);
+      const fmChannel = data.data.find(({ broadcaster_login }) => broadcaster_login === 'fangamemarathon');
+      const { game_id, game_name, id, title } = fmChannel;
+      this.channelId = id;
+      this.gameId = game_id;
+      this.gameName = game_name;
+      this.title = title;
+      console.log('output data', data);
+    }
+
+    async updateChannel(status, game, channels) {
+      const url = `https://api.twitch.tv/kraken/channels/${this.channelId}`;
+      let featuredChannelUrl = 'https://api.furious.pro/featuredchannels/bot/ab8b468a5808ac206f12cbc7d80af868:90780102/';
+
+      const body = JSON.stringify({
+          channel: {
+              ...(status && { status }),
+              ...(game && { game }),
+              channel_feed_enabled: true
+          }
+      });
+
+      const options = {
+          method: 'PUT',
+          body,
+          headers: {
+              'Content-Type': 'application/json',
+          		'Accept': 'application/vnd.twitchtv.v5+json',
+          		'Client-ID': this.clientId,
+          		'Authorization': 'OAuth ' + this.oauthToken,
+          }
+      };
+
+      const data = this.fetcher(url, options);
+      console.log('set data', data)
+
+      if (channels !== undefined) {
+        featuredChannelUrl += channels;
+        this.fetcher(featuredChannelUrl);
+      }
+    }
+
+    updateTwitchFull(game) {
+      const { gameInfo, playerInfo, runInfo } = NodeCG.masterRunList.replicantValues[sanitize(game)];
+      const { gameName, gameCategory } = gameInfo;
+      const { numberOfPlayers } = playerInfo
+      const { category, runType } = runInfo;
+
+      const players = new Array(parseInt(numberOfPlayers)).fill().map((x,i) => playerInfo[`player${i+1}_twitchHandle`]).join(', ');
+      const title = `FM 2021 - ${gameName}, ${category} ${runType} by ${players}`;
+
+      if (confirm(`WARNING: this updates the FM Twitch channel with the info below.\nPlease make sure it is correct before confirming.\n\nTitle:\n${title}\n\nGame Category: ${gameCategory}\n\nFeatured Channels: ${players}`)) {
+        this.updateChannel(title, gameCategory, players);
+      }
+    }
+}
+
+const twitchApi = new TwitchAPI;
+
 // todo: add this to api.js (and min) this to the global scope class to be able to just call them anywhere
 const getGameNameTitle = (gameName) => {
   return gameName.replace(/(I Wanna |Be the )/gi, "");
@@ -190,6 +322,8 @@ class SetReplicant {
     text += `update the following ${fieldsChanged} field(s) for\n${gameName}?\n`;
     if( fieldsChanged && confirm(text + textChanged) ) {
       NodeCG.dashboardPanels.panels.adminPanel.saveFields(gameName);
+      NodeCG.dashboardPanels.panels.adminPanel.saveFields(gameName);
+      NodeCG.dashboardPanels.panels.adminPanel.saveFields(gameName); // NOTE: three are needed to ensure it saves
     };
   }
 
@@ -268,7 +402,9 @@ class AdminPanel {
         // }).sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase()) ); // todo: remove?
 
         var options = NodeCG.masterRunList.schedule.order.filter(x => x);
-        if (!options.length) options = ["I Wanna Eclipse", "Super Metroid Ascent", "Star Revenge 2.5: Remnant of Doom", "Chill Needle 2", "Rockman 4 Burst Chaser x Air Sliding", "Fish Out Of Water", "Gensou Skydrift", "I Wanna Be The Neon 3", "I Wanna Be The Salt", "I Wanna KeyPick 100", "Ghost Mechanism", "SM64: Last Impact", "Super Mario Odyssey 64", "Blind I Wanna Maker", "I Wanna Be The Guy", "I Wanna Be The Guy: Gaiden", "NitorInc.", "Make a Good Mega Man Level 2", "Sunlust", "Avoidance Tournament", "Super Metroid Y-Faster 2 Fast", "Nimpize Adventure", "Sonic Chrono Adventure", "Densha de D: Lightning Stage", "I Wanna See The Moon", "I Wanna Kill The Guy", "Piece's Extravaganza", "Mystery Game", "Gm8Emulator TAS Showcase", "Needle", "I Wanna Be The Justice", "I Wanna Whisper In Mirror", "Star Revenge 2: Night of Doom", "Grief Syndrome", "Maid Made Maze", "Metroid Fusion: Oil Spill", "Blind Adventure Race", "I Wanna Be The Co-op", "Blind Needle Race", "I Wanna Be The Strongest Fairy", "Designer L's Wacky Randventure!", "Waluigi's Taco Stand", "Coinflip Tournament", "Fangame Music DJ Set", "I Wanna Be The Platinum", "I Wanna Be The Computer 2", "I Wanna Be The With Friendsβ", "Blind Sudoku Race", "I Want", "I Wanna Be The Emperor", "Mario Party 64", "I Wanna Leave This Hell", "I Wanna Be The Destination", "Super Mario 63", "New Mini Kongkongi's Adventure", "Fangame Music Quiz", "Touhou Luna Nights", "Touhou Danmakufu", "Relay Race", "Mystery Finale Game", "I Wanna Make A Sandwich", "Crimson Needle 3", "Piece's Bonus Extravaganza", "Misuzu to Chiruno no Youkai no Yamadai Bouken Akushongemu", "Super Mario 74 Extreme Edition", "Draw My Guy"];
+        if (!options.length) options = ["I Wanna Be The Boshy", "Solace Dreams", "Realm Invasion", "Make a Good 24 Hour Mega Man Level", "Super Sheffy World 2", "Super Metroid: Redesign", "Twitch Does Avoidance", "I Wanna Be The Diverse ver0.95", "I Dun Wanna Be Anything 2", "Super Talking Time Bros. 2.5 The Last Levels", "Celeste Spring Collab 2020", "I Wanna Cruise the 6 Islands", "I Wanna Be the Volatile Presence", "I Wanna Be The Cloudburst", "Another Mario Adventure", "Metroid FreezeFlame 2: Twisted Dimensions", "Touhou Makuka Sai ~ Fantastic Danmaku Festival", "Avoidance Tournament", "I Wanna Be The Hamster!", "The Super Mario Bros. Super Show 64", "Blind Sudoku Race", "Mission Escape From Bad games", "I Wanna Burnmind", "I Wanna Kill the Last Boss", "Johnny's Nightmare", "I Wanna Kill The Kamilia", "I Don't Wanna Be The Gay", "Blind Needle Race", "Piece's Fangame Funanzapalooza", "I Wanna Cute Jump", "Star Revenge 2 Act 1: To The Moon", "Sonic 3: Angel Island Revisited", "I Wanna CoinStack 1000", "Super Mario Bros. Dimensions", "Maid Made Maze", "I Wanna Be The Justice, Easy Ver.", "I Wanna be The Vandal", "Microtwist", "Engaging Game Design", "I Wanna Duloxetine", "Slicing Apples", "Super Mario 64 Sapphire", "Fish Out Of Water", "Make a Good Mega Man Level: Episode Zero", "Smol Ame", "GuraQuest", "Star Revenge 0: Galaxy of Origins", "Crimson Needle 3", "Super Monkey Ball Gaiden", "Tempest of the Heavens and Earth", "Yoiyami Dancers", "Mega Man Battle Network Chrono X", "TAS Showcase", "I Wanna Run The Marathon", "I Wanna Delete The Huge Bug", "I Wanna Be The Blizzard", "Super Monkey Ball 651", "Super Mario 74", "Blind I Wanna Maker Race", "Blind Adventure Race", "Relay Race", "Mystery Finale Game", "Touhou Danmakufu", "Fangame Baggage", "I Wanna Walk Out In The Morning Dew", "Fangame Feud", "I Wanna Be The Battlegrounds", "Draw Thingy!"];
+
+        // FM2020 ["I Wanna Eclipse", "Super Metroid Ascent", "Star Revenge 2.5: Remnant of Doom", "Chill Needle 2", "Rockman 4 Burst Chaser x Air Sliding", "Fish Out Of Water", "Gensou Skydrift", "I Wanna Be The Neon 3", "I Wanna Be The Salt", "I Wanna KeyPick 100", "Ghost Mechanism", "SM64: Last Impact", "Super Mario Odyssey 64", "Blind I Wanna Maker", "I Wanna Be The Guy", "I Wanna Be The Guy: Gaiden", "NitorInc.", "Make a Good Mega Man Level 2", "Sunlust", "Avoidance Tournament", "Super Metroid Y-Faster 2 Fast", "Nimpize Adventure", "Sonic Chrono Adventure", "Densha de D: Lightning Stage", "I Wanna See The Moon", "I Wanna Kill The Guy", "Piece's Extravaganza", "Mystery Game", "Gm8Emulator TAS Showcase", "Needle", "I Wanna Be The Justice", "I Wanna Whisper In Mirror", "Star Revenge 2: Night of Doom", "Grief Syndrome", "Maid Made Maze", "Metroid Fusion: Oil Spill", "Blind Adventure Race", "I Wanna Be The Co-op", "Blind Needle Race", "I Wanna Be The Strongest Fairy", "Designer L's Wacky Randventure!", "Waluigi's Taco Stand", "Coinflip Tournament", "Fangame Music DJ Set", "I Wanna Be The Platinum", "I Wanna Be The Computer 2", "I Wanna Be The With Friendsβ", "Blind Sudoku Race", "I Want", "I Wanna Be The Emperor", "Mario Party 64", "I Wanna Leave This Hell", "I Wanna Be The Destination", "Super Mario 63", "New Mini Kongkongi's Adventure", "Fangame Music Quiz", "Touhou Luna Nights", "Touhou Danmakufu", "Relay Race", "Mystery Finale Game", "I Wanna Make A Sandwich", "Crimson Needle 3", "Piece's Bonus Extravaganza", "Misuzu to Chiruno no Youkai no Yamadai Bouken Akushongemu", "Super Mario 74 Extreme Edition", "Draw My Guy"];
 
         // todo: work on this backup
         //
@@ -303,6 +439,21 @@ class AdminPanel {
 
   setPreviewButton() {
 
+  };
+
+  setUpdateTwitchInfo() {
+    const text = "Update Twitch Info";
+    $("#adminPanelUpdateTwitchInfo").append( //todo: next
+      $("<button>", {
+        id: sanitize(text),
+        class: "loadButton",
+        text: text,
+        click: (e) => {
+          e.preventDefault();
+          twitchApi.updateTwitchFull(this.gameName)
+        }
+      })
+    );
   };
 
   setLoadLayoutInfo() {

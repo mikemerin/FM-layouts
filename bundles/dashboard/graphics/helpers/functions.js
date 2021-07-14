@@ -8,9 +8,17 @@ class Layout {
     this.locations = {};
 
     this.baseImageSrc;
+    this.badURLs = {};
 
     this.start();
   };
+
+  linkCheck = (url) => {
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status !== 404;
+  }
 
   runAndCommentaryAnimationInfo = {
     animationType: "collapse",
@@ -156,8 +164,11 @@ class Layout {
     var primaryOffset = 1000;
     // var primaryOffset = 10000; // TODO: change back
     var wrapper = document.querySelector(`#${id}`);
+    const elementSrc = "/assets/dashboard/" + lines[line];
     if (elementType === "text") wrapper.innerText = lines[line]; // todo: wrap the elementType in a function, link with complete
-    if (elementType === "image") wrapper.src = "/assets/dashboard/" + lines[line];
+    if (elementType === "image" && this.linkCheck(elementSrc)) {
+      wrapper.src = elementSrc;
+    }
 
     if (animationType === "flyIn") {
       const [flyInTranslateX, flyInTranslateY] = direction === "top" ? [[-90,0] , [-30,0]] : [[-170,0] , [20,0]];
@@ -222,6 +233,8 @@ class Layout {
         scaleB = 1;
       }
 
+
+
       animate.timeline({ })
       .add({
         targets: `#${id}`,
@@ -235,7 +248,10 @@ class Layout {
         complete: () => {
           line = (line + 1) % lines.length;
           if (elementType === "text") wrapper.innerText = lines[line];
-          if (elementType === "image") wrapper.src = "/assets/dashboard/" + lines[line];
+          const element2Src = "/assets/dashboard/" + lines[line];
+          if (elementType === "image" && this.linkCheck(element2Src)) {
+            wrapper.src = element2Src;
+          }
         }
       })
       .add({
@@ -266,7 +282,10 @@ class Layout {
         complete: () => {
           line = (line + 1) % lines.length;
           if (elementType === "text") wrapper.innerText = lines[line];
-          if (elementType === "image") wrapper.src = "/assets/dashboard/" + lines[line];
+          const element3Src = "/assets/dashboard/" + lines[line];
+          if (elementType === "image" && this.linkCheck(element3Src)) {
+            wrapper.src = element3Src;
+          }
         }
       })
       .add({
