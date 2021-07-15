@@ -132,7 +132,6 @@ class Layout {
     };
 
     var lines = [
-      "Fangame Marathon 2021 is brought to you by The Wannabes! This is a very long line of text to test stuff out.",
       "Fangame Marathon 2021 is brought to you by The Wannabes!",
       "Be sure to show your support for our runners by following them!",
       "Visit www.fangam.es for more IWBTG games!"
@@ -161,8 +160,8 @@ class Layout {
 
   createTimeline = (lines, line, id, animationInfo) => {
     const { animationType, elementType, direction } = animationInfo;
-    var primaryOffset = 1000;
-    // var primaryOffset = 10000; // TODO: change back
+    // var primaryOffset = 1000;
+    var primaryOffset = 10000; // TODO: change back
     var wrapper = document.querySelector(`#${id}`);
     const elementSrc = "/assets/dashboard/" + lines[line];
     if (elementType === "text") wrapper.innerText = lines[line]; // todo: wrap the elementType in a function, link with complete
@@ -389,7 +388,7 @@ class Layout {
 
     const createdByText = "Created By"
     const estimateText = "Estimate " + estimate;
-    const wrText = "WR " + worldRecord + " - " + wrHolder;
+    const wrText = worldRecord ? "WR " + worldRecord : "";
 
     let text = gameName;
     let textSwap = category;
@@ -399,7 +398,7 @@ class Layout {
     const text2 = createdByText;
     const text2Swap = estimateText;
     const text3 =  createdBy;
-    const text3Swap = "WR " + worldRecord + " by " + wrHolder;
+    const text3Swap = wrText;
     let locationInfo2 = this.getOffsetLocationInfo(locationInfo, layouts.offsets.runInfo2);
     let locationInfo3 = this.getOffsetLocationInfo(locationInfo, layouts.offsets.runInfo3);
     if (locationInfo.width || locationInfo.textAlign) {
@@ -432,8 +431,7 @@ class Layout {
 
       if (runInfoLines === 1) { // todo: clean up and make all have 1 2 or 3, with the tests be if > 1, if > 2, etc
         text = gameName + " (" + category + ") - Estimate " + estimate;
-        // textSwap = "Created By " + createdBy + " - " + category + " WR " + worldRecord + " by " + wrHolder;
-        textSwap = "Estimate " + estimate + " - " + category + " WR " + worldRecord + " by " + wrHolder;
+        textSwap = "Estimate " + estimate + " - " + category + (worldRecord ? " WR " + worldRecord : "");
       } else {
         const text2 = commentators;
         let locationInfo2 = this.getOffsetLocationInfo(locationInfo, layouts.offsets.runInfo2);
@@ -576,7 +574,7 @@ class Layout {
       const avatarSrc = "avatars/" + twitchHandle + ".png";
 
       const text = displayName + " (" + pronouns + ")";
-      const textSwap = "PB " + pb + " - " + twitchHandle;
+      const textSwap = (pb ? "PB " + pb + " - " : "") + twitchHandle;
 
       const tLocationInfo = this.getLocationInfo(tId, "player", playerNumber);
       const offsetInfo = this.getLocationInfo("offset", "player", playerNumber);

@@ -226,8 +226,10 @@ const initRuns = () => {
 
   const url = "https://oengus.io/api/marathons/fm2021/schedule";
   fetch(url).then(resp => resp.json()).then(res => {
-    // var mrl = nodecg.Replicant("oengusRunOrder");
-    // mrl.value = res.lines; // todo: implement this correctly
+
+    const oengusRunOrderReplicant = nodecg.Replicant("oengusRunOrder");
+    oengusRunOrderReplicant.value = res.lines;
+
     NodeCG.masterRunList.schedule.order = res.lines.map(({gameName}) => gameName );
 
     NodeCG.masterRunList.replicant = nodecg.Replicant("runs");
