@@ -132,9 +132,12 @@ class Layout {
     };
 
     var lines = [
-      "Fangame Marathon 2021 is brought to you by The Wannabes!",
-      "Be sure to show your support for our runners by following them!",
-      "Visit www.fangam.es for more IWBTG games!"
+      // "Fangame Marathon 2021 is brought to you by The Wannabes!", // FM2020
+      // "Visit www.fangam.es for more IWBTG games!" // FM2020
+      "Thanks for watching Fangame Marathon 2021!",
+      "Please show your support for our runners by following them!",
+      "Post clips in our !Discord to help with our highlight reel!",
+      "For updates on the event, follow @FangameMarathon on Twitter!"
     ];
 
     const sanitizedGameName = sanitize(this.fields.gameName);

@@ -116,14 +116,43 @@ class TwitchAPI {
     updateTwitchFull(game) {
       const { gameInfo, playerInfo, runInfo } = NodeCG.masterRunList.replicantValues[sanitize(game)];
       const { gameName, gameCategory } = gameInfo;
-      const { numberOfPlayers } = playerInfo
+      const { commentators, numberOfPlayers } = playerInfo
       const { category, runType } = runInfo;
 
-      const players = new Array(parseInt(numberOfPlayers)).fill().map((x,i) => playerInfo[`player${i+1}_twitchHandle`]).join(', ');
-      const title = `FM 2021 - ${gameName}, ${category} ${runType} by ${players}`;
+      let players, channels;
 
-      if (confirm(`WARNING: this updates the FM Twitch channel with the info below.\nPlease make sure it is correct before confirming.\n\nTitle:\n${title}\n\nGame Category: ${gameCategory}\n\nFeatured Channels: ${players}`)) {
-        this.updateChannel(title, gameCategory, players);
+      // TODO: this is a carveout, work into code instead with "multiple_people": true
+      const multiplePeopleEvents = ['Avoidance Tournament', 'Relay Race'];
+      if (multiplePeopleEvents.includes(gameName)) {
+        players = 'Multiple People';
+        channels = (gameName === 'Avoidance Tournament'
+          ? ["Arzztt", "Draconical879", "Framzo", "IanBoy141", "Make_North", "Mastermaxify", "Not2Dey", "Razzor_iw", "Skulldude_", "Tehninza", "Wolsk", "bummerman222", "cheez8", "iraqlobster1", "popop4342", "romrom444"]
+          : gameName === 'Relay Race'
+            ? ["BV502", "CeleCele", "Cosmoing", "Gaborro14", "Kalemandu", "Naloas", "Not2Dey", "Tehninza", "Wolfiexe", "d0ppller", "strelook21"]
+            : []
+        ).join(', ');
+      } else {
+        channels = players = new Array(parseInt(numberOfPlayers)).fill().map((x,i) => playerInfo[`player${i+1}_twitchHandle`]).join(', ');
+      }
+
+      if (commentators) {
+        const nonTwitchChannels = [
+          'Multiple People',
+          'KevinStevens525',
+          'killer336',
+          'SloppySlime',
+          'SpookyDad2',
+        ]
+        let commentatorsTwitch = commentators.split(', ').filter(c => !nonTwitchChannels.includes(c));
+        if (commentatorsTwitch.length) {
+          channels += ', ' + commentatorsTwitch.join(', ');
+        }
+      }
+
+      const status = `FM 2021 - ${gameName}, ${category} ${runType} by ${players}`;
+
+      if (confirm(`WARNING: this updates the FM Twitch channel with the info below.\nPlease make sure it is correct before confirming.\n\nTitle:\n${status}\n\nGame Category: ${gameCategory}\n\nFeatured Channels: ${channels}`)) {
+        this.updateChannel(status, gameCategory, channels);
       }
     }
 }

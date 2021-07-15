@@ -30,7 +30,7 @@
             "player4_camera": false,
             "player4_pb": null,
             "player4_pronouns": null,
-            "commentators": "Placements"
+            "commentators": null
         },
         "runInfo": {
             "category": "100%",
@@ -582,7 +582,7 @@
             "player4_camera": false,
             "player4_pb": null,
             "player4_pronouns": null,
-            "commentators": "vv. (egg)"
+            "commentators": "eggv"
         },
         "runInfo": {
             "category": "Any%",
@@ -887,7 +887,7 @@
             "player1_twitchHandle": "DNVIC",
             "player1_displayName": "dnvic",
             "player1_camera": false,
-            "player1_pb": "0:09:10",
+            "player1_pb": "0:08:57",
             "player1_pronouns": "he/him",
             "player2_twitchHandle": null,
             "player2_displayName": null,
@@ -910,7 +910,7 @@
             "category": "All Achievements and Cat Easy",
             "estimate": "0:20:00",
             "runType": "Run",
-            "worldRecord": "0:9:10 by DNVIC",
+            "worldRecord": "0:08:57 by DNVIC",
             "wrHolder": null,
             "commentator_pronouns": null
         },
@@ -1824,7 +1824,7 @@
             "player4_camera": false,
             "player4_pb": null,
             "player4_pronouns": null,
-            "commentators": "Pinkie, ihave_scurvy, KevinStevens525"
+            "commentators": "pinkie_tv, ihave_scurvy, KevinStevens525"
         },
         "runInfo": {
             "category": "Full Game Bubba%",
@@ -2874,7 +2874,7 @@
         "runInfo": {
             "category": "Flop%",
             "estimate": "1:33:00",
-            "runType": "Race",
+            "runType": "Event",
             "worldRecord": null,
             "wrHolder": null
         },
@@ -2919,7 +2919,7 @@
         "runInfo": {
             "category": "Best of 15",
             "estimate": "1:15:00",
-            "runType": "Race",
+            "runType": "Event",
             "worldRecord": null,
             "wrHolder": null
         },
@@ -2964,7 +2964,7 @@
         "runInfo": {
             "category": "Avoid%",
             "estimate": "2:08:00",
-            "runType": "Tournament",
+            "runType": "Event",
             "worldRecord": null,
             "wrHolder": null
         },
@@ -3007,9 +3007,9 @@
             "commentators": null
         },
         "runInfo": {
-            "category": "Race%",
+            "category": "Blind%",
             "estimate": "2:00:00",
-            "runType": "Race",
+            "runType": "Event",
             "worldRecord": null,
             "wrHolder": null
         },
@@ -3054,7 +3054,7 @@
         "runInfo": {
             "category": "Blind%",
             "estimate": "1:48:00",
-            "runType": "Race",
+            "runType": "Event",
             "worldRecord": null,
             "wrHolder": null
         },
@@ -3097,9 +3097,9 @@
             "commentators": null
         },
         "runInfo": {
-            "category": "Race%",
+            "category": "Blind%",
             "estimate": "1:33:00",
-            "runType": "Race",
+            "runType": "Event",
             "worldRecord": null,
             "wrHolder": null
         },
@@ -3144,7 +3144,7 @@
         "runInfo": {
             "category": "Race%",
             "estimate": "1:30:00",
-            "runType": "Race",
+            "runType": "Event",
             "worldRecord": null,
             "wrHolder": null
         },
@@ -3162,40 +3162,45 @@
             "genres": "Adventure; Avoidance; Gimmick; Trap; Needle",
             "otherGenres": null,
             "game1": {
-                "gameName": "I Wanna Be The Groovy",
-                "gameCategory": "I Wanna Be The Guy",
-                "resolution": "608",
-                "createdBy": "どるっぴ",
-                "genres": null,
-                "otherGenres": null
+              "gameName": "I Wanna Go End Of The World",
+              "gameCategory": "I Wanna Be The Guy",
+              "category": "any%",
+              "resolution": "608",
+              "createdBy": "ノベボー, ロボ厨",
+              "genres": null,
+              "otherGenres": null
             },
             "game2": {
-                "gameName": "I Wanna Go End Of The World",
+                "gameName": "I Wanna Be The Aura",
                 "gameCategory": "I Wanna Be The Guy",
-                "resolution": "608",
-                "createdBy": "ノベボー, ロボ厨",
+                "category": "any%",
+                "resolution": "600",
+                "createdBy": "蒼羅",
                 "genres": null,
                 "otherGenres": null
             },
             "game3": {
                 "gameName": "Not Another Needle Game",
                 "gameCategory": "I Wanna Be The Guy",
+                "category": "Bad Ending",
                 "resolution": "608",
                 "createdBy": "Thenewgeezer",
                 "genres": null,
                 "otherGenres": null
             },
             "game4": {
-                "gameName": "I Wanna Be The Aura",
+                "gameName": "I Wanna Be The Groovy",
                 "gameCategory": "I Wanna Be The Guy",
-                "resolution": "600",
-                "createdBy": "蒼羅",
+                "category": "any%",
+                "resolution": "608",
+                "createdBy": "どるっぴ",
                 "genres": null,
                 "otherGenres": null
             },
             "game5": {
                 "gameName": "I Wanna Afflict The Mashikaku",
                 "gameCategory": "I Wanna Be The Guy",
+                "category": "any%",
                 "resolution": "608",
                 "createdBy": "椛饅頭",
                 "genres": null,
@@ -3205,34 +3210,34 @@
         "playerInfo": {
             "numberOfPlayers": "3",
             "team1": {
-                "player1_twitchHandle": "Wolfiexe",
-                "player1_displayName": "Wolfie",
+                "player1_twitchHandle": "Gaborro14",
+                "player1_displayName": "Gaborro",
                 "player1_pronouns": "he/him",
-                "player2_twitchHandle": "Gaborro14",
-                "player2_displayName": "Gaborro",
+                "player2_twitchHandle": "Kalemandu",
+                "player2_displayName": "Kale",
                 "player2_pronouns": "he/him",
                 "player3_twitchHandle": "BV502",
                 "player3_displayName": "bv",
                 "player3_pronouns": "he/him",
-                "player4_twitchHandle": "Kalemandu",
-                "player4_displayName": "Kale",
+                "player4_twitchHandle": "Wolfiexe",
+                "player4_displayName": "Wolfie",
                 "player4_pronouns": "he/him",
-                "player5_twitchHandle": "d0ppller",
-                "player5_displayName": "d0ppller",
+                "player5_twitchHandle": "D0ppller",
+                "player5_displayName": "Doppller",
                 "player5_pronouns": "he/him"
             },
             "team2": {
-                "player1_twitchHandle": "strelook21",
-                "player1_displayName": "Evgeny",
+                "player1_twitchHandle": "Not2Dey",
+                "player1_displayName": "Not2Dey",
                 "player1_pronouns": "he/him",
-                "player2_twitchHandle": "Not2Dey",
-                "player2_displayName": "Not2Dey",
+                "player2_twitchHandle": "CeleCele",
+                "player2_displayName": "Cele",
                 "player2_pronouns": "he/him",
                 "player3_twitchHandle": "Tehninza",
                 "player3_displayName": "Tehninza",
                 "player3_pronouns": "he/him",
-                "player4_twitchHandle": "CeleCele",
-                "player4_displayName": "Cele",
+                "player4_twitchHandle": "strelook21",
+                "player4_displayName": "Evgeny",
                 "player4_pronouns": "he/him",
                 "player5_twitchHandle": "Naloas",
                 "player5_displayName": "Naloa",
@@ -3258,9 +3263,9 @@
             "commentators": null
         },
         "runInfo": {
-            "category": "Race%",
+            "category": "Relay%",
             "estimate": "2:53:00",
-            "runType": "Relay Race",
+            "runType": "Event",
             "worldRecord": null,
             "wrHolder": null
         },
