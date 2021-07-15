@@ -161,7 +161,7 @@ class Layout {
     this.createTimeline(lines, 0, id, animationInfo);
   }
 
-  createTimeline = (lines, line, id, animationInfo) => {
+  createTimeline = (lines, line, id, animationInfo, limitTextAmount) => {
     const { animationType, elementType, direction } = animationInfo;
     // var primaryOffset = 1000;
     var primaryOffset = 10000; // TODO: change back
@@ -374,7 +374,6 @@ class Layout {
     outlineTopInfo.left += offsetLeft; outlineTopInfo.top -= offsetTop;
     outlineBotInfo.left += offsetLeft; outlineBotInfo.top += offsetBot;
 
-    // debugger
     changeCSSRule("name", "gradientMovementRight", "100%", "{ background-position: " + outline.width + " 0 }");
     changeCSSRule("name", "gradientMovementLeft", "0%", "{ background-position: " + outline.width + " 0 }");
 
@@ -398,10 +397,19 @@ class Layout {
 
     const runInfoLines = this.getLocationInfo("runInfoLines");
 
-    const text2 = createdByText;
+    let text2 = createdByText;
     const text2Swap = estimateText;
     const text3 =  createdBy;
     const text3Swap = wrText;
+
+    const gameTextCutoff = 32;
+
+    if (text.length > gameTextCutoff) {
+      const lastSpace = text.slice(0, gameTextCutoff).match(/(?=[^ ]*$)/).index;
+      text2 = text.slice(lastSpace) + ' - ' + text2;
+      text = text.slice(0, lastSpace - 1);
+    }
+
     let locationInfo2 = this.getOffsetLocationInfo(locationInfo, layouts.offsets.runInfo2);
     let locationInfo3 = this.getOffsetLocationInfo(locationInfo, layouts.offsets.runInfo3);
     if (locationInfo.width || locationInfo.textAlign) {
@@ -415,7 +423,7 @@ class Layout {
     this.createTimeline([text3, text3Swap], 0, baseId + 3, this.runAndCommentaryAnimationInfo)
 
     this.createElement(baseId + 1, className, text, locationInfo, "text", baseId);
-    this.createTimeline([text, textSwap], 0, baseId + 1, this.runAndCommentaryAnimationInfo)
+    this.createTimeline([text, textSwap], 0, baseId + 1, this.runAndCommentaryAnimationInfo, 36)
   };
 
   setCommentaryInfo = () => {
