@@ -433,8 +433,7 @@ class Layout {
       const runInfoLines = this.getLocationInfo("runInfoLines");
 
       if (runInfoLines === 1) { // todo: clean up and make all have 1 2 or 3, with the tests be if > 1, if > 2, etc
-        text = gameName + " (" + category + ") - Estimate " + estimate;
-        textSwap = "Estimate " + estimate + " - " + category + (worldRecord ? " WR " + worldRecord : "");
+        text = commentaryByText + ' ' + commentators;
       } else {
         const text2 = commentators;
         let locationInfo2 = this.getOffsetLocationInfo(locationInfo, layouts.offsets.runInfo2);

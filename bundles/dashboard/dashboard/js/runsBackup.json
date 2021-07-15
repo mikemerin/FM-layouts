@@ -139,7 +139,7 @@
     },
     "makeAGood24HourMegaManLevel": {
         "gameInfo": {
-            "gameName": "Make a Good 24 Hour Mega Man Level",
+            "gameName": "MaG24HMML",
             "gameCategory": "Mega Man",
             "resolution": "8:7",
             "createdBy": "Multiple People",
@@ -179,7 +179,7 @@
             "commentator_pronouns": "she/her"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".1",
             "chromaKeyColor": "green"
         }
     },
@@ -657,7 +657,7 @@
             "player1_twitchHandle": "Mushie64",
             "player1_displayName": "Mushie64",
             "player1_camera": false,
-            "player1_pb": "1:52:50",
+            "player1_pb": "1:51:07",
             "player1_pronouns": "he/him",
             "player2_twitchHandle": null,
             "player2_displayName": null,
@@ -737,7 +737,7 @@
     },
     "touhouMakukaSaiFantasticDanmakuFestival": {
         "gameInfo": {
-            "gameName": "Touhou Makuka Sai ~ Fantastic Danmaku Festival",
+            "gameName": "Touhou Makuka Sai - Fantastic Danmaku Festival",
             "gameCategory": "Touhou Project",
             "resolution": "600",
             "createdBy": "東方幕華祭制作组",
@@ -1473,7 +1473,7 @@
     },
     "iWannaBeTheJustice,EasyVer": {
         "gameInfo": {
-            "gameName": "I Wanna Be The Justice, Easy Ver.",
+            "gameName": "I Wanna Be The Justice (Easy Ver.)",
             "gameCategory": "I Wanna Be The Guy",
             "resolution": "600",
             "createdBy": "Carnival",
@@ -1749,7 +1749,7 @@
     },
     "makeAGoodMegaManLevelEpisodeZero": {
         "gameInfo": {
-            "gameName": "Make a Good Mega Man Level: Episode Zero",
+            "gameName": "MaGMML: Episode Zero",
             "gameCategory": "Mega Man",
             "resolution": "8:7",
             "createdBy": "Multiple People",
@@ -2873,7 +2873,7 @@
         },
         "runInfo": {
             "category": "Flop%",
-            "estimate": "1:33:00",
+            "estimate": "1:30:00",
             "runType": "Event",
             "worldRecord": null,
             "wrHolder": null
@@ -2888,7 +2888,7 @@
             "gameName": "Blind I Wanna Maker Race",
             "gameCategory": "I Wanna Maker",
             "resolution": "608",
-            "createdBy": "The FM Team",
+            "createdBy": "The Calf Crew",
             "genres": null,
             "otherGenres": "Blind"
         },
@@ -2962,8 +2962,8 @@
             "commentators": null
         },
         "runInfo": {
-            "category": "Avoid%",
-            "estimate": "2:08:00",
+            "category": "Avoid Things%",
+            "estimate": "2:00:00",
             "runType": "Event",
             "worldRecord": null,
             "wrHolder": null
@@ -3023,7 +3023,7 @@
             "gameName": "Blind Needle Race",
             "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
-            "createdBy": "The FM Team",
+            "createdBy": "The Scumblers",
             "genres": "Needle",
             "otherGenres": "Blind"
         },
@@ -3034,16 +3034,16 @@
             "player1_camera": false,
             "player1_pb": null,
             "player1_pronouns": "he/him",
-            "player2_twitchHandle": "Thenewgeezer",
-            "player2_displayName": "Geezer",
+            "player2_twitchHandle": "Thenadertwo",
+            "player2_displayName": "Nader",
             "player2_camera": false,
             "player2_pb": null,
-            "player2_pronouns": "they/them",
-            "player3_twitchHandle": "Thenadertwo",
-            "player3_displayName": "Nader",
+            "player2_pronouns": "he/him",
+            "player3_twitchHandle": "Thenewgeezer",
+            "player3_displayName": "Geezer",
             "player3_camera": false,
             "player3_pb": null,
-            "player3_pronouns": "he/him",
+            "player3_pronouns": "they/them",
             "player4_twitchHandle": "Tehninza",
             "player4_displayName": "Tehninza",
             "player4_camera": false,
@@ -3053,7 +3053,7 @@
         },
         "runInfo": {
             "category": "Blind%",
-            "estimate": "1:48:00",
+            "estimate": "1:45:00",
             "runType": "Event",
             "worldRecord": null,
             "wrHolder": null
@@ -3068,7 +3068,7 @@
             "gameName": "Blind Sudoku Race",
             "gameCategory": "I Wanna Be The Guy",
             "resolution": "608",
-            "createdBy": "The FM Masochists",
+            "createdBy": "Them",
             "genres": null,
             "otherGenres": "Sudoku"
         },
@@ -3098,7 +3098,7 @@
         },
         "runInfo": {
             "category": "Blind%",
-            "estimate": "1:33:00",
+            "estimate": "1:30:00",
             "runType": "Event",
             "worldRecord": null,
             "wrHolder": null
@@ -3210,6 +3210,7 @@
         "playerInfo": {
             "numberOfPlayers": "3",
             "team1": {
+                "teamName": "First",
                 "player1_twitchHandle": "Gaborro14",
                 "player1_displayName": "Gaborro",
                 "player1_pronouns": "he/him",
@@ -3227,6 +3228,7 @@
                 "player5_pronouns": "he/him"
             },
             "team2": {
+              "teamName": "that ^",
                 "player1_twitchHandle": "Not2Dey",
                 "player1_displayName": "Not2Dey",
                 "player1_pronouns": "he/him",
@@ -3244,6 +3246,7 @@
                 "player5_pronouns": "he/him"
             },
             "team3": {
+                "teamName": "Cosmoing",
                 "player1_twitchHandle": "Cosmoing",
                 "player1_displayName": "Cosmoing",
                 "player1_pronouns": "he/him",
@@ -3264,7 +3267,7 @@
         },
         "runInfo": {
             "category": "Relay%",
-            "estimate": "2:53:00",
+            "estimate": "2:45:00",
             "runType": "Event",
             "worldRecord": null,
             "wrHolder": null
