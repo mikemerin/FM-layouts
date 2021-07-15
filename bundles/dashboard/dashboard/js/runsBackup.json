@@ -1053,7 +1053,7 @@
             "commentator_pronouns": "he/him"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".1",
             "chromaKeyColor": "green"
         }
     },
