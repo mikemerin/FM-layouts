@@ -139,7 +139,7 @@
     },
     "makeAGood24HourMegaManLevel": {
         "gameInfo": {
-            "gameName": "MaG24HMML",
+            "gameName": "Make a Good 24 Hour Mega Man Level",
             "gameCategory": "Mega Man",
             "resolution": "8:7",
             "createdBy": "Multiple People",
@@ -156,7 +156,7 @@
             "player2_twitchHandle": "TimeLink",
             "player2_displayName": "TimeLink",
             "player2_camera": false,
-            "player2_pb": "0:20:17",
+            "player2_pb": "0:18:59",
             "player2_pronouns": "he/him",
             "player3_twitchHandle": "GniefFiar",
             "player3_displayName": "GniefFiar",
@@ -1473,7 +1473,7 @@
     },
     "iWannaBeTheJustice,EasyVer": {
         "gameInfo": {
-            "gameName": "I Wanna Be The Justice (Easy Ver.)",
+            "gameName": "I Wanna Be The Justice (Easy)",
             "gameCategory": "I Wanna Be The Guy",
             "resolution": "600",
             "createdBy": "Carnival",

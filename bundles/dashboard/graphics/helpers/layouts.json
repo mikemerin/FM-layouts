@@ -491,7 +491,7 @@ var layouts = {
       "commentInfo":  { "left": -450,  "top": 500,  "width": "100%", "textAlign": "center" },
       "runInfo":      { "left": 0,  "top": 100, "width": "100%", "textAlign": "center" },
       "runInfoLines": 3,
-      "announcement": { "left": 34, "bottom": 12, "width": 328, "height": 80, "fontSize": "20px" },
+      "announcement": { "left": 34, "bottom": 120, "width": 328, "height": 80, "fontSize": "20px" },
       "player1": {
         "twitchIcon": { "height": 22, "width": 22 }
       },
@@ -601,7 +601,56 @@ var layouts = {
           "offset":   { "left": 312,  "top": 237 }
         }
       }
-    }
+    },
+    "8:7": {
+      "announcement": { "left": 41, "bottom": 24, "width": 350, "height": 80, "fontSize": "24px" },
+      "commentInfo":  { "left": 0,  "top": 440,   "width": "100%", "textAlign": "center" },
+      "runInfo":      { "left": 0,  "top": 610,   "width": "100%", "textAlign": "center" },
+      "hashtag":      {
+        "position":   { "left": 41,   "top": 528 },
+        "text":       { "fontSize": "40.5px" },
+        "outline":    { "width": "344px" }
+      },
+      "player1": {
+        "twitchIcon": { "left":  10,  "top": 27, "width": 28, "height": 28 },
+        "offset":     { "left":  35,  "top": -2 },
+        "gameBorder": {
+          "start":    { "left": 0,    "top": 58  },
+          "offset":   { "left": 417,  "top": 364 }
+        }
+      },
+      "player2": {
+        "dev_note":   "todo: fix this and make the display/margin a className: center",
+        "twitchIcon": { "left": -11, "top": 2, "width": 28, "height": 28, "display": "block", "marginLeft": "50%", "marginRight": "50%", "flyIn": "top" },
+        "offset":     { "left": 11, "top": 28, "textAlign": "center" },
+        "gameBorder": {
+          "start":    { "left": 426,  "top": 58 },
+          "offset":   { "left": 417,  "top": 364 }
+        }
+      },
+      "player3": {
+        "twitchIcon": { "right":  7,  "top": 27, "width": 28, "height": 28 },
+        "offset":     { "right": 33, "top": -2 },
+        "gameBorder": {
+          "start":    { "left": 852,  "top": 58  },
+          "offset":   { "left": 417,  "top": 364 }
+        }
+      },
+      "borders": {
+        "genres": {
+          "start":    { "left": 438,  "top": 619 },
+          "offset":   { "left": 396,  "top": 73 }
+        },
+        "timer": {
+          "start":    { "left": 438,  "top": 513 },
+          "offset":   { "left": 396,  "top": 72  }
+        },
+        "titleCard": {
+          "start":    { "left": 906,  "top": 455 },
+          "offset":   { "left": 312,  "top": 237 }
+        }
+      }
+    },
   },
 
 
