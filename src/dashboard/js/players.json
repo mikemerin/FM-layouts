@@ -1,0 +1,82 @@
+var players = [
+    {
+        "playerName": "Arzztt",
+        "twitchHandle": "Arzztt",
+        "pronouns": "he/him"
+    },
+    {
+        "playerName": "bummerman222",
+        "twitchHandle": "bummerman222",
+        "pronouns": "he/him"
+    },
+    {
+        "playerName": "Cheez",
+        "twitchHandle": "cheez8",
+        "pronouns": "they/them"
+    },
+    {
+        "playerName": "Draconical",
+        "twitchHandle": "Draconical879",
+        "pronouns": "she/her"
+    },
+    {
+        "playerName": "Framzo",
+        "twitchHandle": "Framzo",
+        "pronouns": "he/him"
+    },
+    {
+        "playerName": "Ian",
+        "twitchHandle": "IanBoy141",
+        "pronouns": "he/him"
+    },
+    {
+        "playerName": "iraqlobster1",
+        "twitchHandle": "iraqlobster1",
+        "pronouns": "he/him"
+    },
+    {
+        "playerName": "North",
+        "twitchHandle": "Make_North",
+        "pronouns": "he/him"
+    },
+    {
+        "playerName": "max",
+        "twitchHandle": "Mastermaxify",
+        "pronouns": "he/him"
+    },
+    {
+        "playerName": "Not2Dey",
+        "twitchHandle": "Not2Dey",
+        "pronouns": "he/him"
+    },
+    {
+        "playerName": "popop",
+        "twitchHandle": "popop4342",
+        "pronouns": "he/him"
+    },
+    {
+        "playerName": "Razzor",
+        "twitchHandle": "Razzor_iw",
+        "pronouns": "he/him"
+    },
+    {
+        "playerName": "romrom",
+        "twitchHandle": "romrom444",
+        "pronouns": "he/him"
+    },
+    {
+        "playerName": "Skulldude",
+        "twitchHandle": "Skulldude_",
+        "pronouns": "he/him"
+    },
+    {
+        "playerName": "Tehninza",
+        "twitchHandle": "Tehninza",
+        "pronouns": "he/him"
+    },
+    {
+        "playerName": "Wolsk",
+        "twitchHandle": "Wolsk",
+        "pronouns": "he/him"
+    }
+]

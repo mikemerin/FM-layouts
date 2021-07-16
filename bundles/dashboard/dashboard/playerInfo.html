@@ -3,13 +3,39 @@
 	<head>
 		<script src="/js/jquery-3.5.1.min.js"></script>
 		<script type="text/javascript" src="/dashboard/js/fieldGroups.json"></script>
+		<script type="text/javascript" src="/dashboard/js/players.json"></script>
 		<script type="text/javascript" src="/dashboard/js/globalFunctions.js"></script>
 		<script type="text/javascript" src="js/dashboardForm.js"></script>
+		<style>
+			.panel-table, .panel-table tr, .panel-table th, .panel-table td {
+			  border: 1px solid black;
+				text-align: center;
+			}
+
+			.clickable {
+			  cursor: pointer;
+			  border: 2px solid red;
+		}
+
+		</style>
 	</head>
 	<body id="playerInfoBody">
 		<div id="playerInfoFields"></div>
 		<div id="playerFields"></div>
 		<div id="playerInfoSave"></div>
+		<br><hr><br>
+		<div id="playerInfoAvoidance">
+			<label>Avoidance Players</label>
+			<table id="playerTableAvoidance" class="panel-table" style="border: 1px solid black">
+				<tr>
+					<th>Twitch Handle</th>
+					<th>Display Name</th>
+					<th>Pronouns</th>
+					<th>Make P1</th>
+					<th>Make P2</th>
+				</tr>
+			</table>
+		</div>
 	</body>
 
 	<script type="text/javascript">
@@ -18,6 +44,27 @@
 			console.log(fieldGroup + " ready", e);
 			var dashboardForm = new DashboardForm(fieldGroup);
 			NodeCG.dashboardPanels.panels[fieldGroup] = dashboardForm;
+
+			players.forEach(({twitchHandle, playerName, pronouns}) => {
+				$("#playerTableAvoidance").append(
+					$("<tr>")
+						.append($("<td>", { text: twitchHandle }))
+						.append($("<td>", { text: playerName }))
+						.append($("<td>", { text: pronouns }))
+						.append($("<td>", { text: 'P1', class: 'clickable', click: () => {
+								dashboardForm.insertPlayer(twitchHandle, 1);
+								setTimeout(() => dashboardForm.insertPlayer(twitchHandle, 1), 10);
+								setTimeout(() => dashboardForm.insertPlayer(twitchHandle, 1), 20); // TODO: FIX
+							}
+						}))
+						.append($("<td>", { text: 'P2', class: 'clickable', click: () => {
+							dashboardForm.insertPlayer(twitchHandle, 2)
+							setTimeout(() => dashboardForm.insertPlayer(twitchHandle, 2), 10);
+							setTimeout(() => dashboardForm.insertPlayer(twitchHandle, 2), 20);
+							}
+						}))
+				)
+			});
 		});
 	</script>
 </html>

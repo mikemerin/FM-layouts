@@ -150,6 +150,37 @@ class DashboardForm {
     });
   };
 
+  insertPlayer = (twitchHandle, playerNumber) => {
+    const replicant = nodecg.Replicant("fieldValues");
+    console.log(nodecg)
+    console.log(players)
+    console.log(twitchHandle)
+    const playerInfo = players.find((player) => player.twitchHandle === twitchHandle);
+    const { playerName, pronouns } = playerInfo;
+
+    if (playerNumber === 1) { // TODO: spaghetti code, fix this
+      NodeCG.dashboardPanels.panels.playerInfo.dashboardFields[2].value = twitchHandle;
+      NodeCG.dashboardPanels.panels.playerInfo.dashboardFields[3].value = playerName;
+      NodeCG.dashboardPanels.panels.playerInfo.dashboardFields[4].value = pronouns;
+    } else {
+      NodeCG.dashboardPanels.panels.playerInfo.dashboardFields[7].value = twitchHandle;
+      NodeCG.dashboardPanels.panels.playerInfo.dashboardFields[8].value = playerName;
+      NodeCG.dashboardPanels.panels.playerInfo.dashboardFields[9].value = pronouns;
+    }
+
+    this.saveFields();
+    this.saveFields();
+    this.saveFields();
+    setTimeout(() => $("#adminPanelLoadRunInfoButton").click(), 200);
+    // nodecg.readReplicant(name, namespace, replicantValues => {
+    //   var newValues = {...replicantValues};
+    //   console.log(name, namespace)
+    //
+    // })
+    // NodeCG.dashboardPanels.replicant.value.playerInfo
+    // debugger
+  }
+
   updatePlayerFields = (numberOfPlayers) => {
     if (!numberOfPlayers) {
       numberOfPlayers = 1;

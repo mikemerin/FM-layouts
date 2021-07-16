@@ -578,7 +578,7 @@ class Layout {
   }
 
   setPlayerInfo = () => {
-    var players = parseInt(this.fields.numberOfPlayers, 10);
+    const players = parseInt(this.fields.numberOfPlayers, 10);
     const tId = "twitchIcon";
     const tClassName = "primary twitchIcon";
     const twitchSrc = "baseLayoutLayers/" + tId + ".png";

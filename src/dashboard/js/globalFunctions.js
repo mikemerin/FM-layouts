@@ -325,7 +325,7 @@ class SetReplicant {
 
     if (gameName === "Create New Run") {
       text += `make a new run for ${gameName}?`;
-      // todo: check if on the schedule or not
+      // TODO: check if on the schedule or not (make an issue for this, may not be needed)
     } else {
       const savedGameRun = this.runsReplicant.value[sanitize(gameName)];
       ["gameInfo", "runInfo", "playerInfo", "adminPanel"].forEach(panel => {
