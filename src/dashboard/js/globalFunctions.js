@@ -391,6 +391,7 @@ class AdminPanel {
       text: "Load",
       click: () => {
         this.gameName = $("#gameNameAdmin").val();
+        console.log('clicked for' + this.gameName);
         setReplicant.loadRunIntoDashboard(this.gameName);
       }
     });

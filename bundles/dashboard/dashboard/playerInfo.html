@@ -53,14 +53,12 @@
 						.append($("<td>", { text: pronouns }))
 						.append($("<td>", { text: 'P1', class: 'clickable', click: () => {
 								dashboardForm.insertPlayer(twitchHandle, 1);
-								setTimeout(() => dashboardForm.insertPlayer(twitchHandle, 1), 10);
-								setTimeout(() => dashboardForm.insertPlayer(twitchHandle, 1), 20); // TODO: FIX
+								setTimeout(() => dashboardForm.insertPlayer(twitchHandle, 1), 200);
 							}
 						}))
 						.append($("<td>", { text: 'P2', class: 'clickable', click: () => {
-							dashboardForm.insertPlayer(twitchHandle, 2)
-							setTimeout(() => dashboardForm.insertPlayer(twitchHandle, 2), 10);
-							setTimeout(() => dashboardForm.insertPlayer(twitchHandle, 2), 20);
+								dashboardForm.insertPlayer(twitchHandle, 2);
+								setTimeout(() => dashboardForm.insertPlayer(twitchHandle, 2), 200);
 							}
 						}))
 				)

@@ -152,9 +152,6 @@ class DashboardForm {
 
   insertPlayer = (twitchHandle, playerNumber) => {
     const replicant = nodecg.Replicant("fieldValues");
-    console.log(nodecg)
-    console.log(players)
-    console.log(twitchHandle)
     const playerInfo = players.find((player) => player.twitchHandle === twitchHandle);
     const { playerName, pronouns } = playerInfo;
 
@@ -171,14 +168,9 @@ class DashboardForm {
     this.saveFields();
     this.saveFields();
     this.saveFields();
+    setTimeout(() => $("#adminPanelLoadRunInfoButton").click(), 100);
     setTimeout(() => $("#adminPanelLoadRunInfoButton").click(), 200);
-    // nodecg.readReplicant(name, namespace, replicantValues => {
-    //   var newValues = {...replicantValues};
-    //   console.log(name, namespace)
-    //
-    // })
-    // NodeCG.dashboardPanels.replicant.value.playerInfo
-    // debugger
+    setTimeout(() => $("#adminPanelLoadRunInfoButton").click(), 1000);
   }
 
   updatePlayerFields = (numberOfPlayers) => {
