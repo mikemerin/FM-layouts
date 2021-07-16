@@ -383,24 +383,31 @@ class Layout {
   };
 
   setRunInfo = () => {
-    const { category, createdBy, estimate, gameName, worldRecord, wrHolder } = this.fields; // todo: add checks here if no WR aka N/A
+    // TODO: change to GameAndCommentaryInfo
+    const { commentators, createdBy, gameName, worldRecord } = this.fields;
     const baseId = "runInfo"
     const className = `${baseId} primary`;
     const locationInfo = this.getLocationInfo(baseId);
 
     const createdByText = "Created By"
-    const estimateText = "Estimate " + estimate;
+    const commentaryByText = "Commentary By";
     const wrText = worldRecord ? "WR " + worldRecord : "";
-
-    let text = gameName;
-    let textSwap = category;
 
     const runInfoLines = this.getLocationInfo("runInfoLines");
 
+    let text = gameName;
     let text2 = createdByText;
-    const text2Swap = estimateText;
     const text3 =  createdBy;
-    const text3Swap = wrText;
+
+    let textSwap = '', text2Swap = '', text3Swap = '';
+
+    if (commentators) {
+      textSwap = wrText;
+      text2Swap = commentaryByText;
+      text3Swap = commentators;
+    } else {
+      text2Swap = wrText;
+    }
 
     const gameTextCutoff = 32;
 
@@ -427,34 +434,32 @@ class Layout {
   };
 
   setCommentaryInfo = () => {
-    const { commentators } = this.fields; // todo: add checks here if no WR aka N/A
-    if (commentators) {
-      const baseId = "commentInfo";
-      const className = `${baseId} primary`;
-      const locationInfo = this.getLocationInfo(baseId);
+    const { category, estimate } = this.fields;
+    const estimateText = "Estimate " + estimate;
 
-      const commentaryByText = "Commentary By";
+    const baseId = "commentInfo"; // TODO: change from comment to runInfo
+    const className = `${baseId} primary`;
+    const locationInfo = this.getLocationInfo(baseId);
 
-      let text = commentaryByText;
-      const textSwap = '', text2Swap = '';
+    let text = category;
 
-      const runInfoLines = this.getLocationInfo("runInfoLines");
+    const runInfoLines = this.getLocationInfo("runInfoLines");
 
-      if (runInfoLines === 1) { // todo: clean up and make all have 1 2 or 3, with the tests be if > 1, if > 2, etc
-        text = commentaryByText + ' ' + commentators;
-      } else {
-        const text2 = commentators;
-        let locationInfo2 = this.getOffsetLocationInfo(locationInfo, layouts.offsets.runInfo2);
-        if (locationInfo.width || locationInfo.textAlign) {
-          const { width, textAlign } = locationInfo; // todo: double check if just textAlign: right and no width if this still works
-          locationInfo2 = {...locationInfo2, width: width, textAlign: textAlign };
-        };
-        this.createElement(baseId + 2, className, text2, locationInfo2, "text", baseId);
-        this.createTimeline([text2, text2Swap], 0, baseId + 2, this.runAndCommentaryAnimationInfo)
+    if (runInfoLines === 1) { // todo: clean up and make all have 1 2 or 3, with the tests be if > 1, if > 2, etc
+      text = category + ' ' + estimateText;
+    } else {
+      const text2 = estimateText;
+      let locationInfo2 = this.getOffsetLocationInfo(locationInfo, layouts.offsets.runInfo2);
+      if (locationInfo.width || locationInfo.textAlign) {
+        const { width, textAlign } = locationInfo; // todo: double check if just textAlign: right and no width if this still works
+        locationInfo2 = {...locationInfo2, width: width, textAlign: textAlign };
       };
-      this.createElement(baseId + 1, className, text, locationInfo, "text", baseId);
-      this.createTimeline([text, textSwap], 0, baseId + 1, this.runAndCommentaryAnimationInfo)
-    }
+      this.createElement(baseId + 2, className, text2, locationInfo2, "text", baseId);
+      // this.createTimeline([text2, text2], 0, baseId + 2, this.runAndCommentaryAnimationInfo)
+    };
+    this.createElement(baseId + 1, className, text, locationInfo, "text", baseId);
+    // this.createTimeline([text, text], 0, baseId + 1, this.runAndCommentaryAnimationInfo)
+
   };
 
   // setGenres = () => {  // Note: removed in FM2021
