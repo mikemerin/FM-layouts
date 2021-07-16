@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<script src="/js/jquery-3.5.1.min.js"></script>
+		<script type="text/javascript" src="/dashboard/js/runsBackup.json"></script>
 		<script type="text/javascript" src="/dashboard/js/fieldGroups.json"></script>
 		<script type="text/javascript" src="/dashboard/js/globalFunctions.js"></script>
 		<script type="text/javascript" src="js/dashboardForm.js"></script>
@@ -15,6 +16,8 @@
 		<div id="adminPanelUpdateTwitchInfo"></div>
 		<br /><hr /><br />
 		<div id="loadLayout"></div>
+		<br /><hr /><br />
+		<div id="adminPanelMasterResetButton"></div>
 	</body>
 
 	<script type="text/javascript">
@@ -23,9 +26,6 @@
 			console.log(fieldGroup + " ready", e);
 			var dashboardForm = new DashboardForm(fieldGroup);
 			NodeCG.dashboardPanels.panels[fieldGroup] = dashboardForm;
-
-			// setReplicant.forceSet(); // to use correctly, paste the runsBackup.json here
-			// warning: use only when needed as this overwrites the replicant permanently
 
 			NodeCG.adminPanel.setRunSaveLoadButtons();
 
@@ -36,6 +36,8 @@
 			NodeCG.adminPanel.setUpdateTwitchInfo();
 
 			NodeCG.adminPanel.setLoadLayoutInfo();
+
+			NodeCG.adminPanel.setMasterResetButton(runsBackup); // TODO: load this in NodeCG's globalFunctions, not in the HTMl here
 
 			// future: there must be a better way in NodeCG to do this, but initializing the globals here as the admin panel is the last loaded. If this moves in the future, move init() (for now)
 			initReplicants();

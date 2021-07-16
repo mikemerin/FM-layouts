@@ -1,4 +1,4 @@
-{
+var runsBackup = {
     "iWannaBeTheBoshy": {
         "gameInfo": {
             "gameName": "I Wanna Be The Boshy",
@@ -279,7 +279,7 @@
         "gameInfo": {
             "gameName": "Twitch Does Avoidance",
             "gameCategory": "I Wanna Be The Guy",
-            "resolution": "608",
+            "resolution": "16:9",
             "createdBy": "Patrickgh3",
             "genres": null,
             "otherGenres": null

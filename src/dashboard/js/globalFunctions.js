@@ -1,14 +1,14 @@
 class TwitchAPI {
     constructor() {
         this.channelId = '90780102';
-        this.clientId = '*getFromFile*';
-        this.clientSecret = '*getFromFile*';
+        this.clientId = '*getfromfile*';
+        this.clientSecret = '*getfromfile*';
         this.redirectURI = 'http://localhost:9090/';
         this.responseType = 'token';
         this.scope = 'channel_editor';
 
-        this.oauthToken = '*getFromFile*';
-        this.bearerToken = '*getFromFile*';
+        this.oauthToken = '*getfromfile*';
+        this.bearerToken = '*getfromfile*';
 
         this.gameId;
         this.gameName;
@@ -465,6 +465,35 @@ class AdminPanel {
   setPreviewButton() {
 
   };
+
+  setMasterResetButton(runsBackup) {
+    const text = "Master Reset Button";
+    const warningMessage = [
+      'WARNING: As evident by the fact that this says MASTER RESET BUTTON, please make sure you want to do this.',
+      'This will reset the program back to the backup.json info which has all correct info as of 7/15/21 @ 21:34 ET.',
+      'Use this if the layouts somehow are outputting completely incorrect information that you can\'t seem to reset.',
+    ];
+    $("#adminPanelMasterResetButton").append( //todo: next
+      $("<button>", {
+        id: sanitize(text),
+        class: "loadButton",
+        text,
+        click: (e) => {
+          e.preventDefault();
+          if(confirm(warningMessage.join('\n\n'))) {
+            setReplicant.forceSet(runsBackup);
+      			// warning: use only when needed as this overwrites the replicant permanently
+            location.reload();
+            setReplicant.loadRunIntoDashboard(NodeCG.adminPanel.gameName);
+            NodeCG.adminPanel.gameNameInput.val(NodeCG.adminPanel.gameName);
+            setTimeout(() => $("#adminPanelLoadRunInfoButton").click(), 0);
+          }
+        }
+      })
+    ).append("<br><br>").append(
+      $("<div>", { style: 'text-align: center', text: warningMessage[2]})
+    );
+  }
 
   setUpdateTwitchInfo() {
     const text = "Update Twitch Info";
