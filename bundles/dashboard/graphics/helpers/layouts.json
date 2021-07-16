@@ -55,7 +55,7 @@ var layouts = {
     "1P": 48,
     "2P": 24,
     "3P": 22,
-    "4P": 17,
+    "4P": 16,
   },
   "1P": {
     "1:1|8:7|10:7|600|608": {
@@ -130,10 +130,10 @@ var layouts = {
       }
     },
     "8:7": {
-      "commentInfo":  { "left": 505,  "top": 640 },
+      "commentInfo":  { "left": 505,  "top": 650 },
       "runInfo":      { "left": 36,   "top": 442, "width": 374, "height": 60 },
       "player1": {
-        "twitchIcon": { "right": 68, "bottom": 21 },
+        "twitchIcon": { "right": 14, "bottom": 21, "width": 41, "height": 44 },
         "offset":     { "right": 47, "bottom": -8 },
         "gameBorder": {
           "start":    { "left": 506,  "top": 21  },
@@ -488,10 +488,10 @@ var layouts = {
   "3P": {
     "600|608": {
       "camera": false,
-      "commentInfo":  { "left": -450,  "top": 500,  "width": "100%", "textAlign": "center" },
+      "commentInfo":  { "left": -450,  "top": 445,  "width": "100%", "textAlign": "center" },
       "runInfo":      { "left": 0,  "top": 100, "width": "100%", "textAlign": "center" },
       "runInfoLines": 3,
-      "announcement": { "left": 34, "bottom": 120, "width": 328, "height": 80, "fontSize": "20px" },
+      "announcement": { "left": 34, "bottom": 55, "width": 328, "height": 80, "fontSize": "20px" },
       "player1": {
         "twitchIcon": { "height": 22, "width": 22 }
       },

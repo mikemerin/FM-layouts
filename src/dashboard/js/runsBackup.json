@@ -335,7 +335,7 @@ var runsBackup = {
             "player1_twitchHandle": "suserua0612",
             "player1_displayName": "すせるあ",
             "player1_camera": false,
-            "player1_pb": "0:54:21",
+            "player1_pb": "0:42:32",
             "player1_pronouns": "he/him",
             "player2_twitchHandle": null,
             "player2_displayName": null,
@@ -358,7 +358,7 @@ var runsBackup = {
             "category": "Any% (w/ turbo)",
             "estimate": "1:00:00",
             "runType": "Run",
-            "worldRecord": "0:54",
+            "worldRecord": "0:42:32 by すせるあ",
             "wrHolder": null,
             "commentator_pronouns": null
         },
@@ -1014,7 +1014,7 @@ var runsBackup = {
     "johnnysNightmare": {
         "gameInfo": {
             "gameName": "Johnny's Nightmare",
-            "gameCategory": "I Wanna Be The Guy",
+            "gameCategory": "Games + Demos",
             "resolution": "600",
             "createdBy": "Clysm",
             "genres": null,
@@ -1099,7 +1099,7 @@ var runsBackup = {
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".1",
             "chromaKeyColor": "green"
         }
     },
@@ -1145,7 +1145,7 @@ var runsBackup = {
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".1",
             "chromaKeyColor": "green"
         }
     },
@@ -1191,7 +1191,7 @@ var runsBackup = {
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".2",
             "chromaKeyColor": "green"
         }
     },
@@ -1237,7 +1237,7 @@ var runsBackup = {
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".1",
             "chromaKeyColor": "green"
         }
     },
@@ -1329,7 +1329,7 @@ var runsBackup = {
             "commentator_pronouns": "he/him"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".1",
             "chromaKeyColor": "green"
         }
     },
@@ -1651,7 +1651,7 @@ var runsBackup = {
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".2",
             "chromaKeyColor": "green"
         }
     },
@@ -1749,7 +1749,7 @@ var runsBackup = {
     },
     "makeAGoodMegaManLevelEpisodeZero": {
         "gameInfo": {
-            "gameName": "MaGMML: Episode Zero",
+            "gameName": "Make a Good Mega Man Level: Episode Zero",
             "gameCategory": "Mega Man",
             "resolution": "8:7",
             "createdBy": "Multiple People",
@@ -2295,8 +2295,8 @@ var runsBackup = {
             "commentator_pronouns": "he/him"
         },
         "adminPanel": {
-            "backgroundOpacity": ".3",
-            "chromaKeyColor": "green"
+            "backgroundOpacity": ".2",
+            "chromaKeyColor": "red"
         }
     },
     "iWannaBeTheBlizzard": {
@@ -2341,7 +2341,7 @@ var runsBackup = {
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".2",
             "chromaKeyColor": "green"
         }
     },
@@ -2571,7 +2571,7 @@ var runsBackup = {
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".2",
             "chromaKeyColor": "green"
         }
     },
@@ -2617,7 +2617,7 @@ var runsBackup = {
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".1",
             "chromaKeyColor": "green"
         }
     },
@@ -2672,14 +2672,14 @@ var runsBackup = {
             "gameName": "Fangame Feud",
             "gameCategory": "I Wanna Be The Guy",
             "resolution": "16:9",
-            "createdBy": "pieceofcheese87",
+            "createdBy": "Pieceofcheese87",
             "genres": null,
             "otherGenres": null
         },
         "playerInfo": {
             "numberOfPlayers": "1",
-            "player1_twitchHandle": "pieceofcheese87",
-            "player1_displayName": "pieceofcheese87",
+            "player1_twitchHandle": "Pieceofcheese87",
+            "player1_displayName": "Pieceofcheese87",
             "player1_camera": false,
             "player1_pb": null,
             "player1_pronouns": "he/him",
@@ -2709,7 +2709,7 @@ var runsBackup = {
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".2",
             "chromaKeyColor": "green"
         }
     },
@@ -2755,7 +2755,7 @@ var runsBackup = {
             "commentator_pronouns": null
         },
         "adminPanel": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".1",
             "chromaKeyColor": "green"
         }
     },
@@ -2936,6 +2936,9 @@ var runsBackup = {
             "createdBy": "The FM Team",
             "genres": "Avoidance",
             "otherGenres": null
+        },
+        "listOfParticipants": {
+
         },
         "playerInfo": {
             "numberOfPlayers": "2",

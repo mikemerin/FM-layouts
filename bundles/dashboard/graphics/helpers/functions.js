@@ -161,9 +161,9 @@ class Layout {
     this.createTimeline(lines, 0, id, animationInfo);
   }
 
-  createTimeline = (lines, line, id, animationInfo, limitTextAmount) => {
+  createTimeline = (lines, line, id, animationInfo) => {
     const { animationType, elementType, direction } = animationInfo;
-    // var primaryOffset = 1000;
+    // var primaryOffset = 543;
     var primaryOffset = 10000; // TODO: change back
     var wrapper = document.querySelector(`#${id}`);
     const elementSrc = "/assets/dashboard/" + lines[line];
@@ -383,7 +383,7 @@ class Layout {
   };
 
   setRunInfo = () => {
-    // TODO: change to GameAndCommentaryInfo
+    // TODO: change name to GameAndCommentaryInfo
     const { commentators, createdBy, gameName, worldRecord } = this.fields;
     const baseId = "runInfo"
     const className = `${baseId} primary`;
@@ -399,14 +399,16 @@ class Layout {
     let text2 = createdByText;
     const text3 =  createdBy;
 
-    let textSwap = '', text2Swap = '', text3Swap = '';
+    let textSwap = '', text2Swap = '', text3Swap = '', keepGameAndCreatorOnScreen = false;
 
     if (commentators) {
       textSwap = wrText;
       text2Swap = commentaryByText;
       text3Swap = commentators;
-    } else {
+    } else if (wrText) {
       text2Swap = wrText;
+    } else {
+      keepGameAndCreatorOnScreen = true;
     }
 
     const gameTextCutoff = 32;
@@ -424,13 +426,16 @@ class Layout {
       locationInfo2 = {...locationInfo2, width: width, textAlign: textAlign };
       locationInfo3 = {...locationInfo3, width: width, textAlign: textAlign };
     };
-    this.createElement(baseId + 2, className, text2, locationInfo2, "text", baseId);
-    this.createTimeline([text2, text2Swap], 0, baseId + 2, this.runAndCommentaryAnimationInfo)
-    this.createElement(baseId + 3, className, text3, locationInfo3, "text", baseId);
-    this.createTimeline([text3, text3Swap], 0, baseId + 3, this.runAndCommentaryAnimationInfo)
 
     this.createElement(baseId + 1, className, text, locationInfo, "text", baseId);
-    this.createTimeline([text, textSwap], 0, baseId + 1, this.runAndCommentaryAnimationInfo, 36)
+    this.createElement(baseId + 2, className, text2, locationInfo2, "text", baseId);
+    this.createElement(baseId + 3, className, text3, locationInfo3, "text", baseId);
+
+    if (!keepGameAndCreatorOnScreen) {
+      this.createTimeline([text, textSwap], 0, baseId + 1, this.runAndCommentaryAnimationInfo);
+      this.createTimeline([text2, text2Swap], 0, baseId + 2, this.runAndCommentaryAnimationInfo);
+      this.createTimeline([text3, text3Swap], 0, baseId + 3, this.runAndCommentaryAnimationInfo);
+    }
   };
 
   setCommentaryInfo = () => {
@@ -591,7 +596,7 @@ class Layout {
       const text = displayName + " (" + pronouns + ")";
       const textSwap = (pb ? "PB " + pb + " - " : "") + twitchHandle;
 
-      const tLocationInfo = this.getLocationInfo(tId, "player", playerNumber);
+      let tLocationInfo = this.getLocationInfo(tId, "player", playerNumber);
       const offsetInfo = this.getLocationInfo("offset", "player", playerNumber);
       const pLocationInfo = this.getOffsetLocationInfo(tLocationInfo, offsetInfo);
       let direction;
@@ -609,6 +614,10 @@ class Layout {
       };
 
       pLocationInfo.fontSize = layouts.playerTextSizes[this.fields.numberOfPlayers + "P"];
+      if (players === 1 && twitchHandle.length >= 11) {
+        pLocationInfo.fontSize -= 6;
+        offsetInfo.bottom += 4;
+      }
       if (pLocationInfo.textAlign === "center") pLocationInfo.width = "100%";
 
       this.setBorder("gameBorder", playerNumber);
