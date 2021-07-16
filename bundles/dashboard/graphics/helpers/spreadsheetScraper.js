@@ -1,3 +1,18 @@
+// This is for is for depositing Twitch handle/playername/pronouns. Copy the cells and set to 's'
+
+people = s.split(/[\t\n]/).reduce((acc, el, i) => {
+    n = Math.floor(i / 3);
+    if (i % 3 === 0) {
+        acc[n] = { playerName: el };
+    } else if (i % 3 === 1) {
+        acc[n].twitchHandle = el;
+    } else {
+        acc[n].pronouns = el;
+    }
+    return acc;
+}, []).sort((a,b) => (a.twitchHandle.toLowerCase() > b.twitchHandle.toLowerCase()) ? 1 : -1);
+
+
 // Note: this script is a copy/paste into the Chrome console. TODO: consolidate into program
 entries = '';
 headers = {};

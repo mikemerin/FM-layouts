@@ -1,14 +1,14 @@
 class TwitchAPI {
     constructor() {
-        this.channelId = '90780102';
-        this.clientId = '*getfromfile*';
-        this.clientSecret = '*getfromfile*';
-        this.redirectURI = 'http://localhost:9090/';
-        this.responseType = 'token';
-        this.scope = 'channel_editor';
+      this.channelId = '90780102';
+      this.clientId = '*getfromfile*';
+      this.clientSecret = '*getfromfile*';
+      this.redirectURI = 'http://localhost:9090/';
+      this.responseType = 'token';
+      this.scope = 'channel_editor';
 
-        this.oauthToken = '*getfromfile*';
-        this.bearerToken = '*getfromfile*';
+      this.oauthToken = '*getfromfile*';
+      this.bearerToken = '*getfromfile*';
 
         this.gameId;
         this.gameName;
@@ -126,7 +126,7 @@ class TwitchAPI {
       if (multiplePeopleEvents.includes(gameName)) {
         players = 'Multiple People';
         channels = (gameName === 'Avoidance Tournament'
-          ? ["Arzztt", "Draconical879", "Framzo", "IanBoy141", "Make_North", "Mastermaxify", "Not2Dey", "Razzor_iw", "Skulldude_", "Tehninza", "Wolsk", "bummerman222", "cheez8", "iraqlobster1", "popop4342", "romrom444"]
+          ? ["Arzztt", "Draconical879", "Framzo", "IanBoy141", "Make_North", "Mastermaxify", "Not2Dey", "Razzor_iw", "Skulldude_", "Tehninza", "Wolsk", "bummerman222", "cheez8", "iraqlobster1", "popop4342", "romrom4444"]
           : gameName === 'Relay Race'
             ? ["BV502", "CeleCele", "Cosmoing", "Gaborro14", "Kalemandu", "Naloas", "Not2Dey", "Tehninza", "Wolfiexe", "d0ppller", "strelook21"]
             : []
@@ -391,7 +391,7 @@ class AdminPanel {
       text: "Load",
       click: () => {
         this.gameName = $("#gameNameAdmin").val();
-        console.log('clicked for' + this.gameName);
+        console.log('clicked load for ' + this.gameName);
         setReplicant.loadRunIntoDashboard(this.gameName);
       }
     });
