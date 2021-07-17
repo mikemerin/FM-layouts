@@ -1195,6 +1195,52 @@ var runsBackup = {
             "chromaKeyColor": "green"
         }
     },
+    "matchFangame": {
+        "gameInfo": {
+            "gameName": "Match Fangame",
+            "gameCategory": "I Wanna Be The Guy",
+            "resolution": "16:9",
+            "createdBy": "pieceofcheese87",
+            "genres": null,
+            "otherGenres": null
+        },
+        "playerInfo": {
+            "numberOfPlayers": "1",
+            "player1_twitchHandle": "pieceofcheese87",
+            "player1_displayName": "pieceofcheese87",
+            "player1_camera": false,
+            "player1_pb": null,
+            "player1_pronouns": "he/him",
+            "player2_twitchHandle": null,
+            "player2_displayName": null,
+            "player2_camera": false,
+            "player2_pb": null,
+            "player2_pronouns": null,
+            "player3_twitchHandle": null,
+            "player3_displayName": null,
+            "player3_camera": false,
+            "player3_pb": null,
+            "player3_pronouns": null,
+            "player4_twitchHandle": null,
+            "player4_displayName": null,
+            "player4_camera": false,
+            "player4_pb": null,
+            "player4_pronouns": null,
+            "commentators": "Multiple People"
+        },
+        "runInfo": {
+            "category": "Gameshow%",
+            "estimate": "1:00:00",
+            "runType": "Event",
+            "worldRecord": null,
+            "wrHolder": null,
+            "commentator_pronouns": null
+        },
+        "adminPanel": {
+            "backgroundOpacity": ".2",
+            "chromaKeyColor": "green"
+        }
+    },
     "iWannaCuteJump": {
         "gameInfo": {
             "gameName": "I Wanna Cute Jump",
