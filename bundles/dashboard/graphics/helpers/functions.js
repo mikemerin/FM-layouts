@@ -312,14 +312,7 @@ class Layout {
 
   setChromaKeyColor = () => {
     const chromaKeyColor = this.fields.chromaKeyColor || "green";
-    const conversion = {
-      "red": "#FF0000",
-      "green": "#00FF00",
-      "blue": "#0000FF",
-      "pink": "#FF69B4",
-      "orange": "#FF4500"
-    };
-    $(".fillChromaKey").css({ "background-color": conversion[chromaKeyColor] });
+    $(".fillChromaKey").css({ "background-color": colorToHex[chromaKeyColor] });
   }
 
   setBaseImage = () => {

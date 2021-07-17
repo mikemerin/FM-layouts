@@ -547,9 +547,14 @@ class DashboardField {
           id: game + " - updateTwitch",
           game: game,
           class: "pointer masterRunListpng",
-          text: "U",
           click: () => { twitchApi.updateTwitchFull(game) }
-        }))
+        }).append(
+            $("<img>", {
+              class: "twitchIconSmall",
+              src: "/assets/dashboard/baseLayoutLayers/twitchIconPurple.png"
+            })
+          )
+        )
         .append($("<td>", {
           rowspan: rowSpan,
           id: game,

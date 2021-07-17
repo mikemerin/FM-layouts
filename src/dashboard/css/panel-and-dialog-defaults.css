@@ -345,3 +345,30 @@ button {
   text-decoration: none;
   cursor: pointer;
 }
+
+
+.panel-table, .panel-table tr, .panel-table th, .panel-table td {
+	border: 1px solid black;
+	text-align: center;
+}
+
+.clickable {
+	cursor: pointer;
+	border: 2px solid red;
+}
+
+.twitchIcon {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+
+.twitchIconSmall {
+	width: 10px;
+	height: 10px;
+	cursor: pointer;
+}
+
+.fullWidth {
+	width: 100%;
+}

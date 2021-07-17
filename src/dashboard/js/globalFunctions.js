@@ -227,6 +227,14 @@ function deepMerge(target, source) {
   return target;
 }
 
+const colorToHex = {
+  "red": "#FF0000",
+  "green": "#00FF00",
+  "blue": "#0000FF",
+  "pink": "#FF69B4",
+  "orange": "#FF4500"
+};
+
 const doesFileExist = (url, asset = false) => {
   if (asset) url = "/assets/dashboard/" + url;
   var http = new XMLHttpRequest();
@@ -485,10 +493,10 @@ class AdminPanel {
   };
 
   setMasterResetButton(runsBackup) {
-    const text = "Master Reset Button";
+    const text = "MASTER RESET RUNS";
     const warningMessage = [
-      'WARNING: As evident by the fact that this says MASTER RESET BUTTON, please make sure you want to do this.',
-      'This will reset the program back to the backup.json info which has all correct info as of 7/15/21 @ 21:34 ET.',
+      'WARNING: This is the MASTER RESET BUTTON for run information; please make sure you want to do this.',
+      'This will reset the program back to the backup.json info which has all correct info as of 7/17/21 @ 11:05 ET.',
       'Use this if the layouts somehow are outputting completely incorrect information that you can\'t seem to reset.',
     ];
     $("#adminPanelMasterResetButton").append( //todo: next
@@ -508,9 +516,7 @@ class AdminPanel {
           }
         }
       })
-    ).append("<br><br>").append(
-      $("<div>", { style: 'text-align: center', text: warningMessage[2]})
-    );
+    )
   }
 
   setUpdateTwitchInfo() {
@@ -519,12 +525,17 @@ class AdminPanel {
       $("<button>", {
         id: sanitize(text),
         class: "loadButton",
-        text: text,
         click: (e) => {
           e.preventDefault();
           twitchApi.updateTwitchFull(this.gameName)
         }
-      })
+      }).append(
+        $("<img>", {
+          class: "twitchIcon",
+          src: "/assets/dashboard/baseLayoutLayers/twitchIconPurple.png",
+          alt: text
+        })
+      )
     );
   };
 
@@ -569,7 +580,9 @@ class AdminPanel {
       if (newValue && newValue["playerInfo"] && newValue["gameInfo"] ) {
         const numberOfPlayers = newValue["playerInfo"]["numberOfPlayers"];
         const { resolution, gameName } = newValue["gameInfo"];
-        labelText = text + "<br>" + numberOfPlayers + "P " + resolution + " - " + getGameNameTitle(gameName);
+        const { chromaKeyColor } = newValue["adminPanel"];
+        labelText = text + "<br>" + numberOfPlayers + "P " + resolution + " - " + getGameNameTitle(gameName) + "<br>" +
+              "ChromaKey Color: " + chromaKeyColor + " " + colorToHex[chromaKeyColor];
 
         temporaryLoadButton.on("click", (e) => {
           e.preventDefault();

@@ -3161,7 +3161,7 @@ var runsBackup = {
         "gameInfo": {
             "gameName": "Microtwist",
             "gameCategory": "I Wanna Maker",
-            "resolution": "608",
+            "resolution": "16:9",
             "createdBy": "The Elephant Crew",
             "genres": null,
             "otherGenres": "Sudoku"
