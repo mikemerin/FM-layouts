@@ -74,7 +74,6 @@
     "cookie-parser": "^1.4.4",
     "cookies-js": "^1.2.3",
     "deep-equal": "^1.0.1",
-    "dotenv": "^10.0.0",
     "draggabilly": "^2.2.0",
     "exit-hook": "^2.2.0",
     "express": "^4.16.4",

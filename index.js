@@ -1,6 +1,6 @@
 'use strict';
 
-require('dotenv').config(); // TODO: hook this up
+// require('dotenv').config(); // TODO: hook this up
 
 process.title = 'NodeCG';
 global.exitOnUncaught = true;
