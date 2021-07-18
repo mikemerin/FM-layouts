@@ -23,7 +23,7 @@
 			$("[name='chromaKeyColor']").each((i,color) => {
 					const hexCode = colorToHex[color.labels[0].innerText];
 			    color.labels[0].innerText += `\n${hexCode.slice(1)}`;
-					color.labels[0].style.borderColor = hexCode;
+					color.labels[0].style.border = `3px solid ${hexCode}`;
 					color.labels[0].style.borderRadius = 0;
 			})
 		});

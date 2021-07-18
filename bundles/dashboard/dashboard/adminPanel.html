@@ -5,7 +5,7 @@
 		<script type="text/javascript" src="/dashboard/js/runsBackup.json"></script>
 		<script type="text/javascript" src="/dashboard/js/fieldGroups.json"></script>
 		<script type="text/javascript" src="/dashboard/js/globalFunctions.js"></script>
-		<script type="text/javascript" src="js/dashboardForm.js"></script>
+	<script type="text/javascript" src="js/dashboardForm.js"></script>
 	</head>
 	<body id="adminPanelBody">
 		<div id="adminPanelFields"></div>
@@ -17,7 +17,7 @@
 		<br /><hr /><br />
 		<div id="loadLayout"></div>
 		<br /><hr /><br />
-		<div id="adminPanelMasterResetButton" class="fullWidth"></div>
+		<div id="adminPanelHardResetButton" class="fullWidth"></div>
 	</body>
 
 	<script type="text/javascript">
@@ -37,7 +37,7 @@
 
 			NodeCG.adminPanel.setLoadLayoutInfo();
 
-			NodeCG.adminPanel.setMasterResetButton(runsBackup); // TODO: load this in NodeCG's globalFunctions, not in the HTMl here
+			NodeCG.adminPanel.setHardResetButton(runsBackup); // TODO: load this in NodeCG's globalFunctions, not in the HTMl here
 
 			// future: there must be a better way in NodeCG to do this, but initializing the globals here as the admin panel is the last loaded. If this moves in the future, move init() (for now)
 			initReplicants();

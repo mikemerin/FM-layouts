@@ -229,10 +229,13 @@ function deepMerge(target, source) {
 
 const colorToHex = {
   "red": "#FF0000",
+  "orange": "#FF4500",
+  "yellow": "#FFFF00",
   "green": "#00FF00",
   "blue": "#0000FF",
+  "indigo": "#FF00BB",
+  "purple": "#6441A4",
   "pink": "#FF69B4",
-  "orange": "#FF4500"
 };
 
 const doesFileExist = (url, asset = false) => {
@@ -492,14 +495,14 @@ class AdminPanel {
 
   };
 
-  setMasterResetButton(runsBackup) {
-    const text = "MASTER RESET RUNS";
+  setHardResetButton(runsBackup) {
+    const text = "HARD RESET RUNS";
     const warningMessage = [
-      'WARNING: This is the MASTER RESET BUTTON for run information; please make sure you want to do this.',
-      'This will reset the program back to the backup.json info which has all correct info as of 7/17/21 @ 11:05 ET.',
+      'WARNING: This is the HARD RESET BUTTON for run information; please make sure you want to do this.',
+      'This will reset the program back to the backup.json info which has all correct info as of 7/18/21 @ 12:00 ET.',
       'Use this if the layouts somehow are outputting completely incorrect information that you can\'t seem to reset.',
     ];
-    $("#adminPanelMasterResetButton").append( //todo: next
+    $("#adminPanelHardResetButton").append( //todo: next
       $("<button>", {
         id: sanitize(text),
         class: "loadButton",

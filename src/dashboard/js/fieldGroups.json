@@ -131,10 +131,13 @@ var fieldGroups = {
         "type": "radio",
         "options": [
           "red",
+          "orange",
+          "yellow",
           "green",
           "blue",
-          "pink",
-          "orange"
+          "indigo",
+          "purple",
+          "pink"
         ],
         "defaultValue": "green"
       }
