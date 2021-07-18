@@ -468,7 +468,7 @@ class DashboardField {
       .append( $("<th>", { text: "Update\nTwitch" }) );
 
 
-    ["Game Info", "Run Info", "Player Info", "Individual Player Info", "Admin Panel"].forEach(fieldGroup => {
+    ["Game Info", "Run Info", "Player Info", "Individual Player Info", "Visuals"].forEach(fieldGroup => {
       const sanitizedFieldGroup = sanitize(fieldGroup);
       headerGroups.append($("<th>", {
         text: fieldGroup,
@@ -564,7 +564,7 @@ class DashboardField {
 
         var extraPlayerRows = [...new Array(parseInt(rowSpan-1,10)).keys()].map(row => $("<tr>", { id: `${game} - row ${row+2}`, class: "shadedTable" + (i % 2 === 0 ? "False" : "True") }));
 
-        ["Game Info", "Run Info", "Player Info", "Individual Player Info", "Admin Panel"].forEach(fieldGroup => {
+        ["Game Info", "Run Info", "Player Info", "Individual Player Info", "Visuals"].forEach(fieldGroup => {
           const sanitizedFieldGroup = sanitize(fieldGroup);
 
           fieldGroups[sanitizedFieldGroup].fields.forEach(field => {

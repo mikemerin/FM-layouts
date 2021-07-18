@@ -97,12 +97,13 @@ class Layout {
   setFields = (replicantValues) => {
     this.replicantValues = replicantValues;
     // future: will have "adminPanel"
-    ["gameInfo", "runInfo", "playerInfo", "adminPanel"].forEach(fieldGroup => {
+    ["gameInfo", "runInfo", "playerInfo", "visuals"].forEach(fieldGroup => {
       const fields = this.replicantValues[fieldGroup];
       Object.keys(fields).forEach(field => {
         this.fields[field] = fields[field];
       });
     });
+    console.log(this.fields)
   };
 
   setLocations = () => {
@@ -384,6 +385,9 @@ class Layout {
 
     const createdByText = "Created By"
     const commentaryByText = "Commentary By";
+    console.log(commentators)
+    const commentatorNames = commentators && commentators.split(',').length > 3 ? 'Multiple People (see overlay)' : commentators;
+    // TODO: next year once the Featured Channels program is updated make this say 'Multiple People (hover to see!)'
     const wrText = worldRecord ? "WR " + worldRecord : "";
 
     const runInfoLines = this.getLocationInfo("runInfoLines");
@@ -397,7 +401,7 @@ class Layout {
     if (commentators) {
       textSwap = wrText;
       text2Swap = commentaryByText;
-      text3Swap = commentators;
+      text3Swap = commentatorNames;
     } else if (wrText) {
       text2Swap = wrText;
     } else {

@@ -114,8 +114,8 @@ var fieldGroups = {
       }
     ]
   },
-  "adminPanel": {
-    "name": "Admin Panel",
+  "visuals": {
+    "name": "Visuals",
     "fields": [
       {
         "fieldName": "Background Opacity",
@@ -135,7 +135,6 @@ var fieldGroups = {
           "blue",
           "pink",
           "orange"
-
         ],
         "defaultValue": "green"
       }
@@ -149,6 +148,10 @@ var fieldGroups = {
         "disabled": true
       }
     ]
+  },
+  "adminPanel": {
+    "name": "Admin Panel",
+    "fields": []
   },
   "masterRunList": {
     "name": "Master Run List",

@@ -32,6 +32,14 @@
         "workspace": "Main"
       },
       {
+        "name": "Visuals",
+        "title": "Visuals",
+        "width": 2,
+        "file": "visuals.html",
+        "headerColor": "#0D80A4",
+        "workspace": "Main"
+      },
+      {
         "name": "Admin Panel",
         "title": "Admin Panel",
         "width": 2,

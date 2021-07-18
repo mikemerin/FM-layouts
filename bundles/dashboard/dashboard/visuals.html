@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="/js/jquery-3.5.1.min.js"></script>
+		<script type="text/javascript" src="/dashboard/js/runsBackup.json"></script>
+		<script type="text/javascript" src="/dashboard/js/fieldGroups.json"></script>
+		<script type="text/javascript" src="/dashboard/js/globalFunctions.js"></script>
+		<script type="text/javascript" src="js/dashboardForm.js"></script>
+	</head>
+	<body id="visualsBody">
+		<div id="visualsFields"></div>
+		<div id="visualsChroma"></div>
+		<div id="visualsSave"></div>
+	</body>
+
+	<script type="text/javascript">
+		$(document).ready(e => {
+			const fieldGroup = "visuals";
+			console.log(fieldGroup + " ready", e);
+			var dashboardForm = new DashboardForm(fieldGroup);
+			NodeCG.dashboardPanels.panels[fieldGroup] = dashboardForm;
+
+			$("[name='chromaKeyColor']").each((i,color) => {
+					const hexCode = colorToHex[color.labels[0].innerText];
+			    color.labels[0].innerText += `\n${hexCode.slice(1)}`;
+					color.labels[0].style.borderColor = hexCode;
+					color.labels[0].style.borderRadius = 0;
+			})
+		});
+	</script>
+</html>

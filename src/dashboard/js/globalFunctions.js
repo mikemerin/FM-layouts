@@ -336,7 +336,7 @@ class SetReplicant {
     // console.log("NodeCG.adminPanel:", NodeCG.adminPanel);
     NodeCG.dashboardPanels.replicantValues = this.runsReplicant.value[sanitize(gameName)];
     this.fieldValuesReplicant.value = this.runsReplicant.value[sanitize(gameName)];
-    ["gameInfo", "runInfo", "playerInfo", "adminPanel"].forEach(panel => {
+    ["gameInfo", "runInfo", "playerInfo", "adminPanel", "visuals"].forEach(panel => {
       NodeCG.dashboardPanels.panels[panel].loadValues(true);
     })
     NodeCG.adminPanel.setDropdownGameName(gameName);
@@ -353,7 +353,7 @@ class SetReplicant {
       // TODO: check if on the schedule or not (make an issue for this, may not be needed)
     } else {
       const savedGameRun = this.runsReplicant.value[sanitize(gameName)];
-      ["gameInfo", "runInfo", "playerInfo", "adminPanel"].forEach(panel => {
+      ["gameInfo", "runInfo", "playerInfo", "adminPanel", "visuals"].forEach(panel => {
           NodeCG.dashboardPanels.panels[panel].dashboardFields.forEach(({id, value}) => {
             const savedValue = savedGameRun[panel][id];
             if (value !== savedValue) {
@@ -580,7 +580,7 @@ class AdminPanel {
       if (newValue && newValue["playerInfo"] && newValue["gameInfo"] ) {
         const numberOfPlayers = newValue["playerInfo"]["numberOfPlayers"];
         const { resolution, gameName } = newValue["gameInfo"];
-        const { chromaKeyColor } = newValue["adminPanel"];
+        const { chromaKeyColor } = newValue["visuals"];
         labelText = text + "<br>" + numberOfPlayers + "P " + resolution + " - " + getGameNameTitle(gameName) + "<br>" +
               "ChromaKey Color: " + chromaKeyColor + " " + colorToHex[chromaKeyColor];
 
