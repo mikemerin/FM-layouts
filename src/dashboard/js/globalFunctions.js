@@ -165,7 +165,7 @@ class TwitchAPI {
         }
       }
 
-      const status = `FM 2021 - ${gameName}, ${category} ${runType} by ${players}`;
+      const status = `FM 2022 - ${gameName}, ${category} ${runType} by ${players}`;
 
       if (confirm(`WARNING: this updates the FM Twitch channel with the info below.\nPlease make sure it is correct before confirming.\n\nTitle:\n${status}\n\nGame Category: ${gameCategory}\n\nFeatured Channels: ${channels}`)) {
         this.updateChannel(status, gameCategory, channels);
@@ -281,7 +281,7 @@ const initFieldValues = () => {
 
 const initRuns = () => {
 
-  const url = "https://oengus.io/api/marathons/fm2021/schedule";
+  const url = "https://oengus.io/api/marathons/fm2022/schedule";
   fetch(url).then(resp => resp.json()).then(res => {
 
     const oengusRunOrderReplicant = nodecg.Replicant("oengusRunOrder");

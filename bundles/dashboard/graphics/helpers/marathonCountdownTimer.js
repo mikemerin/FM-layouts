@@ -1,7 +1,7 @@
 // Note: change to the correct date
-const start = new Date('July 15, 2021 15:00:00');
+const start = new Date('July 13, 2022 15:00:00');
 const startTimeET = "(3PM ET)";
-const marathonName = "FM2021";
+const marathonName = "FM2022";
 
 function timeLeft(seconds) {
   var days        = Math.floor(seconds/24/60/60);

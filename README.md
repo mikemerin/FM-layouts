@@ -1,6 +1,6 @@
-#Fangame Marathon 2021 Layouts
+# Fangame Marathon Layouts - 2022 Update
 
-This is a program to dynamically generate layouts for FM2021.
+This is a program to dynamically generate layouts for Fangame Marathon.
 
 To get started:
 
@@ -15,7 +15,7 @@ Once there you will see a few tabs
 
 * All Runs
   * This is where you can see all runs.
-  * The run order is fetched from the official FM2021 run list on [Oengus' API](https://oengus.io/api/marathon/fm2021/schedule)
+  * The run order is fetched from the official FM2022 run list on [Oengus' API](https://oengus.io/api/marathon/fm2022/schedule)
   * The rest of the information is stored in the program
   * On the left side you can click to either edit the info or load the run into its own URL
 * Main
