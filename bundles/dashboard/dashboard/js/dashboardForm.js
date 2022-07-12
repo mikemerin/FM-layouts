@@ -80,7 +80,7 @@ class DashboardForm {
     });
     $("#playerFields").append(playerTable); // todo: next
     $("input[name$=numberOfPlayers]").each((i,x) => {
-        $(x).click(() => this.updatePlayerFields(x.id));
+        $(x).on('click', () => this.updatePlayerFields(x.id));
     });
     this.updatePlayerFields();
   };
@@ -127,9 +127,9 @@ class DashboardForm {
       if (changeType === "off") {
         if (type === "text") {
           field1.val("");
-          field1.blur();
+          field1.trigger('blur');
         } else if (type === "slider") {
-          if (field1.is(":checked")) field1.click();
+          if (field1.is(":checked")) field1.on('click');
         };
       } else {
         var field2 = $("#player" + (playerNumber + 1*operator) + "_" + sanitizedFieldName); //todo: next
@@ -138,12 +138,12 @@ class DashboardForm {
           var tmpValue = field1.val();
           field1.val( field2.val() );
           field2.val(tmpValue);
-          field1.blur();
-          field2.blur();
+          field1.trigger('blur');
+          field2.trigger('blur');
         } else if (type === "slider") {
           if (field1.is(":checked") !== field2.is(":checked")) {
-            field1.click();
-            field2.click();
+            field1.trigger('click');
+            field2.trigger('click');
           };
         };
       };
@@ -152,25 +152,25 @@ class DashboardForm {
 
   insertPlayer = (twitchHandle, playerNumber) => {
     const replicant = nodecg.Replicant("fieldValues");
-    const playerInfo = players.find((player) => player.twitchHandle === twitchHandle);
-    const { playerName, pronouns } = playerInfo;
+    const { country, handleType, displayName, pronouns } = players[twitchHandle];
+    let startNumber = 2;
 
-    if (playerNumber === 1) { // TODO: spaghetti code, fix this
-      NodeCG.dashboardPanels.panels.playerInfo.dashboardFields[2].value = twitchHandle;
-      NodeCG.dashboardPanels.panels.playerInfo.dashboardFields[3].value = playerName;
-      NodeCG.dashboardPanels.panels.playerInfo.dashboardFields[4].value = pronouns;
-    } else {
-      NodeCG.dashboardPanels.panels.playerInfo.dashboardFields[7].value = twitchHandle;
-      NodeCG.dashboardPanels.panels.playerInfo.dashboardFields[8].value = playerName;
-      NodeCG.dashboardPanels.panels.playerInfo.dashboardFields[9].value = pronouns;
+    const fields = [twitchHandle, displayName, handleType, country, pronouns, ''];
+
+    if (playerNumber !== 1) {
+      startNumber += 7;
     }
 
+    fields.forEach((field, i) => {
+      NodeCG.dashboardPanels.panels.playerInfo.dashboardFields[startNumber + i].value = field;
+    })
+
     this.saveFields();
     this.saveFields();
     this.saveFields();
-    setTimeout(() => $("#adminPanelLoadRunInfoButton").click(), 100);
-    setTimeout(() => $("#adminPanelLoadRunInfoButton").click(), 200);
-    setTimeout(() => $("#adminPanelLoadRunInfoButton").click(), 1000);
+    setTimeout(() => $("#adminPanelLoadRunInfoButton").trigger('click'), 100);
+    setTimeout(() => $("#adminPanelLoadRunInfoButton").trigger('click'), 200);
+    setTimeout(() => $("#adminPanelLoadRunInfoButton").trigger('click'), 1000);
   }
 
   updatePlayerFields = (numberOfPlayers) => {
@@ -636,9 +636,9 @@ class DashboardField {
   saveImage = (game, runList, runNumber) => {
     if (runList) {
       // document.title = `${runNumber + 1}/${Object.keys(runList).length} generated`
-      game = $($(".masterRunListpng")[runNumber]).attr("gamename");
+      game = $($(".masterRunListpng")[runNumber * 2]).attr("gamename");
+      // note: *2 since there's two tds for each
     };
-
     const imageWindow = window.open(`http://localhost:9090/bundles/dashboard/graphics/layout.html?saveImage=true&gameName=${game}`);
     imageWindow.addEventListener('click', e => {
       if (e.target.id === "saveImageLink") {
@@ -647,7 +647,7 @@ class DashboardField {
         if (runList) {
           runNumber++;
           if (runList[runNumber]) {
-            this.saveImage("", runList, runNumber);
+              this.saveImage("", runList, runNumber);
           }
         }
       };

@@ -3,27 +3,19 @@
 	<head>
 		<script src="/js/jquery-3.5.1.min.js"></script>
 		<script type="text/javascript" src="/dashboard/js/fieldGroups.json"></script>
+		<script type="text/javascript" src="/dashboard/js/playerGroups.json"></script>
 		<script type="text/javascript" src="/dashboard/js/players.json"></script>
 		<script type="text/javascript" src="/dashboard/js/globalFunctions.js"></script>
 		<script type="text/javascript" src="js/dashboardForm.js"></script>
+		<script type="text/javascript" src="js/players.js"></script>
 	</head>
 	<body id="playerInfoBody">
 		<div id="playerInfoFields"></div>
 		<div id="playerFields"></div>
 		<div id="playerInfoSave"></div>
-		<br><hr><br>
-		<div id="playerInfoAvoidance">
-			<label>Avoidance Players</label>
-			<table id="playerTableAvoidance" class="panel-table" style="border: 1px solid black">
-				<tr>
-					<th>Twitch Handle</th>
-					<th>Display Name</th>
-					<th>Pronouns</th>
-					<th>Make P1</th>
-					<th>Make P2</th>
-				</tr>
-			</table>
-		</div>
+		<br><hr>
+		<h2>Player Groups</h2>
+		<div>note: when using these buttons, use the "temporary url" graphic. After clicking "Make P1/P2" just refresh the graphic (even though it doesn't show above). If you want it to show above, just refresh this page.</div>
 	</body>
 
 	<script type="text/javascript">
@@ -32,25 +24,7 @@
 			console.log(fieldGroup + " ready", e);
 			var dashboardForm = new DashboardForm(fieldGroup);
 			NodeCG.dashboardPanels.panels[fieldGroup] = dashboardForm;
-
-			players.forEach(({twitchHandle, playerName, pronouns}) => {
-				$("#playerTableAvoidance").append(
-					$("<tr>")
-						.append($("<td>", { text: twitchHandle }))
-						.append($("<td>", { text: playerName }))
-						.append($("<td>", { text: pronouns }))
-						.append($("<td>", { text: 'P1', class: 'clickable', click: () => {
-								dashboardForm.insertPlayer(twitchHandle, 1);
-								setTimeout(() => dashboardForm.insertPlayer(twitchHandle, 1), 200);
-							}
-						}))
-						.append($("<td>", { text: 'P2', class: 'clickable', click: () => {
-								dashboardForm.insertPlayer(twitchHandle, 2);
-								setTimeout(() => dashboardForm.insertPlayer(twitchHandle, 2), 200);
-							}
-						}))
-				)
-			});
+			makePlayerGroupTables(players, playerGroups, dashboardForm);
 		});
 	</script>
 </html>

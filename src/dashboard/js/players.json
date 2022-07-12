@@ -1,82 +1,674 @@
-var players = [
-    {
-        "playerName": "Arzztt",
+var players = {
+    "128up": {
+        "twitchHandle": "128up",
+        "displayName": "128-Up",
+        "pronouns": "he/him",
+        "country": "GB",
+        "handleType": "Twitch"
+    },
+    "42guy42": {
+        "twitchHandle": "42guy42",
+        "displayName": "42guy42",
+        "pronouns": "he/him",
+        "country": "CA",
+        "handleType": "Twitch"
+    },
+    "AndrewSM64": {
+        "twitchHandle": "AndrewSM64",
+        "displayName": "AndrewSM64",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "Arzztt": {
         "twitchHandle": "Arzztt",
+        "displayName": "Arzztt",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "AsneL": {
+        "twitchHandle": "AsneL",
+        "displayName": "AsneL",
+        "pronouns": "he/him",
+        "country": "JP",
+        "handleType": "Twitch"
+    },
+    "AussieAdam": {
+        "twitchHandle": "AussieAdam",
+        "displayName": "AussieAdam",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "BanjoFreak64": {
+        "twitchHandle": "BanjoFreak64",
+        "displayName": "BanjoFreak64",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "Barfyace": {
+        "twitchHandle": "Barfyace",
+        "displayName": "Barfy",
+        "pronouns": "he/him",
+        "country": "CA",
+        "handleType": "Twitch"
+    },
+    "Benjamanian": {
+        "twitchHandle": "Benjamanian",
+        "displayName": "benjamanian",
+        "pronouns": "he/him",
+        "country": "NZ",
+        "handleType": "Twitch"
+    },
+    "CeleCele": {
+        "twitchHandle": "CeleCele",
+        "displayName": "Cele",
+        "pronouns": "he/him",
+        "country": "NL",
+        "handleType": "Twitch"
+    },
+    "ChrisayNewfarm": {
+        "twitchHandle": "ChrisayNewfarm",
+        "displayName": "Chrisay",
+        "pronouns": "he/him",
+        "country": "DK",
+        "handleType": "Twitch"
+    },
+    "Cosmoing": {
+        "twitchHandle": "Cosmoing",
+        "displayName": "Cosmoing",
+        "pronouns": "he/him",
+        "country": "CA",
+        "handleType": "Youtube"
+    },
+    "DJ_Tala0": {
+        "twitchHandle": "DJ_Tala0",
+        "displayName": "DJ_Tala",
+        "pronouns": "he/him",
+        "country": "MX",
+        "handleType": "Twitch"
+    },
+    "DNVIC": {
+        "twitchHandle": "DNVIC",
+        "displayName": "dnvic",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "Daglom": {
+        "twitchHandle": "Daglom",
+        "displayName": "Daglom",
+        "handleType": "Twitch",
+        "country": "RO",
         "pronouns": "he/him"
     },
-    {
-        "playerName": "bummerman222",
-        "twitchHandle": "bummerman222",
+    "Dom_sr": {
+        "twitchHandle": "Dom_sr",
+        "displayName": "dom",
+        "pronouns": "they/them",
+        "country": "NZ",
+        "handleType": "Twitch"
+    },
+    "DragonXplayer": {
+        "twitchHandle": "DragonXplayer",
+        "displayName": "DragonXplayer",
+        "handleType": "Twitch",
+        "country": "PL",
         "pronouns": "he/him"
     },
-    {
-        "playerName": "Cheez",
-        "twitchHandle": "cheez8",
-        "pronouns": "they/them"
-    },
-    {
-        "playerName": "Draconical",
-        "twitchHandle": "Draconical879",
+    "Eeva_x": {
+        "twitchHandle": "Eeva_x",
+        "displayName": "Eeva",
+        "handleType": "Twitch",
+        "country": "NL",
         "pronouns": "she/her"
     },
-    {
-        "playerName": "Framzo",
+    "ElRaimon2000": {
+        "twitchHandle": "ElRaimon2000",
+        "displayName": "Elraimon",
+        "pronouns": "he/him",
+        "country": "ES",
+        "handleType": "Twitch"
+    },
+    "EzTheBoss2": {
+        "twitchHandle": "EzTheBoss2",
+        "displayName": "EzTheBoss2",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "FlaviaEstCalida": {
+        "twitchHandle": "FlaviaEstCalida",
+        "displayName": "flaviaflave",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "Fragnaticc": {
+        "twitchHandle": "Fragnaticc",
+        "displayName": "Fragnaticc",
+        "pronouns": "he/him",
+        "country": "AR",
+        "handleType": "Twitch"
+    },
+    "Framzo": {
         "twitchHandle": "Framzo",
-        "pronouns": "he/him"
+        "displayName": "Framzo",
+        "pronouns": "he/him",
+        "country": "FR",
+        "handleType": "Twitch"
     },
-    {
-        "playerName": "Ian",
-        "twitchHandle": "IanBoy141",
-        "pronouns": "he/him"
+    "Gaborro14": {
+        "twitchHandle": "Gaborro14",
+        "displayName": "Gaborro",
+        "pronouns": "he/him",
+        "country": "MX",
+        "handleType": "Twitch"
     },
-    {
-        "playerName": "iraqlobster1",
-        "twitchHandle": "iraqlobster1",
-        "pronouns": "he/him"
+    "GniefFiar": {
+        "twitchHandle": "GniefFiar",
+        "displayName": "Gnief_Fiar",
+        "pronouns": "he/him",
+        "country": "CA",
+        "handleType": "Twitch"
     },
-    {
-        "playerName": "North",
-        "twitchHandle": "Make_North",
-        "pronouns": "he/him"
+    "IkeSMB": {
+        "twitchHandle": "IkeSMB",
+        "displayName": "Ike",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
     },
-    {
-        "playerName": "max",
-        "twitchHandle": "Mastermaxify",
-        "pronouns": "he/him"
+    "Koslyn": {
+        "twitchHandle": "Koslyn",
+        "displayName": "koslyn",
+        "pronouns": "she/her",
+        "country": "US",
+        "handleType": "Twitch"
     },
-    {
-        "playerName": "Not2Dey",
-        "twitchHandle": "Not2Dey",
-        "pronouns": "he/him"
+    "Lahmus": {
+        "twitchHandle": "Lahmus",
+        "displayName": "lahmus",
+        "pronouns": "he/him",
+        "country": "DE",
+        "handleType": "Twitch"
     },
-    {
-        "playerName": "popop",
-        "twitchHandle": "popop4342",
-        "pronouns": "he/him"
+    "LinkaMeister": {
+        "twitchHandle": "LinkaMeister",
+        "displayName": "LinkaMeister",
+        "pronouns": "he/him",
+        "country": "NL",
+        "handleType": "Twitch"
     },
-    {
-        "playerName": "Razzor",
+    "MKey": {
+        "twitchHandle": "MKey",
+        "displayName": "MKey",
+        "pronouns": "he/him",
+        "country": "VN",
+        "handleType": "Twitch"
+    },
+    "Matth33w_": {
+        "twitchHandle": "Matth33w_",
+        "displayName": "Matth33w",
+        "pronouns": "he/him",
+        "country": "BR",
+        "handleType": "Twitch"
+    },
+    "MikansBox": {
+        "twitchHandle": "MikansBox",
+        "displayName": "mikansbox",
+        "pronouns": null,
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "Mir_iw": {
+        "twitchHandle": "Mir_iw",
+        "displayName": "Mir",
+        "pronouns": "he/him",
+        "country": "AT",
+        "handleType": "Twitch"
+    },
+    "Muimania": {
+        "twitchHandle": "Muimania",
+        "displayName": "Muimania",
+        "pronouns": "he/him",
+        "country": "DE",
+        "handleType": "Twitch"
+    },
+    "Multiple People": {
+        "twitchHandle": "Multiple People",
+        "displayName": "Multiple People",
+        "pronouns": null,
+        "country": null,
+        "handleType": null
+    },
+    "Mushie64": {
+        "twitchHandle": "Mushie64",
+        "displayName": "Mushie64",
+        "pronouns": "he/him",
+        "country": "BG",
+        "handleType": "Twitch"
+    },
+    "Naloas": {
+        "twitchHandle": "Naloas",
+        "displayName": "Naloa",
+        "pronouns": "he/him",
+        "country": "GB",
+        "handleType": "Twitch"
+    },
+    "Naro": {
+        "twitchHandle": "Naro",
+        "displayName": "naro",
+        "pronouns": "he/him",
+        "country": "NO",
+        "handleType": "Twitch"
+    },
+    "NasuAmaya": {
+        "twitchHandle": "NasuAmaya",
+        "displayName": "nasuamaya",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "Natsu_iw": {
+        "twitchHandle": "Natsu_iw",
+        "displayName": "Natsu",
+        "pronouns": "he/him",
+        "country": "GB",
+        "handleType": "Twitch"
+    },
+    "NinjaLifestyle": {
+        "twitchHandle": "NinjaLifestyle",
+        "displayName": "NinjaLifestyle",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "Parrot_Dash": {
+        "twitchHandle": "Parrot_Dash",
+        "displayName": "Parrot Dash",
+        "pronouns": "he/him",
+        "country": "NL",
+        "handleType": "Twitch"
+    },
+    "Phanton404": {
+        "twitchHandle": "Phanton404",
+        "displayName": "Phanton404",
+        "pronouns": "he/him",
+        "country": "AR",
+        "handleType": "Twitch"
+    },
+    "Pinkie_TV": {
+        "twitchHandle": "Pinkie_TV",
+        "displayName": "Pinkie_TV",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "PlutoTheThing": {
+        "twitchHandle": "PlutoTheThing",
+        "displayName": "plutothething",
+        "pronouns": "she/her",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "Public Lobby": {
+        "twitchHandle": "Public Lobby",
+        "displayName": "Public Lobby",
+        "pronouns": null,
+        "country": null,
+        "handleType": null
+    },
+    "Razzor_iw": {
         "twitchHandle": "Razzor_iw",
+        "displayName": "Razzor_iw",
+        "handleType": "Twitch",
+        "country": "UA",
         "pronouns": "he/him"
     },
-    {
-        "playerName": "romrom",
-        "twitchHandle": "romrom4444",
+    "Saira": {
+        "twitchHandle": "Saira",
+        "displayName": "Saira",
+        "handleType": "Bilibili",
+        "country": "CN",
         "pronouns": "he/him"
     },
-    {
-        "playerName": "Skulldude",
-        "twitchHandle": "Skulldude_",
+    "Skukl_": {
+        "twitchHandle": "Skukl_",
+        "displayName": "Skulldude",
+        "pronouns": "he/him",
+        "country": "BR",
+        "handleType": "Twitch"
+    },
+    "SuperViperT302": {
+        "twitchHandle": "SuperViperT302",
+        "displayName": "SuperViperT302",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "SwiftShotTV": {
+        "twitchHandle": "SwiftShotTV",
+        "displayName": "Swift",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "TSRStormed": {
+        "twitchHandle": "TSRStormed",
+        "displayName": "TSR Stormed",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "TTBB": {
+        "twitchHandle": "TTBB",
+        "displayName": "TTBB",
+        "pronouns": "he/him",
+        "country": "CA",
+        "handleType": "Twitch"
+    },
+    "TetraField": {
+        "twitchHandle": "TetraField",
+        "displayName": "TetraField",
+        "handleType": "Twitch",
+        "country": "PL",
         "pronouns": "he/him"
     },
-    {
-        "playerName": "Tehninza",
-        "twitchHandle": "Tehninza",
-        "pronouns": "he/him"
+    "TheReverserOfTime": {
+        "twitchHandle": "TheReverserOfTime",
+        "displayName": "TheReverserOfTime",
+        "pronouns": "she/her",
+        "country": "US",
+        "handleType": "Twitch"
     },
-    {
-        "playerName": "Wolsk",
+    "TheWalkr_": {
+        "twitchHandle": "TheWalkr_",
+        "displayName": "Walkr",
+        "pronouns": "they/he",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "Thenadertwo": {
+        "twitchHandle": "Thenadertwo",
+        "displayName": "thenadertwo",
+        "pronouns": "he/him",
+        "country": "BR",
+        "handleType": "Twitch"
+    },
+    "Wahnthac": {
+        "twitchHandle": "Wahnthac",
+        "displayName": "Wahnthac",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "Wolfiexe": {
+        "twitchHandle": "Wolfiexe",
+        "displayName": "wolfiexe",
+        "pronouns": "he/him",
+        "country": "GB",
+        "handleType": "Twitch"
+    },
+    "Wolsk": {
         "twitchHandle": "Wolsk",
+        "displayName": "Wolsk",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "abiteofdata": {
+        "twitchHandle": "abiteofdata",
+        "displayName": "abiteofdata",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "aducck": {
+        "twitchHandle": "aducck",
+        "displayName": "aducck",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "aglab2": {
+        "twitchHandle": "aglab2",
+        "displayName": "aglab2",
+        "pronouns": "he/him",
+        "country": "SG",
+        "handleType": "Twitch"
+    },
+    "aliceNobodi": {
+        "twitchHandle": "aliceNobodi",
+        "displayName": "AliceNobodi",
+        "pronouns": "she/her",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "anuj071": {
+        "twitchHandle": "anuj071",
+        "displayName": "anuj071",
+        "handleType": "Twitch",
+        "country": "GB",
+        "pronouns": "he/him"
+    },
+    "araxon_iw": {
+        "twitchHandle": "araxon_iw",
+        "displayName": "Aroxon",
+        "handleType": "Twitch",
+        "country": "DE",
+        "pronouns": "he/him"
+    },
+    "barfyace": {
+        "twitchHandle": "barfyace",
+        "displayName": "barfyace",
+        "handleType": "Twitch",
+        "country": "CA",
+        "pronouns": "he/him"
+    },
+    "bummer222": {
+        "twitchHandle": "bummer222",
+        "displayName": "bummer",
+        "handleType": "Twitch",
+        "country": "CA",
+        "pronouns": "he/him"
+    },
+    "dansalvato": {
+        "twitchHandle": "dansalvato",
+        "displayName": "dansalvato",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "dogsrcutew": {
+        "twitchHandle": "dogsrcutew",
+        "displayName": "dogsrcutew",
+        "pronouns": "she/they/he",
+        "country": "DE",
+        "handleType": "Twitch"
+    },
+    "draconical879": {
+        "twitchHandle": "draconical879",
+        "displayName": "Draconical",
+        "handleType": "Twitch",
+        "country": "GB",
+        "pronouns": "she/her"
+    },
+    "flaviaflave": {
+        "twitchHandle": "flaviaflave",
+        "displayName": "flaviaflave",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "hyo_ka": {
+        "twitchHandle": "hyo_ka",
+        "displayName": "hyoka",
+        "pronouns": "he/him",
+        "country": "JP",
+        "handleType": "Twitch"
+    },
+    "iraqlobster01": {
+        "twitchHandle": "iraqlobster01",
+        "displayName": "iraqlobster01",
+        "handleType": "Twitch",
+        "country": "US",
+        "pronouns": "he/him"
+    },
+    "iwVerve": {
+        "twitchHandle": "iwVerve",
+        "displayName": "Verve",
+        "pronouns": "they/them",
+        "country": "CZ",
+        "handleType": "Twitch"
+    },
+    "kalemandu": {
+        "twitchHandle": "kalemandu",
+        "displayName": "kalemandu",
+        "pronouns": "he/him",
+        "country": "GQ",
+        "handleType": "Twitch"
+    },
+    "mastermaxify": {
+        "twitchHandle": "mastermaxify",
+        "displayName": "Mastermaxify",
+        "handleType": "Twitch",
+        "country": "PL",
+        "pronouns": "he/him"
+    },
+    "max954": {
+        "twitchHandle": "max954",
+        "displayName": "max954",
+        "pronouns": "he/him",
+        "country": "CA",
+        "handleType": "Twitch"
+    },
+    "murzikk89": {
+        "twitchHandle": "murzikk89",
+        "displayName": "Murzikk",
+        "handleType": "Twitch",
+        "country": "LV",
+        "pronouns": "he/him"
+    },
+    "namb0": {
+        "twitchHandle": "namb0",
+        "displayName": "Nambo",
+        "pronouns": "any",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "nameless_iw": {
+        "twitchHandle": "nameless_iw",
+        "displayName": "nameless_iw",
+        "pronouns": "he/him",
+        "country": "DE",
+        "handleType": "Twitch"
+    },
+    "no__maybe": {
+        "twitchHandle": "no__maybe",
+        "displayName": "No_",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "pieceofcheese87": {
+        "twitchHandle": "pieceofcheese87",
+        "displayName": "pieceofcheese87",
+        "pronouns": "he/him",
+        "country": "CA",
+        "handleType": "Twitch"
+    },
+    "placements": {
+        "twitchHandle": "placements",
+        "displayName": "placements",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "pointfivepercent": {
+        "twitchHandle": "pointfivepercent",
+        "displayName": "point",
+        "pronouns": "he/him",
+        "country": "SK",
+        "handleType": "Twitch"
+    },
+    "popop4342": {
+        "twitchHandle": "popop4342",
+        "displayName": "popop614",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "protocloud01": {
+        "twitchHandle": "protocloud01",
+        "displayName": "ProtoCloud",
+        "pronouns": "he/him",
+        "country": "BR",
+        "handleType": "Twitch"
+    },
+    "rainydaysTA": {
+        "twitchHandle": "rainydaysTA",
+        "displayName": "rainydays",
+        "pronouns": "he/him",
+        "country": "CN",
+        "handleType": "Twitch"
+    },
+    "shlongster7": {
+        "twitchHandle": "shlongster7",
+        "displayName": "SHLONGSTER",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "strelook21": {
+        "twitchHandle": "strelook21",
+        "displayName": "strelook",
+        "pronouns": "he/him",
+        "country": "RU",
+        "handleType": "Twitch"
+    },
+    "touhoe_": {
+        "twitchHandle": "touhoe_",
+        "displayName": "Touhoe",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "ubersawmedic": {
+        "twitchHandle": "ubersawmedic",
+        "displayName": "Ubersaw",
+        "pronouns": "he/him",
+        "country": "ES",
+        "handleType": "Twitch"
+    },
+    "unpigeonvoyageur": {
+        "twitchHandle": "unpigeonvoyageur",
+        "displayName": "Pigeon",
+        "pronouns": "he/him",
+        "country": "FR",
+        "handleType": "Twitch"
+    },
+    "xoro1": {
+        "twitchHandle": "xoro1",
+        "displayName": "xoro1",
+        "handleType": "Twitch",
+        "country": "DE",
+        "pronouns": "he/him"
+    },
+    "zemooGames": {
+        "twitchHandle": "zemooGames",
+        "displayName": "zemoogames",
+        "pronouns": "he/him",
+        "country": "US",
+        "handleType": "Twitch"
+    },
+    "あずもる": {
+        "twitchHandle": "あずもる",
+        "displayName": "AZmol",
+        "handleType": "Youtube",
+        "country": "JP",
         "pronouns": "he/him"
     }
-]
+}

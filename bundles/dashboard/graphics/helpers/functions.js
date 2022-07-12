@@ -330,6 +330,7 @@ class Layout {
     const id = "gameImage";
     const className = "gameImage";
     gameName = sanitizeFilename(gameName);
+    console.log('gameName',  "gameBackgrounds/" + gameName + ".png")
     const output = "gameBackgrounds/" + gameName + ".png";
 
     if (doesFileExist(output, true)) {
@@ -379,7 +380,7 @@ class Layout {
 
   setRunInfo = () => {
     // TODO: change name to GameAndCommentaryInfo
-    const { commentators, createdBy, gameName, worldRecord } = this.fields;
+    const { commentators, createdBy, gameName, gameNameShortened, worldRecord } = this.fields;
     const baseId = "runInfo"
     const className = `${baseId} primary`;
     const locationInfo = this.getLocationInfo(baseId);
@@ -392,8 +393,9 @@ class Layout {
     const wrText = worldRecord ? "WR " + worldRecord : "";
 
     const runInfoLines = this.getLocationInfo("runInfoLines");
+    console.log('runInfoLines', runInfoLines)
 
-    let text = gameName;
+    let text = gameNameShortened || gameName;
     let text2 = createdByText;
     const text3 =  createdBy;
 

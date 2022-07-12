@@ -131,7 +131,7 @@ class TwitchAPI {
 
     updateTwitchFull(game) {
       const { gameInfo, playerInfo, runInfo } = NodeCG.masterRunList.replicantValues[sanitize(game)];
-      const { gameName, gameCategory } = gameInfo;
+      const { gameName, gameLink } = gameInfo;
       const { commentators, numberOfPlayers } = playerInfo
       const { category, runType } = runInfo;
 
@@ -167,8 +167,8 @@ class TwitchAPI {
 
       const status = `FM 2022 - ${gameName}, ${category} ${runType} by ${players}`;
 
-      if (confirm(`WARNING: this updates the FM Twitch channel with the info below.\nPlease make sure it is correct before confirming.\n\nTitle:\n${status}\n\nGame Category: ${gameCategory}\n\nFeatured Channels: ${channels}`)) {
-        this.updateChannel(status, gameCategory, channels);
+      if (confirm(`WARNING: this updates the FM Twitch channel with the info below.\nPlease make sure it is correct before confirming.\n\nTitle:\n${status}\n\nGame Link: ${gameLink}\n\nFeatured Channels: ${channels}`)) {
+        this.updateChannel(status, gameLink, channels);
       }
     }
 }
@@ -199,9 +199,10 @@ const sanitize = (str) => {
 const sanitizeFilename = (str) => {
   var replace = {
     "#": "number",
-    ":": ""
+    ":": "",
+    "\n": " ",
   };
-  return str.replace(/[#:]/g, (matched) => replace[matched]);
+  return str.replace(/[#:\n]/g, (matched) => replace[matched]);
 };
 
 function deepMerge(target, source) {
@@ -456,13 +457,17 @@ class AdminPanel {
         // }).sort((a,b) => a.toLowerCase().localeCompare(b.toLowerCase()) ); // todo: remove?
 
         var options = NodeCG.masterRunList.schedule.order.filter(x => x);
-        if (!options.length) options = ["Match Fangame", "I Wanna Be The Boshy", "Solace Dreams", "Realm Invasion", "Make a Good 24 Hour Mega Man Level", "Super Sheffy World 2", "Super Metroid: Redesign", "Twitch Does Avoidance", "I Wanna Be The Diverse ver0.95", "I Dun Wanna Be Anything 2", "Super Talking Time Bros. 2.5 The Last Levels", "Celeste Spring Collab 2020", "I Wanna Cruise the 6 Islands", "I Wanna Be the Volatile Presence", "I Wanna Be The Cloudburst", "Another Mario Adventure", "Metroid FreezeFlame 2: Twisted Dimensions", "Touhou Makuka Sai - Fantastic Danmaku Festival", "Avoidance Tournament", "I Wanna Be The Hamster!", "The Super Mario Bros. Super Show 64", "Blind Sudoku Race", "Mission Escape From Bad games", "I Wanna Burnmind", "I Wanna Kill the Last Boss", "Johnny's Nightmare", "I Wanna Kill The Kamilia", "I Don't Wanna Be The Gay", "Blind Needle Race", "Piece's Fangame Funanzapalooza", "I Wanna Cute Jump", "Star Revenge 2 Act 1: To The Moon", "Sonic 3: Angel Island Revisited", "I Wanna CoinStack 1000", "Super Mario Bros. Dimensions", "Maid Made Maze", "I Wanna Be The Justice, Easy Ver.", "I Wanna be The Vandal", "Microtwist", "Engaging Game Design", "I Wanna Duloxetine", "Slicing Apples", "Super Mario 64 Sapphire", "Fish Out Of Water", "Make a Good Mega Man Level: Episode Zero", "Smol Ame", "GuraQuest", "Star Revenge 0: Galaxy of Origins", "Crimson Needle 3", "Super Monkey Ball Gaiden", "Tempest of the Heavens and Earth", "Yoiyami Dancers", "Mega Man Battle Network Chrono X", "TAS Showcase", "I Wanna Run The Marathon", "I Wanna Delete The Huge Bug", "I Wanna Be The Blizzard", "Super Monkey Ball 651", "Super Mario 74", "Blind I Wanna Maker Race", "Blind Adventure Race", "Relay Race", "Mystery Finale Game", "Touhou Danmakufu", "Fangame Baggage", "I Wanna Walk Out In The Morning Dew", "Fangame Feud", "I Wanna Be The Battlegrounds", "Draw Thingy!"];
+        if (!options.length) options = ['I Wanna Be The Orbit', 'Super Metroid: Ascent', "King Boo's Revenge X", 'Super Mario World Blind Event', 'I Wanna Try A Collab 2', 'Super Mario XP', 'Super Monkey Ball: Hella Holidays', 'E.Y.E. Divine Cybermancy', 'I Wanna Take The Memory', 'I Wanna Be The Pendulum', 'Super Mario: The Lost Dreams', 'Nebulous Thoughts', 'La-Mulana Randomizer', 'Touhou Rock Maiden FC', 'I Wanna Be The Farewell', 'Smol Ame', 'Yoiyami Dreamer', 'Fish Out Of Water', 'Celeste - Spring Collab 2020', 'Momentum Mod Jump Showcase', 'Super Mario Star Road', 'The Colour Relay Race', "Piece's Extravaganza", 'I Wanna Be The Fangame!', 'I Wanna Be Time Characters', "ABuffZucchini's Various Maps", 'I Wanna Be The Permanence', 'I Wanna Be The Justice Guy', 'Banjo-Kazooie Randomizer', 'Full Techno Jackass', 'Piano Medley', 'I Wanna Be The Agent', 'Touhou Rock Maiden FC2', 'I Wanna Be The Angewel', 'Shining Stars 4: Elephant Star Adventure', 'IWBTG Blind Sudoku Event', 'I Wanna Be The Kukulu', "Gaborro's Goobawagawahoo Event", 'I Wanna Rost The Car', 'Pyrite Adventure 2', 'Momentum Mod Surf Showcase', 'untitled needle game', 'How The Gruntch Stole Christmas', 'Bounce Tales 64', 'Celeste Randomizer', 'Avoidance Tournament', 'Suwako-chan Cubic HD', 'Escape From The Jail Definitive Edition', 'Celeste Blind Event', 'I Wanna Be The Sugar', 'I Wanna Be The Guy Remastered', "I Wanna Can't Stop Tournament", 'Make a Good Mega Man Level Remastered', 'YuuYuu Jiteki no Yuukarin', 'IWBTG Blind Adventure Event', '？？？', 'Super Mario 64 Blind Event', 'Ocarina of Time Randomizer', 'Relay Race', "Banjo-Kazooie: Cheato's Challenges", 'I Wanna Arcana Of The Tarot', 'Holo Dungeon', 'SM64 Millionaire', 'Metroid: Spooky Mission 2', 'Monkey Ball Tournament', 'Super Mario Senseless Delirium', 'I Wanna Be The  iDOLM@STER', 'IWBTG Fangame TAS', 'Celeste (Farewell B-Side) TAS', 'Celeste: Into the Jungle TAS', '"Mystery" Finale Game', 'Not Another Needle Game', 'Help Me Remember, Satori-sama!', 'IWBTG Hide and Seek', 'Clone Hero', 'I Wanna Be The Magic Master', "Piece's Extravaganza Bonus", 'I Wanna Kardia', 'Celestio 64', 'Some Drawing-Related Fangame'];
+        
+        // FM2021 ["Match Fangame", "I Wanna Be The Boshy", "Solace Dreams", "Realm Invasion", "Make a Good 24 Hour Mega Man Level", "Super Sheffy World 2", "Super Metroid: Redesign", "Twitch Does Avoidance", "I Wanna Be The Diverse ver0.95", "I Dun Wanna Be Anything 2", "Super Talking Time Bros. 2.5 The Last Levels", "Celeste Spring Collab 2020", "I Wanna Cruise the 6 Islands", "I Wanna Be the Volatile Presence", "I Wanna Be The Cloudburst", "Another Mario Adventure", "Metroid FreezeFlame 2: Twisted Dimensions", "Touhou Makuka Sai - Fantastic Danmaku Festival", "Avoidance Tournament", "I Wanna Be The Hamster!", "The Super Mario Bros. Super Show 64", "Blind Sudoku Race", "Mission Escape From Bad games", "I Wanna Burnmind", "I Wanna Kill the Last Boss", "Johnny's Nightmare", "I Wanna Kill The Kamilia", "I Don't Wanna Be The Gay", "Blind Needle Race", "Piece's Fangame Funanzapalooza", "I Wanna Cute Jump", "Star Revenge 2 Act 1: To The Moon", "Sonic 3: Angel Island Revisited", "I Wanna CoinStack 1000", "Super Mario Bros. Dimensions", "Maid Made Maze", "I Wanna Be The Justice, Easy Ver.", "I Wanna be The Vandal", "Microtwist", "Engaging Game Design", "I Wanna Duloxetine", "Slicing Apples", "Super Mario 64 Sapphire", "Fish Out Of Water", "Make a Good Mega Man Level: Episode Zero", "Smol Ame", "GuraQuest", "Star Revenge 0: Galaxy of Origins", "Crimson Needle 3", "Super Monkey Ball Gaiden", "Tempest of the Heavens and Earth", "Yoiyami Dancers", "Mega Man Battle Network Chrono X", "TAS Showcase", "I Wanna Run The Marathon", "I Wanna Delete The Huge Bug", "I Wanna Be The Blizzard", "Super Monkey Ball 651", "Super Mario 74", "Blind I Wanna Maker Race", "Blind Adventure Race", "Relay Race", "Mystery Finale Game", "Touhou Danmakufu", "Fangame Baggage", "I Wanna Walk Out In The Morning Dew", "Fangame Feud", "I Wanna Be The Battlegrounds", "Draw Thingy!"];
 
         // FM2020 ["I Wanna Eclipse", "Super Metroid Ascent", "Star Revenge 2.5: Remnant of Doom", "Chill Needle 2", "Rockman 4 Burst Chaser x Air Sliding", "Fish Out Of Water", "Gensou Skydrift", "I Wanna Be The Neon 3", "I Wanna Be The Salt", "I Wanna KeyPick 100", "Ghost Mechanism", "SM64: Last Impact", "Super Mario Odyssey 64", "Blind I Wanna Maker", "I Wanna Be The Guy", "I Wanna Be The Guy: Gaiden", "NitorInc.", "Make a Good Mega Man Level 2", "Sunlust", "Avoidance Tournament", "Super Metroid Y-Faster 2 Fast", "Nimpize Adventure", "Sonic Chrono Adventure", "Densha de D: Lightning Stage", "I Wanna See The Moon", "I Wanna Kill The Guy", "Piece's Extravaganza", "Mystery Game", "Gm8Emulator TAS Showcase", "Needle", "I Wanna Be The Justice", "I Wanna Whisper In Mirror", "Star Revenge 2: Night of Doom", "Grief Syndrome", "Maid Made Maze", "Metroid Fusion: Oil Spill", "Blind Adventure Race", "I Wanna Be The Co-op", "Blind Needle Race", "I Wanna Be The Strongest Fairy", "Designer L's Wacky Randventure!", "Waluigi's Taco Stand", "Coinflip Tournament", "Fangame Music DJ Set", "I Wanna Be The Platinum", "I Wanna Be The Computer 2", "I Wanna Be The With Friendsβ", "Blind Sudoku Race", "I Want", "I Wanna Be The Emperor", "Mario Party 64", "I Wanna Leave This Hell", "I Wanna Be The Destination", "Super Mario 63", "New Mini Kongkongi's Adventure", "Fangame Music Quiz", "Touhou Luna Nights", "Touhou Danmakufu", "Relay Race", "Mystery Finale Game", "I Wanna Make A Sandwich", "Crimson Needle 3", "Piece's Bonus Extravaganza", "Misuzu to Chiruno no Youkai no Yamadai Bouken Akushongemu", "Super Mario 74 Extreme Edition", "Draw My Guy"];
 
         // todo: work on this backup
         //
         // console.log("options:", options);
+
+        console.log('fieldReplicantValues', fieldReplicantValues)
 
         this.gameName = fieldReplicantValues.gameInfo.gameName;
 
@@ -499,7 +504,7 @@ class AdminPanel {
     const text = "HARD RESET RUNS";
     const warningMessage = [
       'WARNING: This is the HARD RESET BUTTON for run information; please make sure you want to do this.',
-      'This will reset the program back to the backup.json info which has all correct info as of 7/18/21 @ 12:00 ET.',
+      'This will reset the program back to the backup.json info which has all correct info as of 7/10/22 @ 17:00 ET.',
       'Use this if the layouts somehow are outputting completely incorrect information that you can\'t seem to reset.',
     ];
     $("#adminPanelHardResetButton").append( //todo: next
@@ -515,7 +520,7 @@ class AdminPanel {
             location.reload();
             setReplicant.loadRunIntoDashboard(NodeCG.adminPanel.gameName);
             NodeCG.adminPanel.gameNameInput.val(NodeCG.adminPanel.gameName);
-            setTimeout(() => $("#adminPanelLoadRunInfoButton").click(), 0);
+            setTimeout(() => $("#adminPanelLoadRunInfoButton").trigger('click'), 0);
           }
         }
       })
@@ -603,8 +608,8 @@ class AdminPanel {
           };
         });
       } else { //todo: remove else statement
-        currentLoadButton.off();
-        defaultLoadButton.off();
+        // currentLoadButton.off();
+        // defaultLoadButton.off();
       }
 
       $("#" + sanitize(text)).html(labelText); //todo: next

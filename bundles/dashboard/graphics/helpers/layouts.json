@@ -322,11 +322,12 @@ var layouts = {
         "text":       { "fontSize": "40.5px" },
         "outline":    { "width": "344px" }
       },
-      "runInfo":      { "left": 0,  "top": 14, "width": "100%", "textAlign": "center" },
-      "runInfoLines": 1,
       "announcement": { "left": 41, "bottom": 18, "width": 350, "height": 80, "fontSize": "24px" },
+      "commentInfo":  { "left": 0,  "top": 15,    "width": "100%", "textAlign": "center" },
+      "runInfo":      { "left": 0,  "top": 600, "width": "100%", "textAlign": "center" },
+      "runInfoLines": 1,
       "player1": {
-        "twitchIcon": { "left":  10,  "top": 15 },
+        "twitchIcon": { "left":  10,  "top": 15, "width": 28, "height": 28 },
         "offset":     { "left":  35,  "top": -2 },
         "gameBorder": {
           "start":    { "left": 0,    "top": 55  },
@@ -334,7 +335,7 @@ var layouts = {
         }
       },
       "player2": {
-        "twitchIcon": { "right":  7,  "top": 15 },
+        "twitchIcon": { "right":  7,  "top": 15, "width": 28, "height": 28 },
         "offset":     { "right": 31, "top": -2 },
         "gameBorder": {
           "start":    { "left": 639,  "top": 55  },
@@ -486,7 +487,60 @@ var layouts = {
 
 
   "3P": {
-    "600|608": {
+    "16:9": {
+      "camera": false,
+      "hashtag":      {
+        "position":   { "left": 44,   "top": 438 },
+        "text":       { "fontSize": "40.5px" },
+        "outline":    { "width": "344px" }
+      },
+      "announcement": { "left": 44, "top": 560, "width": 350, "height": 80, "fontSize": "24px" },
+      "commentInfo":  { "left": 0,  "top": -1,   "width": "100%", "textAlign": "center" },
+      "runInfo":      { "left": 0,  "top": 560, "width": "100%", "textAlign": "center" },
+      "player1": {
+        "twitchIcon": { "left":  15,  "top": 14, "width": 28, "height": 28 },
+        "offset":     { "left":  35,  "top": -2 },
+        "gameBorder": {
+          "start":    { "left": 0,    "top": 0  },
+          "offset":   { "left": 630,  "top": 357 }
+        }
+      },
+      "player2": {
+        "twitchIcon": { "right":  7,  "top": 14, "width": 28, "height": 28 },
+        "offset":     { "right": 31, "top": -2 },
+        "gameBorder": {
+          "start":    { "left": 639,  "top": 0  },
+          "offset":   { "left": 630,  "top": 357 }
+        }
+      },
+      "player3": {
+        "twitchIcon": { "left":  15,  "top": 14, "width": 28, "height": 28 },
+        "offset":     { "left":  35,  "top": -2 },
+        "gameBorder": {
+          "start":    { "left": 0,    "top": 352  },
+          "offset":   { "left": 630,  "top": 357 }
+        }
+      },
+      "borders": {
+        "genres": {
+          "start":    { "left": 521,  "top": 534, "alt": true },
+          "offset":   { "left": 224,  "top": 73 }
+        },
+        "genresStacked": {
+          "start":    { "left": 550,  "top": 612 },
+          "offset":   { "left": 167,  "top": 73 }
+        },
+        "timer": {
+          "start":    { "left": 438,  "top": 423 },
+          "offset":   { "left": 396,  "top": 72  }
+        },
+        "titleCard": {
+          "start":    { "left": 886,  "top": 450 },
+          "offset":   { "left": 312,  "top": 237 }
+        }
+      }
+    },
+    "10:7|16:9|600|608": {
       "camera": false,
       "commentInfo":  { "left": -450,  "top": 445,  "width": "100%", "textAlign": "center" },
       "runInfo":      { "left": 0,  "top": 100, "width": "100%", "textAlign": "center" },
@@ -500,6 +554,57 @@ var layouts = {
       },
       "player3": {
         "twitchIcon": { "height": 22, "width": 22 }
+      }
+    },
+    "10:7": {
+      "runInfo":      { "fontSize": "19px" },
+      "hashtag":      {
+        "position":   { "left": 518,   "top": 24 },
+        "text":       { "fontSize": "28px" },
+        "outline":    { "width": "238px" }
+      },
+      "player1": {
+        "twitchIcon": { "left":   8,  "top": 368 },
+        "offset":     { "left":  26,  "top":  -2 },
+        "gameBorder": {
+          "start":    { "left": 0,    "top":   0 },
+          "offset":   { "left": 502,  "top": 350 }
+        }
+      },
+      "player2": {
+        "dev_note":   "todo: fix this and make the display/margin a className: center",
+        "twitchIcon": { "left": -11, "top": 305, "display": "block", "marginLeft": "50%", "marginRight": "50%" },
+        "offset":     { "left": 11, "top": 24, "textAlign": "center" },
+        "gameBorder": {
+          "start":    { "left": 383,  "top": 359 },
+          "offset":   { "left": 502,  "top": 350 }
+        }
+      },
+      "player3": {
+        "twitchIcon": { "right":  7, "top": 367, "className": "center" },
+        "offset":     { "right": 27, "top": -2 },
+        "gameBorder": {
+          "start":    { "left": 767,  "top":   0 },
+          "offset":   { "left": 502,  "top": 350 }
+        }
+      },
+      "borders": {
+        "genres": {
+          "start":    { "left":  87,  "top": 459, "alt": true },
+          "offset":   { "left": 224,  "top": 73  }
+        },
+        "genresStacked": {
+          "start":    { "left": 116,  "top": 537 },
+          "offset":   { "left": 167,  "top":  73 }
+        },
+        "timer": {
+          "start":    { "left": 516,  "top": 206 },
+          "offset":   { "left": 240,  "top":  72 }
+        },
+        "titleCard": {
+          "start":    { "left": 927,  "top": 418 },
+          "offset":   { "left": 312,  "top": 237 }
+        }
       }
     },
     "600": {

@@ -1,0 +1,41 @@
+var playerGroups = {
+    "Avoidance Tournament": [
+        "anuj071",
+        "araxon_iw",
+        "barfyace",
+        "bummer222",
+        "Daglom",
+        "draconical879",
+        "DragonXplayer",
+        "Eeva_x",
+        "iraqlobster01",
+        "mastermaxify",
+        "murzikk89",
+        "Razzor_iw",
+        "Saira",
+        "TetraField",
+        "xoro1",
+        "あずもる"
+    ],
+    "Gaborro's Goobawagawahoo Event": [
+        "anuj071",
+        "Arzztt",
+        "Cosmoing",
+        "Eeva_x",
+        "Gaborro14",
+        "iwVerve",
+        "Skukl_",
+        "Thenadertwo",
+        "Wolfiexe"
+    ],
+    "I Wanna Can't Stop Tournament": [
+        "128up",
+        "Arzztt",
+        "CeleCele",
+        "Eeva_x",
+        "Mir_iw",
+        "Naloas",
+        "あずもる"
+    ],
+    "Monkey Ball Tournament": ["42guy42", "IkeSMB", "TheWalkr_"],
+}
