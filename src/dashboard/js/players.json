@@ -104,6 +104,13 @@ var players = {
         "country": "RO",
         "pronouns": "he/him"
     },
+    "dmt_goobz": {
+        "twitchHandle": "dmt_goobz",
+        "displayName": "Dmt Goobz",
+        "handleType": "Twitch",
+        "country": "US",
+        "pronouns": "he/him"
+    },
     "Dom_sr": {
         "twitchHandle": "Dom_sr",
         "displayName": "dom",
@@ -323,7 +330,7 @@ var players = {
     },
     "Razzor_iw": {
         "twitchHandle": "Razzor_iw",
-        "displayName": "Razzor_iw",
+        "displayName": "Razzor",
         "handleType": "Twitch",
         "country": "UA",
         "pronouns": "he/him"
@@ -455,7 +462,7 @@ var players = {
         "pronouns": "he/him"
     },
     "araxon_iw": {
-        "twitchHandle": "araxon_iw",
+        "twitchHandle": "aroxon_iw",
         "displayName": "Aroxon",
         "handleType": "Twitch",
         "country": "DE",

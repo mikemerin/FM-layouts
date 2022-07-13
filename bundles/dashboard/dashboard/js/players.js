@@ -14,7 +14,8 @@ const groupTableGames = [
     "Avoidance Tournament",
     "Gaborro's Goobawagawahoo Event",
     "I Wanna Can't Stop Tournament",
-    "Monkey Ball Tournament"
+    "Monkey Ball Tournament",
+    "The Colour Relay Race"
 ];
 
 const makePlayerGroupTables = (players, playerGroups, dashboardForm) => {

@@ -37,5 +37,6 @@ var playerGroups = {
         "Naloas",
         "あずもる"
     ],
-    "Monkey Ball Tournament": ["42guy42", "IkeSMB", "TheWalkr_"],
+    "Monkey Ball Tournament": ["42guy42", "dmt_goobz", "IkeSMB", "TheWalkr_"],
+    "The Colour Relay Race": ["anuj071", "placements", "FlaviaEstCalida", "barfyace"],
 }
