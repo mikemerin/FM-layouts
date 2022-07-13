@@ -416,7 +416,7 @@ class Layout {
       keepGameAndCreatorOnScreen = true;
     }
 
-    const gameTextCutoff = 40;
+    const gameTextCutoff = 36;
 
     if (text.length > gameTextCutoff) {
       const lastSpace = text.slice(0, gameTextCutoff).match(/(?=[^ ]*$)/).index;
