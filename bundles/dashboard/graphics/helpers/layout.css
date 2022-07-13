@@ -11,8 +11,14 @@
 .fill         { z-index:  7; }
 .bright       { z-index: 10; }
 .primary      { z-index: 13; }
+.flagIcon     { z-index: 14; }
 .twitchIcon   { z-index: 16; }
 .border       { z-index: 20; }
+
+.flagIcon     {
+  -webkit-clip-path: polygon(13% 0, 100% 0%, 100% 65%, 75% 88%, 53% 88%, 43% 100%, 29% 100%, 29% 88%, 0 88%, 0 21%);
+  clip-path: polygon(13% 0, 100% 0%, 100% 65%, 75% 88%, 53% 88%, 43% 100%, 29% 100%, 29% 88%, 0 88%, 0 21%);
+}
 
 /* main css */
 

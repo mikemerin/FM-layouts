@@ -348,3 +348,45 @@ let output = Object.keys(runsBackup).reduce((acc, el) => {
 }, {})
 
 let playerInfo = [...new Set(Object.keys(output))].sort().reduce((acc, el) => ({ ...acc, [el]: output[el] }), {});
+
+
+// flags
+
+flags = ["AC", "AD", "AE", "AF", "AG", "AI", "AL", "AM", "AO", "AQ", "AR", "AS", "AT", "AU", "AW", "AX", "AZ", "BA", "BB", "BD", "BE", "BF", "BG", "BH", "BI", "BJ", "BL", "BM", "BN", "BO", "BQ", "BR", "BS", "BT", "BV", "BW", "BY", "BZ", "CA", "CC", "CD", "CF", "CG", "CH", "CI", "CK", "CL", "CM", "CN", "CO", "CR", "CU", "CV", "CW", "CX", "CY", "CZ", "DE", "DJ", "DK", "DM", "DO", "DZ", "EC", "EE", "EG", "EH", "ER", "ES", "ET", "EU", "FI", "FJ", "FK", "FM", "FO", "FR", "GA", "GB", "GD", "GE", "GF", "GG", "GH", "GI", "GL", "GM", "GN", "GP", "GQ", "GR", "GS", "GT", "GU", "GW", "GY", "HK", "HM", "HN", "HR", "HT", "HU", "IC", "ID", "IE", "IL", "IM", "IN", "IO", "IQ", "IR", "IS", "IT", "JE", "JM", "JO", "JP", "KE", "KG", "KH", "KI", "KM", "KN", "KP", "KR", "KW", "KY", "KZ", "LA", "LB", "LC", "LI", "LK", "LR", "LS", "LT", "LU", "LV", "LY", "MA", "MC", "MD", "ME", "MF", "MG", "MH", "MK", "ML", "MM", "MN", "MO", "MP", "MQ", "MR", "MS", "MT", "MU", "MV", "MW", "MX", "MY", "MZ", "NA", "NC", "NE", "NF", "NG", "NI", "NL", "NO", "NP", "NR", "NU", "NZ", "OM", "PA", "PE", "PF", "PG", "PH", "PK", "PL", "PM", "PN", "PR", "PS", "PT", "PW", "PY", "QA", "RE", "RO", "RS", "RU", "RW", "SA", "SB", "SC", "SD", "SE", "SG", "SH", "SI", "SJ", "SK", "SL", "SM", "SN", "SO", "SR", "SS", "ST", "SV", "SX", "SY", "SZ", "TA", "TC", "TD", "TF", "TG", "TH", "TJ", "TK", "TL", "TM", "TN", "TO", "TR", "TT", "TV", "TW", "TZ", "UA", "UG", "UM", "US", "UY", "UZ", "VA", "VC", "VE", "VG", "VI", "VN", "VU", "WF", "WS", "XK", "YE", "YT", "ZA", "ZM", "ZW"];
+
+const elem = document.createElement('a');
+
+let i = 0
+
+function download() {
+    const flag = flags[i];
+    if (flag) {
+        const url = 'https://catamphetamine.gitlab.io/country-flag-icons/3x2/' + flag + '.svg';
+        
+        elem.href = url;
+        elem.download = flag + '.svg';
+        elem.id="downloadAnchor";
+        document.body.appendChild(elem);
+        document.getElementById('downloadAnchor').click();
+        setTimeout(() => {
+            console.log(i, flag)
+            i++
+            download();
+        }, 100)
+    }
+}
+
+download();
+
+
+// avatars
+
+
+['ShadowsDieAway', 'wolsk'].forEach(user => {
+    fetch('https://api.twitch.tv/helix/users?login=' + user, {
+        headers: {
+            'Client-Id': '-',
+            'Authorization': 'Bearer ' + '-',
+        }
+    }).then(x => x.json()).then(x => console.log(x.data[0].profile_image_url))
+})

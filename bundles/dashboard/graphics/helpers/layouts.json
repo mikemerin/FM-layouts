@@ -162,7 +162,7 @@ var layouts = {
         "outline":    { "width": "320px" }
       },
       "commentInfo":  { "left": 352,  "top": 640 },
-      "runInfo":      { "left": 852,  "top": 14, "width": 374, "height": 60 },
+      "runInfo":      { "left": 802,  "top": 14, "width": 474, "height": 60 },
       "player1": {
         "twitchIcon": { "right": 30, "bottom": 21, "width": 41, "height": 44 },
         "offset":     { "right": 47, "bottom": -8 },

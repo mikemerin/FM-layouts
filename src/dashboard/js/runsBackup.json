@@ -176,7 +176,7 @@ var runsBackup = {
             "player1_camera": true,
             "player1_pb": null,
             "player2_twitchHandle": "MKey",
-            "player2_handleType": "Twitch",
+            "player2_handleType": "Youtube",
             "player2_displayName": "MKey",
             "player2_country": "VN",
             "player2_pronouns": "he/him",
@@ -955,7 +955,7 @@ var runsBackup = {
             "commentator_pronouns": "he/him"
         },
         "visuals": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".1",
             "chromaKeyColor": "green"
         }
     },
@@ -1157,7 +1157,7 @@ var runsBackup = {
             "player4_pronouns": null,
             "player4_camera": false,
             "player4_pb": null,
-            "commentators": "flaviaflave",
+            "commentators": "FlaviaEstCalida",
             "commentator_pronouns": null
         },
         "runInfo": {
@@ -1917,7 +1917,7 @@ var runsBackup = {
             "commentator_pronouns": "he/him"
         },
         "visuals": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".1",
             "chromaKeyColor": "green"
         }
     },
@@ -2945,7 +2945,7 @@ var runsBackup = {
         "playerInfo": {
             "numberOfPlayers": "1",
             "player1_twitchHandle": "abiteofdata",
-            "player1_handleType": "Twitch",
+            "player1_handleType": "Youtube",
             "player1_displayName": "abiteofdata",
             "player1_country": "US",
             "player1_pronouns": "he/him",
@@ -3026,7 +3026,7 @@ var runsBackup = {
             "player4_pronouns": null,
             "player4_camera": false,
             "player4_pb": null,
-            "commentators": "mikachelya, abiteofdata, sashabell2001, kataiser",
+            "commentators": "mikachelya abiteofdata sashabell kataiser",
             "commentator_pronouns": null
         },
         "runInfo": {
@@ -3911,7 +3911,7 @@ var runsBackup = {
             "player2_pronouns": "he/him",
             "player2_camera": false,
             "player2_pb": null,
-            "player3_twitchHandle": "flaviaflave",
+            "player3_twitchHandle": "FlaviaEstCalida",
             "player3_handleType": "Twitch",
             "player3_displayName": "flaviaflave",
             "player3_country": "US",

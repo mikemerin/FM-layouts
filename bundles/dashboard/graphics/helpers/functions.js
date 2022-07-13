@@ -163,15 +163,21 @@ class Layout {
     this.createTimeline(lines, 0, id, animationInfo);
   }
 
-  createTimeline = (lines, line, id, animationInfo) => {
+  createTimeline = (lines, line, id, animationInfo, fallback) => {
     const { animationType, elementType, direction } = animationInfo;
-    // var primaryOffset = 543;
-    var primaryOffset = 10000; // TODO: change back
+    var primaryOffset = 543;
+    // var primaryOffset = 10000; // TODO: change back
     var wrapper = document.querySelector(`#${id}`);
     const elementSrc = "/assets/dashboard/" + lines[line];
     if (elementType === "text") wrapper.innerText = lines[line]; // todo: wrap the elementType in a function, link with complete
-    if (elementType === "image" && this.linkCheck(elementSrc)) {
-      wrapper.src = elementSrc;
+    if (elementType === "image") {
+      if (this.linkCheck(elementSrc)) {
+        console.log('link check good for ', elementSrc)
+        wrapper.src = elementSrc;
+      } else if (fallback) {
+        console.log('replacing with ', fallback)
+        wrapper.src = fallback;
+      }
     }
 
     if (animationType === "flyIn") {
@@ -222,7 +228,7 @@ class Layout {
         duration: 2000,
         delay: (el, i) => 100 + 20 * i,
         offset: primaryOffset + 17000,
-        complete: () => { this.createTimeline(lines, (line + 1) % lines.length, id, animationInfo) }
+        complete: () => { this.createTimeline(lines, (line + 1) % lines.length, id, animationInfo, fallback) }
       });
     } else if (animationType === "swap") {
       primaryOffset *= 2;
@@ -267,7 +273,7 @@ class Layout {
         easing: "easeInOutBack",
         duration: 3000,
         offset: primaryOffset + 7000,
-        complete: () => { this.createTimeline(lines, line, id, animationInfo) }
+        complete: () => { this.createTimeline(lines, line, id, animationInfo, fallback) }
       })
     } else if (animationType === "collapse") {
       primaryOffset *= 2;
@@ -300,7 +306,7 @@ class Layout {
         easing: "easeInOutBack",
         duration: 3000,
         offset: primaryOffset + 7000,
-        complete: () => { this.createTimeline(lines, line, id, animationInfo) }
+        complete: () => { this.createTimeline(lines, line, id, animationInfo, fallback) }
       })
     }
   };
@@ -388,7 +394,7 @@ class Layout {
     const createdByText = "Created By"
     const commentaryByText = "Commentary By";
     console.log(commentators)
-    const commentatorNames = commentators && commentators.split(',').length > 3 ? 'Multiple People (see overlay)' : commentators;
+    const commentatorNames = commentators;
     // TODO: next year once the Featured Channels program is updated make this say 'Multiple People (hover to see!)'
     const wrText = worldRecord ? "WR " + worldRecord : "";
 
@@ -580,20 +586,26 @@ class Layout {
   setPlayerInfo = () => {
     const players = parseInt(this.fields.numberOfPlayers, 10);
     const tId = "twitchIcon";
+    const fId = "flagIcon";
     const tClassName = "primary twitchIcon";
-    const twitchSrc = "baseLayoutLayers/" + tId + ".png";
+    const fClassName = "primary flagIcon";
+    const twitchSrc = "baseLayoutLayers/" + tId + "Hollow.png";
 
     for (let playerNumber = 1; playerNumber <= players; playerNumber++) {``
       const pIdIcon = tId + playerNumber;
+      const fIdIcon = fId + playerNumber;
       const pIdText = "player" + playerNumber;
       const pClassName = "primary";
       const twitchHandle = this.fields["player" + playerNumber + "_twitchHandle"];
       const pronouns = this.fields["player" + playerNumber + "_pronouns"];
       const pb = this.fields["player" + playerNumber + "_pb"];
       const displayName = this.fields["player" + playerNumber + "_displayName"] || twitchHandle;
-      const avatarSrc = "avatars/" + twitchHandle + ".png";
+      let avatarSrc = "avatars/" + twitchHandle + ".png";
 
-      const text = displayName + " (" + pronouns + ")";
+      const country = this.fields["player" + playerNumber + "_country"]
+      const flagSrc = "flags/" + country + ".svg";
+
+      const text = displayName + (pronouns ? " (" + pronouns + ")" : "");
       const textSwap = (pb ? "PB " + pb + " - " : "") + twitchHandle;
 
       let tLocationInfo = this.getLocationInfo(tId, "player", playerNumber);
@@ -612,6 +624,11 @@ class Layout {
         elementType: "image",
         direction: tLocationInfo.flyIn || "horizontal"
       };
+      const fLocationInfo = {
+        ...tLocationInfo,
+        ...(tLocationInfo.bottom && { bottom: tLocationInfo.bottom + 1 }),
+        ...(tLocationInfo.top && { top: tLocationInfo.top - 1 }),
+      };
 
       pLocationInfo.fontSize = layouts.playerTextSizes[this.fields.numberOfPlayers + "P"];
       if (players === 1 && twitchHandle.length >= 11) {
@@ -623,9 +640,11 @@ class Layout {
       this.setBorder("gameBorder", playerNumber);
 
       this.createElement(pIdIcon, tClassName, twitchSrc,  tLocationInfo, "img", "player");
+      this.createElement(fIdIcon, fClassName, flagSrc,  fLocationInfo, "img", "player");
       this.createElement(pIdText, pClassName, twitchHandle, pLocationInfo, "text", "player");
       this.createTimeline([text, textSwap], 0, pIdText, animationInfo);
       this.createTimeline([avatarSrc, twitchSrc], 0, pIdIcon, iconAnimationInfo);
+      this.createTimeline([avatarSrc, flagSrc], 0, fIdIcon, iconAnimationInfo);
     };
   };
 

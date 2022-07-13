@@ -329,7 +329,7 @@ var players = {
         "pronouns": "he/him"
     },
     "Saira": {
-        "twitchHandle": "Saira",
+        "twitchHandle": "王者青年",
         "displayName": "Saira",
         "handleType": "Bilibili",
         "country": "CN",

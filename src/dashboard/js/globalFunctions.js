@@ -504,7 +504,7 @@ class AdminPanel {
     const text = "HARD RESET RUNS";
     const warningMessage = [
       'WARNING: This is the HARD RESET BUTTON for run information; please make sure you want to do this.',
-      'This will reset the program back to the backup.json info which has all correct info as of 7/10/22 @ 17:00 ET.',
+      'This will reset the program back to the backup.json info which has all correct info as of 7/13/22 @ 01:00 ET.',
       'Use this if the layouts somehow are outputting completely incorrect information that you can\'t seem to reset.',
     ];
     $("#adminPanelHardResetButton").append( //todo: next
