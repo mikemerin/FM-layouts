@@ -82,8 +82,10 @@ class TwitchAPI {
 
       const options = {
         headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/vnd.twitchtv.v5+json',
           'Client-ID': this.clientId,
-          'Authorization': 'Bearer ' + this.bearerToken
+          'Authorization': 'Bearer ' + this.oauthToken,
         }
       };
 
@@ -98,7 +100,42 @@ class TwitchAPI {
     }
 
     async updateChannel(status, game, channels) {
-      const url = `https://api.twitch.tv/kraken/channels/${this.channelId}`;
+      this.getChannelInfo()
+      console.log('game', game)
+      console.log('status', status)
+      console.log('channels', channels)
+      const gameMap = {
+        "Banjo-Kazooie": 10033,
+        "Celeste": 492535,
+        "Clone Hero": 125264560,
+        "E.Y.E. Divine Cybermancy": 26800,
+        "Holo Dungeon": 2041888201,
+        "I Wanna Be The Guy": 20716,
+        "I Wanna Be the Guy": 20716,
+        "La-Mulana": 20422,
+        "Mega Man": 4815,
+        "Metroid: Zero Mission": 15919,
+        "Momentum Mod": 492973,
+        "Piano": 26936,
+        "Smol Ame": 1518385830,
+        "Sonic Adventure": 7195,
+        "Super Mario 64": 2692,
+        "Super Mario Bros.": 509508,
+        "Super Mario World": 1229,
+        "Super Metroid": 7595,
+        "Super Monkey Ball": 6624,
+        "Super Monkey Ball 2": 4694,
+        "The Legend of Zelda: Ocarina of Time": 11557,
+        "Touhou Project": 448375,
+      }
+      // game list https://raw.githubusercontent.com/Nerothos/TwithGameList/master/game_info.json
+      let url = `https://api.twitch.tv/helix/channels?broadcaster_id=${this.channelId}`;
+      if (game && gameMap[game]) {
+        url += '&game_id=' + gameMap[game];
+      }
+      if (status) {
+        url += '&title=' + encodeURI(status);
+      }
       let featuredChannelUrl = 'https://api.furious.pro/featuredchannels/bot/ab8b468a5808ac206f12cbc7d80af868:90780102/';
 
       const body = JSON.stringify({
@@ -110,13 +147,13 @@ class TwitchAPI {
       });
 
       const options = {
-          method: 'PUT',
+          method: 'PATCH',
           body,
           headers: {
               'Content-Type': 'application/json',
           		'Accept': 'application/vnd.twitchtv.v5+json',
           		'Client-ID': this.clientId,
-          		'Authorization': 'OAuth ' + this.oauthToken,
+          		'Authorization': 'Bearer ' + this.oauthToken,
           }
       };
 
