@@ -399,7 +399,6 @@ class Layout {
     const wrText = worldRecord ? "WR " + worldRecord : "";
 
     const runInfoLines = this.getLocationInfo("runInfoLines");
-    console.log('runInfoLines', runInfoLines)
 
     let text = gameNameShortened || gameName;
     let text2 = createdByText;

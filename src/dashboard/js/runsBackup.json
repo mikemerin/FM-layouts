@@ -121,14 +121,14 @@ var runsBackup = {
             "player1_country": "US",
             "player1_pronouns": "he/him",
             "player1_camera": false,
-            "player1_pb": "1:57:01",
+            "player1_pb": "1:52:46",
             "player2_twitchHandle": "PlutoTheThing",
             "player2_handleType": "Twitch",
             "player2_displayName": "plutothething",
             "player2_country": "US",
             "player2_pronouns": "she/her",
             "player2_camera": false,
-            "player2_pb": "2:02:54",
+            "player2_pb": "1:47:25",
             "player3_twitchHandle": null,
             "player3_handleType": null,
             "player3_displayName": null,
@@ -150,7 +150,7 @@ var runsBackup = {
             "category": "90 Star",
             "estimate": "2:10:00",
             "runType": "Race",
-            "worldRecord": "1:57:01 by AndrewSM64",
+            "worldRecord": "1:47:25 by PlutoTheThing",
             "wrHolder": null
         },
         "visuals": {
@@ -420,7 +420,7 @@ var runsBackup = {
             "wrHolder": null
         },
         "visuals": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".2",
             "chromaKeyColor": "green"
         }
     },
@@ -688,7 +688,7 @@ var runsBackup = {
             "commentator_pronouns": "he/him"
         },
         "visuals": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".1",
             "chromaKeyColor": "green"
         }
     },
@@ -815,7 +815,7 @@ var runsBackup = {
             "player1_country": "US",
             "player1_pronouns": "he/him",
             "player1_camera": false,
-            "player1_pb": "0:29:52",
+            "player1_pb": "0:29:43",
             "player2_twitchHandle": null,
             "player2_handleType": null,
             "player2_displayName": null,
@@ -844,7 +844,7 @@ var runsBackup = {
             "category": "Easy",
             "estimate": "0:40:00",
             "runType": "Solo Run",
-            "worldRecord": "0:29:52 by aducck",
+            "worldRecord": "0:29:43 by aducck",
             "wrHolder": null
         },
         "visuals": {
@@ -1061,7 +1061,7 @@ var runsBackup = {
             "wrHolder": null
         },
         "visuals": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".2",
             "chromaKeyColor": "green"
         }
     },
@@ -1383,7 +1383,7 @@ var runsBackup = {
             "commentator_pronouns": "he/him"
         },
         "visuals": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".2",
             "chromaKeyColor": "green"
         }
     },
@@ -1403,14 +1403,14 @@ var runsBackup = {
             "player1_country": "NL",
             "player1_pronouns": "she/her",
             "player1_camera": false,
-            "player1_pb": "0:31:21",
+            "player1_pb": "0:27:49",
             "player2_twitchHandle": "Framzo",
             "player2_handleType": "Twitch",
             "player2_displayName": "Framzo",
             "player2_country": "FR",
             "player2_pronouns": "he/him",
             "player2_camera": false,
-            "player2_pb": "0:38:36",
+            "player2_pb": "0:34:23",
             "player3_twitchHandle": null,
             "player3_handleType": null,
             "player3_displayName": null,
@@ -1432,11 +1432,11 @@ var runsBackup = {
             "category": "Any%",
             "estimate": "0:45:00",
             "runType": "Race",
-            "worldRecord": "0:31:21 by Eeva",
+            "worldRecord": "0:27:49 by Eeva",
             "wrHolder": null
         },
         "visuals": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".1",
             "chromaKeyColor": "green"
         }
     },
@@ -1538,7 +1538,7 @@ var runsBackup = {
             "category": "Any%",
             "estimate": "1:30:00",
             "runType": "Solo Run",
-            "worldRecord": null,
+            "worldRecord": "1:16:23 by raindaysTA",
             "wrHolder": null
         },
         "visuals": {
@@ -1777,7 +1777,7 @@ var runsBackup = {
             "player1_country": "US",
             "player1_pronouns": "he/him",
             "player1_camera": false,
-            "player1_pb": "0:16:25 (RTA)",
+            "player1_pb": "0:11:59 (RTA)",
             "player2_twitchHandle": null,
             "player2_handleType": null,
             "player2_displayName": null,
@@ -1806,11 +1806,11 @@ var runsBackup = {
             "category": "100%",
             "estimate": "0:20:00",
             "runType": "Solo Run",
-            "worldRecord": "0:16:25 (RTA)",
+            "worldRecord": "0:11:59 (RTA) by EzTheBoss2",
             "wrHolder": null
         },
         "visuals": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".1",
             "chromaKeyColor": "green"
         }
     },
@@ -1830,7 +1830,7 @@ var runsBackup = {
             "player1_country": "CA",
             "player1_pronouns": "he/him",
             "player1_camera": true,
-            "player1_pb": "0:24:21 ( RTA ),\n0:14:52 ( IGT )",
+            "player1_pb": "= WR",
             "player2_twitchHandle": null,
             "player2_handleType": null,
             "player2_displayName": null,
@@ -1859,7 +1859,7 @@ var runsBackup = {
             "category": "Any%",
             "estimate": "0:30:00",
             "runType": "Solo Run",
-            "worldRecord": "0:24:21 ( RTA ),\n0:14:52 ( IGT ) by max954",
+            "worldRecord": "0:24:21 RTA 0:14:52 IGT by max954",
             "wrHolder": null
         },
         "visuals": {
@@ -1971,7 +1971,7 @@ var runsBackup = {
             "commentator_pronouns": "she/her"
         },
         "visuals": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".2",
             "chromaKeyColor": "green"
         }
     },
@@ -2024,7 +2024,7 @@ var runsBackup = {
             "wrHolder": null
         },
         "visuals": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".1",
             "chromaKeyColor": "green"
         }
     },
@@ -2471,7 +2471,7 @@ var runsBackup = {
             "player1_displayName": "zemoogames",
             "player1_country": "US",
             "player1_pronouns": "he/him",
-            "player1_camera": false,
+            "player1_camera": true,
             "player1_pb": null,
             "player2_twitchHandle": null,
             "player2_handleType": null,
@@ -2558,7 +2558,7 @@ var runsBackup = {
             "wrHolder": null
         },
         "visuals": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".2",
             "chromaKeyColor": "green"
         }
     },
@@ -2770,7 +2770,7 @@ var runsBackup = {
             "wrHolder": null
         },
         "visuals": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".2",
             "chromaKeyColor": "green"
         }
     },
@@ -3144,7 +3144,7 @@ var runsBackup = {
             "wrHolder": null
         },
         "visuals": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".1",
             "chromaKeyColor": "green"
         }
     },
@@ -3356,7 +3356,7 @@ var runsBackup = {
             "wrHolder": null
         },
         "visuals": {
-            "backgroundOpacity": ".3",
+            "backgroundOpacity": ".2",
             "chromaKeyColor": "green"
         }
     },
@@ -3707,7 +3707,7 @@ var runsBackup = {
             "player3_pb": null,
             "player4_twitchHandle": "TheReverserOfTime",
             "player4_handleType": "Twitch",
-            "player4_displayName": "TheReverserOfTime",
+            "player4_displayName": "ReverserOfTime",
             "player4_country": "US",
             "player4_pronouns": "she/her",
             "player4_camera": false,
