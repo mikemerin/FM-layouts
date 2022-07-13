@@ -165,8 +165,8 @@ class Layout {
 
   createTimeline = (lines, line, id, animationInfo, fallback) => {
     const { animationType, elementType, direction } = animationInfo;
-    var primaryOffset = 543;
-    // var primaryOffset = 10000; // TODO: change back
+    // var primaryOffset = 543;
+    var primaryOffset = 10000; // TODO: change back
     var wrapper = document.querySelector(`#${id}`);
     const elementSrc = "/assets/dashboard/" + lines[line];
     if (elementType === "text") wrapper.innerText = lines[line]; // todo: wrap the elementType in a function, link with complete
