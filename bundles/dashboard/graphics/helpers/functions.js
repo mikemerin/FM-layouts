@@ -407,16 +407,16 @@ class Layout {
     let textSwap = '', text2Swap = '', text3Swap = '', keepGameAndCreatorOnScreen = false;
 
     if (commentators) {
-      textSwap = wrText;
+      // textSwap = wrText;
       text2Swap = commentaryByText;
       text3Swap = commentatorNames;
-    } else if (wrText) {
-      text2Swap = wrText;
+    // } else if (wrText) {
+      // text2Swap = wrText;
     } else {
       keepGameAndCreatorOnScreen = true;
     }
 
-    const gameTextCutoff = 32;
+    const gameTextCutoff = 40;
 
     if (text.length > gameTextCutoff) {
       const lastSpace = text.slice(0, gameTextCutoff).match(/(?=[^ ]*$)/).index;
@@ -437,7 +437,7 @@ class Layout {
     this.createElement(baseId + 3, className, text3, locationInfo3, "text", baseId);
 
     if (!keepGameAndCreatorOnScreen) {
-      this.createTimeline([text, textSwap], 0, baseId + 1, this.runAndCommentaryAnimationInfo);
+      // this.createTimeline([text, textSwap], 0, baseId + 1, this.runAndCommentaryAnimationInfo);
       this.createTimeline([text2, text2Swap], 0, baseId + 2, this.runAndCommentaryAnimationInfo);
       this.createTimeline([text3, text3Swap], 0, baseId + 3, this.runAndCommentaryAnimationInfo);
     }
