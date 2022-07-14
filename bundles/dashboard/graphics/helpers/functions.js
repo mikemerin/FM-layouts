@@ -172,10 +172,10 @@ class Layout {
     if (elementType === "text") wrapper.innerText = lines[line]; // todo: wrap the elementType in a function, link with complete
     if (elementType === "image") {
       if (this.linkCheck(elementSrc)) {
-        console.log('link check good for ', elementSrc)
+        // console.log('link check good for ', elementSrc)
         wrapper.src = elementSrc;
       } else if (fallback) {
-        console.log('replacing with ', fallback)
+        console.log('link check, replacing with ', fallback)
         wrapper.src = fallback;
       }
     }
@@ -336,7 +336,6 @@ class Layout {
     const id = "gameImage";
     const className = "gameImage";
     gameName = sanitizeFilename(gameName);
-    console.log('gameName',  "gameBackgrounds/" + gameName + ".png")
     const output = "gameBackgrounds/" + gameName + ".png";
 
     if (doesFileExist(output, true)) {
@@ -393,7 +392,6 @@ class Layout {
 
     const createdByText = "Created By"
     const commentaryByText = "Commentary By";
-    console.log(commentators)
     const commentatorNames = commentators;
     // TODO: next year once the Featured Channels program is updated make this say 'Multiple People (hover to see!)'
     const wrText = worldRecord ? "WR " + worldRecord : "";
@@ -444,8 +442,17 @@ class Layout {
   };
 
   setCommentaryInfo = () => {
-    const { category, estimate } = this.fields;
+    const { category, estimate, numberOfPlayers, worldRecord,
+      player1_pb, player1_displayName, player1_twitchHandle } = this.fields;
+    const pbP1EqualsWR = numberOfPlayers === '1' && worldRecord ? (
+      worldRecord.includes(player1_twitchHandle) ||
+      worldRecord.includes(player1_displayName)
+    ) && worldRecord.includes(player1_pb) : false;
     const estimateText = "Estimate " + estimate;
+    let wrText = "";
+    if (worldRecord) {
+      wrText = "WR " + (pbP1EqualsWR ? worldRecord.split(' ')[0] : worldRecord);
+    }
 
     const baseId = "commentInfo"; // TODO: change from comment to runInfo
     const className = `${baseId} primary`;
@@ -457,6 +464,7 @@ class Layout {
 
     if (runInfoLines === 1) { // todo: clean up and make all have 1 2 or 3, with the tests be if > 1, if > 2, etc
       text = category + ' ' + estimateText;
+      wrText = category + ' ' + wrText;
     } else {
       const text2 = estimateText;
       let locationInfo2 = this.getOffsetLocationInfo(locationInfo, layouts.offsets.runInfo2);
@@ -465,11 +473,14 @@ class Layout {
         locationInfo2 = {...locationInfo2, width: width, textAlign: textAlign };
       };
       this.createElement(baseId + 2, className, text2, locationInfo2, "text", baseId);
-      // this.createTimeline([text2, text2], 0, baseId + 2, this.runAndCommentaryAnimationInfo)
+      if (worldRecord) {
+        this.createTimeline([text2, wrText], 0, baseId + 2, this.runAndCommentaryAnimationInfo);
+      }
     };
     this.createElement(baseId + 1, className, text, locationInfo, "text", baseId);
-    // this.createTimeline([text, text], 0, baseId + 1, this.runAndCommentaryAnimationInfo)
-
+    if (worldRecord && runInfoLines === 1) {
+      this.createTimeline([text, wrText], 0, baseId + 1, this.runAndCommentaryAnimationInfo)
+    }
   };
 
   // setGenres = () => {  // Note: removed in FM2021
@@ -595,17 +606,24 @@ class Layout {
       const fIdIcon = fId + playerNumber;
       const pIdText = "player" + playerNumber;
       const pClassName = "primary";
+      const { worldRecord } = this.fields;
       const twitchHandle = this.fields["player" + playerNumber + "_twitchHandle"];
       const pronouns = this.fields["player" + playerNumber + "_pronouns"];
       const pb = this.fields["player" + playerNumber + "_pb"];
       const displayName = this.fields["player" + playerNumber + "_displayName"] || twitchHandle;
       let avatarSrc = "avatars/" + twitchHandle + ".png";
 
+      const pbEqualsWR = worldRecord ? (
+        worldRecord.includes(twitchHandle) ||
+        worldRecord.includes(displayName)
+      ) && worldRecord.includes(pb) : false;
+
       const country = this.fields["player" + playerNumber + "_country"]
       const flagSrc = "flags/" + country + ".svg";
 
       const text = displayName + (pronouns ? " (" + pronouns + ")" : "");
-      const textSwap = (pb ? "PB " + pb + " - " : "") + twitchHandle;
+      const pbText = pbEqualsWR ? "WR Holder - " : (pb ? "PB " + pb + " - " : "");
+      const textSwap = pbText + twitchHandle;
 
       let tLocationInfo = this.getLocationInfo(tId, "player", playerNumber);
       const offsetInfo = this.getLocationInfo("offset", "player", playerNumber);
