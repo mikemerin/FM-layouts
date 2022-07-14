@@ -21,7 +21,7 @@ var fieldGroups = {
         "fieldName": "Resolution",
         "type": "radio",
         "options": [
-          "600", "608", "3:2", "8:7", "10:7", "16:9"
+          "600", "608", "3:2", "8:7", "10:7", "16:9", "Fish", "Relay"
         ],
         "dev_note_FM2021": "Removing the unique 1:1 this year as Wisper in the Mirror needed it in FM2020",
         "other": true

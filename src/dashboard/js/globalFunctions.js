@@ -81,7 +81,9 @@ class TwitchAPI {
     // }
 
     async getChannelInfo() {
-      const url = 'https://api.twitch.tv/helix/search/channels?query=fangamemarathon/';
+      const channelName = 'fangamemarathon';
+      // const channelName = 'shadowsdieaway'; // For game_id debugging
+      const url = `https://api.twitch.tv/helix/search/channels?query=${channelName}/`;
 
       const options = {
         headers: {
@@ -93,7 +95,7 @@ class TwitchAPI {
       };
 
       const data = await this.fetcher(url, options);
-      const fmChannel = data.data.find(({ broadcaster_login }) => broadcaster_login === 'fangamemarathon');
+      const fmChannel = data.data.find(({ broadcaster_login }) => broadcaster_login === channelName);
       const { game_id, game_name, id, title } = fmChannel;
       this.channelId = id;
       this.gameId = game_id;
@@ -118,7 +120,7 @@ class TwitchAPI {
         "La-Mulana": 20422,
         "Mega Man": 4815,
         "Metroid: Zero Mission": 15919,
-        "Momentum Mod": 492973,
+        "Momentum Mod": 2043449207,
         "Piano": 26936,
         "Smol Ame": 1518385830,
         "Sonic Adventure": 7195,
@@ -208,6 +210,7 @@ class TwitchAPI {
       const status = `FM 2022 - ${gameName}, ${category} ${runType} by ${players}`;
 
       if (confirm(`WARNING: this updates the FM Twitch channel with the info below.\nPlease make sure it is correct before confirming.\n\nTitle:\n${status}\n\nGame Link: ${gameLink}\n\nFeatured Channels: ${channels}`)) {
+        // this.getChannelInfo() // for game_id debugging
         this.updateChannel(status, gameLink, channels);
       }
     }
@@ -566,6 +569,27 @@ class AdminPanel {
       })
     )
   }
+
+  setSaveImage = () => {
+    const text = "Save png"
+    $("#adminPanelDownloadPNG").append( //todo: next
+      $("<button>", {
+        id: sanitize(text),
+        class: "loadButton",
+        click: (e) => {
+          e.preventDefault();
+          // TODO: duplicated code from dashboardForm.js
+          const imageWindow = window.open(`http://localhost:9090/bundles/dashboard/graphics/layout.html?saveImage=true&gameName=${this.gameName}`);
+          imageWindow.addEventListener('click', e => {
+            if (e.target.id === "saveImageLink") {
+              imageWindow.close();
+            }
+          });
+        },
+        text,
+      })
+    )
+  };
 
   setUpdateTwitchInfo() {
     const text = "Update Twitch Info";

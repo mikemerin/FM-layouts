@@ -82,6 +82,7 @@ class Layout {
         this.setMarqueeText();
         this.setRunInfo();
         this.setCommentaryInfo();
+        this.setExtraInfo();
 
         this.setPlayerInfo();
         this.setChromaKeyColor(); // note: needs to be last
@@ -181,7 +182,11 @@ class Layout {
     }
 
     if (animationType === "flyIn") {
-      const [flyInTranslateX, flyInTranslateY] = direction === "top" ? [[-90,0] , [-30,0]] : [[-170,0] , [20,0]];
+      const [flyInTranslateX, flyInTranslateY] = direction === "top"
+      ? [[-90,0] , [-30,0]]
+      : "bottom"
+        ? [[60,0] , [10,0]]
+        : [[-170,0] , [20,0]];
       const letterClass = `${id}Letter`;
       if (elementType === "text") { // todo: wrap this in a function, link with complete
         wrapper.innerHTML = wrapper.textContent.split(" ").map(word => "<span class='word nowrap'>" + word.replace(/\S/g, `<span class='letter ${letterClass}'>$&</span>`) + "</span>" ).join(" ");
@@ -483,6 +488,43 @@ class Layout {
     }
   };
 
+  setExtraInfo = () => {
+    const fishTextLocationInfo = this.getLocationInfo("fishText");
+    if (fishTextLocationInfo) {
+      const textArr = [
+        "In this event, players from different",
+        "fangame/mod/hack communities play each",
+        "other's games that they are unfamiliar with."
+      ];
+      textArr.forEach((text, i) => {
+        this.createElement("", "primary", text, {
+          ...fishTextLocationInfo,
+          top: fishTextLocationInfo.top + (i * 23),
+        }, "text", "fishText");
+      });
+    }
+
+    // if (runInfoLines === 1) { // todo: clean up and make all have 1 2 or 3, with the tests be if > 1, if > 2, etc
+    //   text = category + ' ' + estimateText;
+    //   wrText = category + ' ' + wrText;
+    // } else {
+    //   const text2 = estimateText;
+    //   let locationInfo2 = this.getOffsetLocationInfo(locationInfo, layouts.offsets.runInfo2);
+    //   if (locationInfo.width || locationInfo.textAlign) {
+    //     const { width, textAlign } = locationInfo; // todo: double check if just textAlign: right and no width if this still works
+    //     locationInfo2 = {...locationInfo2, width: width, textAlign: textAlign };
+    //   };
+    //   this.createElement(baseId + 2, className, text2, locationInfo2, "text", baseId);
+    //   if (worldRecord) {
+    //     this.createTimeline([text2, wrText], 0, baseId + 2, this.runAndCommentaryAnimationInfo);
+    //   }
+    // };
+    // this.createElement(baseId + 1, className, text, locationInfo, "text", baseId);
+    // if (worldRecord && runInfoLines === 1) {
+    //   this.createTimeline([text, wrText], 0, baseId + 1, this.runAndCommentaryAnimationInfo)
+    // }
+  };
+
   // setGenres = () => {  // Note: removed in FM2021
   //   var id = "genreBorder";
   //   var layoutLocation = "genre";
@@ -628,6 +670,7 @@ class Layout {
       let tLocationInfo = this.getLocationInfo(tId, "player", playerNumber);
       const offsetInfo = this.getLocationInfo("offset", "player", playerNumber);
       const pLocationInfo = this.getOffsetLocationInfo(tLocationInfo, offsetInfo);
+      // TODO: fish icon
       let direction;
 
       const animationInfo = {
