@@ -33,9 +33,12 @@ class TwitchAPI {
       }
     }
 
-    async fetcher(url, options = {}) {
+    async fetcher(url, options = {}, ignoreJson = false) {
         console.log('url', url, '\noptions', options)
         const res = await fetch(url, options);
+        if (ignoreJson) {
+          return res;
+        }
         const data = await res.json();
         console.log('fetcher data', data);
         return data;
@@ -161,7 +164,7 @@ class TwitchAPI {
       console.log('set data', data)
 
       if (channels !== undefined) {
-        featuredChannelUrl += channels;
+        featuredChannelUrl += channels.replace(/ /g,'');
         this.fetcher(featuredChannelUrl);
       }
     }
