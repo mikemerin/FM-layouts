@@ -15,7 +15,8 @@ var playerGroups = {
         "Saira",
         "TetraField",
         "xoro1",
-        "あずもる"
+        "あずもる",
+        "aliceNobodi",
     ],
     "Gaborro's Goobawagawahoo Event": [
         "anuj071",
@@ -37,6 +38,25 @@ var playerGroups = {
         "Naloas",
         "あずもる"
     ],
-    "Monkey Ball Tournament": ["42guy42", "dmt_goobz", "IkeSMB", "TheWalkr_"],
+    "Monkey Ball Tournament": ["42guy42", "dmt_goobz", "IkeSMB", "TheWalkr_", "Cosmoing"],
     "The Colour Relay Race": ["anuj071", "placements", "FlaviaEstCalida", "barfyace"],
+    "Relay Race": [
+        "ubersawmedic",
+        "Eeva_x",
+        "ElRaimon2000",
+        "ChrisayNewfarm",
+        "pieceofcheese87",
+        "strelook21",
+        "Cosmoing",
+        "anuj071",
+        "Natsu_iw",
+        "Skukl_",
+        "Barfyace",
+        "TTBB",
+        "bummer222",
+        "hyo_ka",
+        "Gaborro14",
+        "Thenadertwo",
+        "Wolsk"
+    ],
 }

@@ -15,7 +15,8 @@ const groupTableGames = [
     "Gaborro's Goobawagawahoo Event",
     "I Wanna Can't Stop Tournament",
     "Monkey Ball Tournament",
-    "The Colour Relay Race"
+    "The Colour Relay Race",
+    "Relay Race"
 ];
 
 const makePlayerGroupTables = (players, playerGroups, dashboardForm) => {
@@ -72,12 +73,34 @@ const makePlayerGroupTables = (players, playerGroups, dashboardForm) => {
             table.append(gamePlayers);
         });
 
+        // TODO: store this somewhere else, duplicated from dashboard
+        let featuredChannelUrl = 'https://api.furious.pro/featuredchannels/bot/ab8b468a5808ac206f12cbc7d80af868:90780102/';
+        featuredChannelUrl += playerGroups[game].filter((twitchHandle) => players[twitchHandle].handleType === "Twitch").join(',');
+
+        console.log('featuredChannelUrl', featuredChannelUrl)
+
         $('#playerInfoBody').append(
             $("<br>"),
             $("<div>", { id: "playerInfo" + sanitizedGameName })
                 .append(
                     $("<label>").append(
                         $("<span>", { text: game }),
+                        $("<span>").append(
+                            $("<button>", {
+                                id: sanitize("Update followers " + game),
+                                click: (e) => {
+                                    e.preventDefault();
+                                    if (confirm(`WARNING: updates the followers to ${featuredChannelUrl}`)) {
+                                        window.open(featuredChannelUrl)
+                                    }
+                                }
+                            }).append(
+                                $("<img>", {
+                                src: "/assets/dashboard/baseLayoutLayers/twitchIconPurple.png",
+                                alt: "Update followers"
+                                })
+                            )
+                        ),
                         $("<span>", {
                             id: "status" + sanitizedGameName,
                             text: ' +'
