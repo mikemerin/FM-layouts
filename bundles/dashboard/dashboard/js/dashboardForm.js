@@ -157,9 +157,7 @@ class DashboardForm {
 
     const fields = [twitchHandle, displayName, handleType, country, pronouns, ''];
 
-    if (playerNumber !== 1) {
-      startNumber += 7;
-    }
+    startNumber += (playerNumber - 1) * 7;
 
     fields.forEach((field, i) => {
       NodeCG.dashboardPanels.panels.playerInfo.dashboardFields[startNumber + i].value = field;

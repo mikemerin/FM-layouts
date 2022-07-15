@@ -166,8 +166,8 @@ class Layout {
 
   createTimeline = (lines, line, id, animationInfo, fallback) => {
     const { animationType, elementType, direction } = animationInfo;
-    // var primaryOffset = 543;
-    var primaryOffset = 10000; // TODO: change back
+    var primaryOffset = 543;
+    // var primaryOffset = 10000; // TODO: change back
     var wrapper = document.querySelector(`#${id}`);
     const elementSrc = "/assets/dashboard/" + lines[line];
     if (elementType === "text") wrapper.innerText = lines[line]; // todo: wrap the elementType in a function, link with complete
@@ -431,10 +431,13 @@ class Layout {
     let locationInfo3 = this.getOffsetLocationInfo(locationInfo, layouts.offsets.runInfo3);
     if (locationInfo.width || locationInfo.textAlign) {
       const { width, textAlign } = locationInfo; // todo: double check if just textAlign: right and no width if this still works
-      locationInfo2 = {...locationInfo2, width: width, textAlign: textAlign };
-      locationInfo3 = {...locationInfo3, width: width, textAlign: textAlign };
+      locationInfo2 = { ...locationInfo2, fontSize: locationInfo.fontSize, width: width, textAlign: textAlign };
+      locationInfo3 = { ...locationInfo3, fontSize: locationInfo.fontSize, width: width, textAlign: textAlign };
     };
-
+    
+    console.log(locationInfo)
+    console.log(locationInfo2)
+    console.log(locationInfo3)
     this.createElement(baseId + 1, className, text, locationInfo, "text", baseId);
     this.createElement(baseId + 2, className, text2, locationInfo2, "text", baseId);
     this.createElement(baseId + 3, className, text3, locationInfo3, "text", baseId);

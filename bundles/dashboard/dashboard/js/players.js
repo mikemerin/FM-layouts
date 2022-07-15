@@ -35,6 +35,8 @@ const makePlayerGroupTables = (players, playerGroups, dashboardForm) => {
                 .append($("<th>", { text: "Pronouns" }))
                 .append($("<th>", { text: "Make P1" }))
                 .append($("<th>", { text: "Make P2" }))
+                .append($("<th>", { text: "Make P3" }))
+                .append($("<th>", { text: "Make P4" }))
             );
         
         playerGroups[game].forEach((player) => {
@@ -54,6 +56,16 @@ const makePlayerGroupTables = (players, playerGroups, dashboardForm) => {
                 .append($("<td>", { text: 'P2', class: 'clickable', click: () => {
                         dashboardForm.insertPlayer(twitchHandle, 2);
                         setTimeout(() => dashboardForm.insertPlayer(twitchHandle, 2), 200);
+                    }
+                }))
+                .append($("<td>", { text: 'P3', class: 'clickable', click: () => {
+                        dashboardForm.insertPlayer(twitchHandle, 3);
+                        setTimeout(() => dashboardForm.insertPlayer(twitchHandle, 3), 200);
+                    }
+                }))
+                .append($("<td>", { text: 'P4', class: 'clickable', click: () => {
+                        dashboardForm.insertPlayer(twitchHandle, 4);
+                        setTimeout(() => dashboardForm.insertPlayer(twitchHandle, 4), 200);
                     }
                 }))
 
