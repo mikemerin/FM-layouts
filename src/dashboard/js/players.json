@@ -335,6 +335,13 @@ var players = {
         "country": "UA",
         "pronouns": "he/him"
     },
+    "romrom4444": {
+        "twitchHandle": "romrom4444",
+        "displayName": "romrom4444",
+        "handleType": "Twitch",
+        "country": "IL",
+        "pronouns": "she/her"
+    },
     "Saira": {
         "twitchHandle": "王者青年",
         "displayName": "Saira",

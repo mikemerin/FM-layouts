@@ -434,10 +434,7 @@ class Layout {
       locationInfo2 = { ...locationInfo2, fontSize: locationInfo.fontSize, width: width, textAlign: textAlign };
       locationInfo3 = { ...locationInfo3, fontSize: locationInfo.fontSize, width: width, textAlign: textAlign };
     };
-    
-    console.log(locationInfo)
-    console.log(locationInfo2)
-    console.log(locationInfo3)
+
     this.createElement(baseId + 1, className, text, locationInfo, "text", baseId);
     this.createElement(baseId + 2, className, text2, locationInfo2, "text", baseId);
     this.createElement(baseId + 3, className, text3, locationInfo3, "text", baseId);
@@ -580,10 +577,21 @@ class Layout {
     this.setBorder("titleCard");
     if (layouts[this.fields.numberOfPlayers + "P"][this.fields.resolution]["borders"]["titleCard2"]) this.setBorder("titleCard2");
     this.setBorder("timer");
+    if (this.locations.wins) {
+      const winsTextLocationInfo = this.getLocationInfo("wins");
+      this.createElement("wins", "primary", "Wins", winsTextLocationInfo, "text", "wins");
+    
+      this.setBorder("winsL");
+      this.setBorder("winsR");
+    }
     // this.setBorder("genres");  // Note: removed in FM2021 // future: lazy creation in under the pasted border; works as is, in the future will create (BG dependent on the fills)
   };
 
-  setBorder = (type, playerNumber = false) => {
+  setBorder = (type, playerNumber = false, winNumber = 0) => {
+    console.log('type', type)
+    if (type === "winsL" && winNumber < this.fields.wins) {
+      
+    }
     const { left: sL, top: sT, alt } = this.getLocationInfo("start", type, playerNumber);
     const { left: oL, top: oT } = this.getLocationInfo("offset", type, playerNumber);
     // if (type === "genres" && alt) {
@@ -758,6 +766,8 @@ class Layout {
       case "titleCard":
       case "titleCard2":
       case "timer":
+      case "winsL":
+      case "winsR":
       case "genres":  // Note: removed in FM2021, TODO remove the reference to this
       case "genresStacked":  // Note: removed in FM2021, TODO remove the reference to this
         return layout["borders"][type][id];

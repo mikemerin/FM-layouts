@@ -85,26 +85,25 @@ const makePlayerGroupTables = (players, playerGroups, dashboardForm) => {
                 .append(
                     $("<label>").append(
                         $("<span>", { text: game }),
-                        $("<span>").append(
-                            $("<button>", {
-                                id: sanitize("Update followers " + game),
-                                click: (e) => {
-                                    e.preventDefault();
-                                    if (confirm(`WARNING: updates the followers to ${featuredChannelUrl}`)) {
-                                        window.open(featuredChannelUrl)
-                                    }
-                                }
-                            }).append(
-                                $("<img>", {
-                                src: "/assets/dashboard/baseLayoutLayers/twitchIconPurple.png",
-                                alt: "Update followers"
-                                })
-                            )
-                        ),
                         $("<span>", {
                             id: "status" + sanitizedGameName,
                             text: ' +'
                         }),
+                        $("<span>", { text: '\t\t\t\t'} ),
+                        $("<span>", { class: 'updateFollowers' }).append(
+                            $("<img>", {
+                                id: sanitize("Update followers " + game),
+                                click: (e) => {
+                                    console.log('e', e)
+                                    e.preventDefault();
+                                    if (confirm(`WARNING: updates the followers to ${featuredChannelUrl}`)) {
+                                        window.open(featuredChannelUrl)
+                                    }
+                                },
+                                src: "/assets/dashboard/baseLayoutLayers/twitchIconPurple.png",
+                                alt: "Update followers"
+                            })
+                        ),
                     ),
                     table
                 )
