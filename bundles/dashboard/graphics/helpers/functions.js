@@ -166,8 +166,8 @@ class Layout {
 
   createTimeline = (lines, line, id, animationInfo, fallback) => {
     const { animationType, elementType, direction } = animationInfo;
-    var primaryOffset = 543;
-    // var primaryOffset = 10000; // TODO: change back
+    // var primaryOffset = 543;
+    var primaryOffset = 10000; // TODO: change back
     var wrapper = document.querySelector(`#${id}`);
     const elementSrc = "/assets/dashboard/" + lines[line];
     if (elementType === "text") wrapper.innerText = lines[line]; // todo: wrap the elementType in a function, link with complete
@@ -588,17 +588,22 @@ class Layout {
   };
 
   setBorder = (type, playerNumber = false, winNumber = 0) => {
-    console.log('type', type)
-    if (type === "winsL" && winNumber < this.fields.wins) {
-      
-    }
-    const { left: sL, top: sT, alt } = this.getLocationInfo("start", type, playerNumber);
+    let { left: sL, top: sT, alt } = this.getLocationInfo("start", type, playerNumber);
     const { left: oL, top: oT } = this.getLocationInfo("offset", type, playerNumber);
     // if (type === "genres" && alt) {
-    //   this.setBorder("genresStacked");  // Note: removed in FM2021
-    // }
+      //   this.setBorder("genresStacked");  // Note: removed in FM2021
+      // }
 
-    // console.log(type, playerNumber, sL, sT, oL, oT)
+    if (winNumber < this.locations.winCount - 1) {
+      if (type === "winsL") {
+        this.setBorder(type, false, winNumber + 1)
+        sL -= 27 * winNumber;
+      }
+      if (type === "winsR") {
+        this.setBorder(type, false, winNumber + 1)
+        sL += 27 * winNumber;
+      }
+    }
 
     const size = layouts.border[type].cornerSize;
     const fillClass = layouts.border[type].fill;

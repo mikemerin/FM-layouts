@@ -47,12 +47,12 @@ var layouts = {
       "fill": "ChromaKey"
     },
     "winsL": {
-      "cornerSize": "small",
-      "fill": "Grey"
+      "cornerSize": "large",
+      "fill": "ChromaKey"
     },
     "winsR": {
-      "cornerSize": "small",
-      "fill": "Grey"
+      "cornerSize": "large",
+      "fill": "ChromaKey"
     },
     "cornerSize": {
       "small": 8,
@@ -493,7 +493,7 @@ var layouts = {
       "announcement": { "left": 41, "bottom": 4, "width": 350, "height": 80, "fontSize": "24px" },
       "commentInfo":  { "left": 0,  "top": -1,    "width": "100%", "textAlign": "center" },
       "runInfo":      { "left": 0,  "top": 627,   "width": "100%", "textAlign": "center" },
-      "wins":         { "left": 0,  "top": 42,    "width": "100%", "textAlign": "center", "fontSize": "19px" },
+      "wins":         { "left": 0,  "top": 37,    "width": "100%", "textAlign": "center", "fontSize": "19px" },
       "winCount":     5,
       "hashtag":      {
         "position":   { "left": 41,   "top": 558 },
@@ -530,12 +530,12 @@ var layouts = {
           "offset":   { "left": 208,  "top": 159 }
         },
         "winsL": {
-          "start":    { "left": 600,  "top": 49 },
-          "offset":   { "left": 10,  "top": 10 }
+          "start":    { "left": 590,  "top": 37 },
+          "offset":   { "left": 16,  "top": 16 }
         },
         "winsR": {
-          "start":    { "left": 662,  "top": 49 },
-          "offset":   { "left": 10,  "top": 10 }
+          "start":    { "left": 663,  "top": 37 },
+          "offset":   { "left": 16,  "top": 16 }
         }
       }
     },
