@@ -594,7 +594,7 @@ class Layout {
       //   this.setBorder("genresStacked");  // Note: removed in FM2021
       // }
 
-    if (winNumber < this.fields.winCount - 1) {
+    if (winNumber < this.fields.winCount) {
       if (type === "winsL") {
         this.setBorder(type, false, winNumber + 1)
         sL -= 27 * winNumber;
