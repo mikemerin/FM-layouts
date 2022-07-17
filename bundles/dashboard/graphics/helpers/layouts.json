@@ -494,7 +494,7 @@ var layouts = {
       "commentInfo":  { "left": 0,  "top": -1,    "width": "100%", "textAlign": "center" },
       "runInfo":      { "left": 0,  "top": 627,   "width": "100%", "textAlign": "center" },
       "wins":         { "left": 0,  "top": 37,    "width": "100%", "textAlign": "center", "fontSize": "19px" },
-      "winCount":     5,
+      "winCount":     7,
       "hashtag":      {
         "position":   { "left": 41,   "top": 558 },
         "text":       { "fontSize": "40.5px" },

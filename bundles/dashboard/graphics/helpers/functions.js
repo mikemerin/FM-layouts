@@ -390,7 +390,7 @@ class Layout {
 
   setRunInfo = () => {
     // TODO: change name to GameAndCommentaryInfo
-    const { commentators, createdBy, gameName, gameNameShortened, worldRecord } = this.fields;
+    const { commentators, createdBy, gameName, gameNameShortened, winCount, worldRecord } = this.fields;
     const baseId = "runInfo"
     const className = `${baseId} primary`;
     const locationInfo = this.getLocationInfo(baseId);
@@ -594,7 +594,7 @@ class Layout {
       //   this.setBorder("genresStacked");  // Note: removed in FM2021
       // }
 
-    if (winNumber < this.locations.winCount - 1) {
+    if (winNumber < this.fields.winCount - 1) {
       if (type === "winsL") {
         this.setBorder(type, false, winNumber + 1)
         sL -= 27 * winNumber;

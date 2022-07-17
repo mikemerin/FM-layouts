@@ -26,6 +26,11 @@ var fieldGroups = {
         "dev_note_FM2021": "Removing the unique 1:1 this year as Wisper in the Mirror needed it in FM2020",
         "other": true
       },
+      {
+        "fieldName": "Win Count",
+        "type": "text",
+        "placeholder": "7"
+      },
     ]
   },
   "runInfo": {
